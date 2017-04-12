@@ -1,0 +1,28 @@
+# ubuntu-server commands
+ssh  13.79.164.186
+chocolateconleche1@
+
+sudo umount ubuntuDir
+sshfs notanumber@13.74.37.185: ubuntuDir -o reconnect -C -o workaround=all
+
+
+# Borrar intento anterior
+rm -rfd data info positives.vec
+
+# Crea directorios adecuados
+mkdir data
+
+
+
+# Crea info, con la lista de muestras positivas automaticas y el info.lst
+opencv_createsamples -img pos.jpg -bg bg.txt -info info/info.lst -pngoutput info -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 1950
+
+
+# Crea el vector de positivas
+
+opencv_createsamples -info info/info.lst -num 1950 -w 20 -h 20 -vec positives.vec
+
+
+#Crea el resultado del entrenamiento
+rm -rfd data & mkdir data
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1700 -numNeg 900 -numStages 10 -w 20 -h 20
