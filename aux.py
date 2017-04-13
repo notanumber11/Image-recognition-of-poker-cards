@@ -50,6 +50,7 @@ def deleteSmallImages(pathToDirectory, widthImg, heightImg):
 
 
 def changeRedToBlack(img):
+    img2 = img.copy()
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     lower_range = np.array([0, 100, 100], dtype=np.uint8)
     upper_range = np.array([10, 255, 255], dtype=np.uint8)
@@ -59,8 +60,9 @@ def changeRedToBlack(img):
     upper_range = np.array([190, 255, 255], dtype=np.uint8)
     # Threshold the HSV image to get only blue colors
     mask2 = cv2.inRange(hsv, lower_range, upper_range)
-    img[mask1 == 255] = [0, 0, 0]
-    img[mask2 == 255] = [0, 0, 0]
+    img2[mask1 == 255] = [0, 0, 0]
+    img2[mask2 == 255] = [0, 0, 0]
+    return img2
 
 
 def extractCentroid(contours):
@@ -76,6 +78,14 @@ def extractCentroid(contours):
             listCY.append(cy)
     return listCX,listCY
 
+
+def extractSingleCentroid(contour):
+    M = cv2.moments(contour)
+    cx,cy = 0,0
+    if M["m00"] != 0:
+        cx = int(M['m10'] / M['m00'])
+        cy = int(M['m01'] / M['m00'])
+    return cx,cy
 
 def isInsideRectangle(x,y,x0,y0,w,h):
     if x>x0 and x<(x0+w):
@@ -98,27 +108,29 @@ def drawContourRectangle(contours,img,offsetX,offsetY):
     return rectangles
 
 
-def drawContoursDetected(img,gray, x, y,w,h):
-    crop_img = gray[y:y + h, x:x + w]
+def drawContoursDetected(img, x, y,w,h):
+    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    crop_img = gray_img[y:y + h, x:x + w]
+
     # prepare for contour detection
     blur = cv2.GaussianBlur(crop_img, (1, 1), 1000)
     flag, thresh = cv2.threshold(blur, 120, 255, cv2.THRESH_BINARY)
     im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_TC89_L1)
-
-
+    # change to 0
     contours = sorted(contours, key=cv2.contourArea)
 
 
-    # change to 0 , change size
     # draw the contours with the offset
     cv2.drawContours(img, contours[:-1], -1, (0, 255, 255), 2, offset=(x, y))
 
-
     return contours[:-1]
 
-def drawAllContours(img):
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    crop_img = gray
+def drawAllContours(contours,imgDest):
+    cv2.drawContours(imgDest, contours, -1, (0, 255, 255), 2)
+
+
+def obtainContours(imgSrc):
+    crop_img = cv2.cvtColor(imgSrc, cv2.COLOR_BGR2GRAY)
     # prepare for contour detection
     blur = cv2.GaussianBlur(crop_img, (1, 1), 1000)
     flag, thresh = cv2.threshold(blur, 120, 255, cv2.THRESH_BINARY)
@@ -126,7 +138,6 @@ def drawAllContours(img):
     # change to 0
     contours = sorted(contours, key=cv2.contourArea)
     # print 'El tamano de los contornos es ' +str(len(contours))
-    cv2.drawContours(img, contours, -1, (0, 255, 255), 2)
     return contours
 
 def nothing(x):
