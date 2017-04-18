@@ -46,23 +46,39 @@ def deleteSmallImages(pathToDirectory, widthImg, heightImg):
     return
 
 
-
-
-
 def changeRedToBlack(img):
     img2 = img.copy()
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     lower_range = np.array([0, 100, 100], dtype=np.uint8)
     upper_range = np.array([10, 255, 255], dtype=np.uint8)
-    # Threshold the HSV image to get only blue colors
+    # Threshold the HSV image to get only red colors
     mask1 = cv2.inRange(hsv, lower_range, upper_range)
     lower_range = np.array([170, 100, 100], dtype=np.uint8)
     upper_range = np.array([190, 255, 255], dtype=np.uint8)
-    # Threshold the HSV image to get only blue colors
+    # Threshold the HSV image to get only red colors
     mask2 = cv2.inRange(hsv, lower_range, upper_range)
+
+    #a =  len(np.extract(mask2, mask2)) + len(np.extract(mask1,mask1))
+    a = np.count_nonzero(mask2) +np.count_nonzero(mask1)
+
+    print "La longitud es " ,a
     img2[mask1 == 255] = [0, 0, 0]
     img2[mask2 == 255] = [0, 0, 0]
     return img2
+
+
+def fittingLine(img,cnt):
+    rows, cols = img.shape[:2]
+    [vx, vy, x, y] = cv2.fitLine(cnt, cv2.DIST_L2, 0, 0.01, 0.01)
+    print vx,vy,x,y
+    lefty = int((-x * vy / vx) + y)
+    righty = int(((cols - x) * vy / vx) + y)
+
+    incognita = (0-y)/vy
+    incognita2= (rows-y)/vy
+    # print lefty,righty
+    # cv2.line(img, (cols - 1, righty), (0, lefty), (0, 255, 0), 2)
+    cv2.line(img, (x, incognita2), (x, incognita), (0, 255, 0), 2)
 
 
 def extractCentroid(contours):
@@ -94,7 +110,7 @@ def isInsideRectangle(x,y,x0,y0,w,h):
     return False
 
 
-def drawContourRectangle(contours,img,offsetX,offsetY):
+def drawBoundingRectangle(contours, img, offsetX, offsetY):
     print 'El tamano de los contornos es ' + str(len(contours))
     rectangles  = []
     for cnt in contours:
@@ -106,6 +122,14 @@ def drawContourRectangle(contours,img,offsetX,offsetY):
         rectangles.append(rectangle)
 
     return rectangles
+
+
+def drawMinimalRectangle(img,cnt):
+    for c in cnt:
+        rect = cv2.minAreaRect(c)
+        box = cv2.boxPoints(rect)
+        box = np.int0(box)
+        cv2.drawContours(img, [box], 0, (0, 0, 255), 2)
 
 
 def drawContoursDetected(img, x, y,w,h):
@@ -179,3 +203,28 @@ def createTrackbars(list,imageName,initValue):
     cv2.namedWindow(imageName)
     for x in list:
         cv2.createTrackbar(x, imageName, initValue, 255, nothing)
+
+def detectCircles():
+    img = cv2.imread('Images/fives-3.jpg')
+    img = cv2.medianBlur(img, 5)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    # cimg = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
+
+
+    list = ['dp', 'minDist', 'param1', 'param2']
+    aux.createTrackbars(list, 'img')
+
+    # Circle detection
+    circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1, 50, param1=50, param2=30, minRadius=0,
+                               maxRadius=100)
+    if circles.size > 0:
+        circles = np.uint16(np.around(circles))
+        for i in circles[0, :]:
+            # draw the outer circle
+            cv2.circle(img, (i[0], i[1]), i[2], (0, 255, 0), 2)
+
+    # Showing image
+
+    cv2.imshow('img', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()

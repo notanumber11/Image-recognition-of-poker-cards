@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd52b43f-ef69-4c87-a641-41ccb369c3b6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Cascades/cascade_spades_sample_16.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PositiveSamples/sample_heart.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/PositiveSamples/sample_picas.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PositiveSamples/sample_clubs.jpg" afterPath="$PROJECT_DIR$/Samples/sample_clubs.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PositiveSamples/sample_diamonds.jpg" afterPath="$PROJECT_DIR$/Samples/sample_diamonds.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PositiveSamples/sample_hearts.jpg" afterPath="$PROJECT_DIR$/Samples/sample_hearts.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PositiveSamples/sample_spades.jpg" afterPath="$PROJECT_DIR$/Samples/sample_spades.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PositiveSamples/samples.jpg" afterPath="$PROJECT_DIR$/Samples/samples.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PositiveSamples/samples.png" afterPath="$PROJECT_DIR$/Samples/samples.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/PositiveSamples/watch.jpg" afterPath="$PROJECT_DIR$/Samples/watch.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aux.py" afterPath="$PROJECT_DIR$/aux.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
@@ -19,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Tutorial$main.coverage" NAME="main Coverage Results" MODIFIED="1492086280616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Tutorial$main.coverage" NAME="main Coverage Results" MODIFIED="1492099871399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
@@ -27,43 +29,18 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="294">
+              <caret line="93" column="27" lean-forward="false" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#199#2725#0" expanded="false" />
-                <element signature="e#2750#4024#0" expanded="false" />
-                <marker date="1492086280524" expanded="false" signature="4047:4749" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="4472:4652" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="4552:4652" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="5173:5678" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="5259:5678" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="6133:7551" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="6313:6373" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="6585:7296" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="6802:7296" ph="..." />
-                <marker date="1492086280524" expanded="false" signature="7301:7475" ph="..." />
+                <element signature="e#4378#5678#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="samples.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PositiveSamples/samples.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="samples.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PositiveSamples/samples.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2-spades4.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Images/2-spades4.jpg">
+      <file leaf-file-name="twos-1.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Images/twos-1.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -76,20 +53,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="randomCards-4.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Images/randomCards-4.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="randomCards-5.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Images/randomCards-5.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="randomCards-2.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Images/randomCards-2.jpg">
           <provider selected="true" editor-type-id="images">
@@ -97,15 +60,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fives-2.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Images/fives-2.jpg">
+      <file leaf-file-name="aux.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aux.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+              <folding>
+                <element signature="e#145#226#0" expanded="false" />
+                <element signature="e#261#431#0" expanded="false" />
+                <element signature="e#328#420#0" expanded="false" />
+                <element signature="e#464#685#0" expanded="false" />
+                <element signature="e#753#1309#0" expanded="false" />
+                <element signature="e#828#1260#0" expanded="false" />
+                <element signature="e#1078#1260#0" expanded="false" />
+                <element signature="e#1343#2107#0" expanded="false" />
+                <element signature="e#2585#2895#0" expanded="false" />
+                <element signature="e#2676#2870#0" expanded="false" />
+                <element signature="e#2739#2870#0" expanded="false" />
+                <element signature="e#2938#3093#0" expanded="false" />
+                <element signature="e#3009#3076#0" expanded="false" />
+                <element signature="e#3137#3229#0" expanded="false" />
+                <element signature="e#3167#3212#0" expanded="false" />
+                <element signature="e#3296#3652#0" expanded="false" />
+                <element signature="e#3906#4467#0" expanded="false" />
+                <element signature="e#4512#4569#0" expanded="false" />
+                <element signature="e#5086#5090#0" expanded="false" />
+                <element signature="e#5111#5888#0" expanded="false" />
+                <element signature="e#5433#5859#0" expanded="false" />
+                <element signature="e#5773#5785#0" expanded="false" />
+                <element signature="e#5942#6053#0" expanded="false" />
+                <element signature="e#6080#6809#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_diamonds.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Samples/sample_diamonds.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2-spades-hearts-1.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Images/2-spades-hearts-1.jpg">
+      <file leaf-file-name="samples.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Samples/samples.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_spades.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Samples/sample_spades.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_hearts.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Samples/sample_hearts.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_clubs.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Samples/sample_clubs.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -149,8 +168,8 @@
         <option value="$PROJECT_DIR$/output.txt" />
         <option value="$PROJECT_DIR$/commandsCreateCascade" />
         <option value="$PROJECT_DIR$/rectangle.py" />
-        <option value="$PROJECT_DIR$/aux.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/aux.py" />
       </list>
     </option>
   </component>
@@ -180,8 +199,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -204,7 +221,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PositiveSamples" />
+              <option name="myItemId" value="Samples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,6 +269,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -483,17 +502,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2968085" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2968085" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -502,8 +521,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,25 +538,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/aux.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Images/exampleCard1.jpg" />
     <entry file="file://$PROJECT_DIR$/Images/heart_template.jpg" />
     <entry file="file://$PROJECT_DIR$/Images/heart_template2.jpg" />
     <entry file="file://$PROJECT_DIR$/Images/prueba.jpg" />
     <entry file="file://$PROJECT_DIR$/NegativeSamples/8.jpg" />
     <entry file="file://$PROJECT_DIR$/NegativeSamples/33.jpg" />
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/watch.jpg">
+    <entry file="file://$PROJECT_DIR$/Samples/watch.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -567,11 +579,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Captures/img_3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Captures/img_3.jpg" />
     <entry file="file://$PROJECT_DIR$/Cascades/cascade-15-spades.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -586,11 +594,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Images/elefantes.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Captures/img_2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -632,32 +635,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/sample_heart.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/sample_picas.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PositiveSamples/sample_heart.jpg" />
+    <entry file="file://$PROJECT_DIR$/PositiveSamples/sample_picas.jpg" />
     <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1125584163/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="527" column="4" lean-forward="false" selection-start-line="527" selection-start-column="4" selection-end-line="527" selection-end-column="4" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/sample_spades.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/sample_hearts.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rectangle.py">
@@ -669,43 +653,6 @@
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aux.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="131" column="4" lean-forward="false" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#145#226#0" expanded="false" />
-            <element signature="e#261#431#0" expanded="false" />
-            <element signature="e#328#420#0" expanded="false" />
-            <element signature="e#464#685#0" expanded="false" />
-            <element signature="e#753#1309#0" expanded="false" />
-            <element signature="e#828#1260#0" expanded="false" />
-            <element signature="e#1078#1260#0" expanded="false" />
-            <element signature="e#2541#2633#0" expanded="false" />
-            <element signature="e#2571#2616#0" expanded="false" />
-            <element signature="e#2696#3052#0" expanded="false" />
-            <element signature="e#2810#3029#0" expanded="false" />
-            <element signature="e#4280#4284#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/sample_clubs.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/sample_diamonds.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Captures/img_1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Images/2-hearts1.jpg">
@@ -748,27 +695,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Images/randomCards-4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/randomCards-5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/randomCards-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Images/fives-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/randomCards-1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -783,34 +710,111 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/samples.png">
+    <entry file="file://$PROJECT_DIR$/Samples/samples.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PositiveSamples/samples.jpg">
+    <entry file="file://$PROJECT_DIR$/Images/randomCards-4.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/randomCards-5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Captures/img_1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Captures/img_2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Samples/sample_hearts.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Samples/sample_spades.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Samples/samples.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/twos-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/randomCards-1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/randomCards-2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Samples/sample_diamonds.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Samples/sample_clubs.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aux.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+          <folding>
+            <element signature="e#145#226#0" expanded="false" />
+            <element signature="e#261#431#0" expanded="false" />
+            <element signature="e#328#420#0" expanded="false" />
+            <element signature="e#464#685#0" expanded="false" />
+            <element signature="e#753#1309#0" expanded="false" />
+            <element signature="e#828#1260#0" expanded="false" />
+            <element signature="e#1078#1260#0" expanded="false" />
+            <element signature="e#1343#2107#0" expanded="false" />
+            <element signature="e#2585#2895#0" expanded="false" />
+            <element signature="e#2676#2870#0" expanded="false" />
+            <element signature="e#2739#2870#0" expanded="false" />
+            <element signature="e#2938#3093#0" expanded="false" />
+            <element signature="e#3009#3076#0" expanded="false" />
+            <element signature="e#3137#3229#0" expanded="false" />
+            <element signature="e#3167#3212#0" expanded="false" />
+            <element signature="e#3296#3652#0" expanded="false" />
+            <element signature="e#3906#4467#0" expanded="false" />
+            <element signature="e#4512#4569#0" expanded="false" />
+            <element signature="e#5086#5090#0" expanded="false" />
+            <element signature="e#5111#5888#0" expanded="false" />
+            <element signature="e#5433#5859#0" expanded="false" />
+            <element signature="e#5773#5785#0" expanded="false" />
+            <element signature="e#5942#6053#0" expanded="false" />
+            <element signature="e#6080#6809#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="294">
+          <caret line="93" column="27" lean-forward="false" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#199#2725#0" expanded="false" />
-            <element signature="e#2750#4024#0" expanded="false" />
-            <marker date="1492086280524" expanded="false" signature="4047:4749" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="4472:4652" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="4552:4652" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="5173:5678" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="5259:5678" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="6133:7551" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="6313:6373" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="6585:7296" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="6802:7296" ph="..." />
-            <marker date="1492086280524" expanded="false" signature="7301:7475" ph="..." />
+            <element signature="e#4378#5678#0" expanded="false" />
           </folding>
         </state>
       </provider>
