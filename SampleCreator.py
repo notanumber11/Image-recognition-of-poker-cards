@@ -75,20 +75,36 @@ class SampleCreator:
             # Testing time !!!
 
 
-
-            flag = self.sampleComparison.isSpades(sample)
-
-            if ( flag == True):
+            flag1 = self.sampleComparison.isSpades(sample)
+            if ( flag1 == True):
                 font = cv2.FONT_HERSHEY_SIMPLEX
                 cv2.putText(image, "Spades", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
 
 
-            flag = self.sampleComparison.isClubs(sample)
 
-            if ( flag == True):
+            flag2 = self.sampleComparison.isClubs(sample)
+            if ( flag2 == True):
                 font = cv2.FONT_HERSHEY_SIMPLEX
                 cv2.putText(image, "Clubs", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
             # if ( flag == False):
+            #     cv2.waitKey()
+
+
+
+            flag3 = self.sampleComparison.isHeart(sample)
+            if (flag3 == True):
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(image, "Hearts", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
+            # if ( flag == False):
+            #     cv2.waitKey()
+
+            
+            flag4 = self.sampleComparison.isDiamond(sample)
+            if (flag4 == True):
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(image, "Diamonds", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
+
+            # if ( flag1,flag2,flag3,flag4 == False):
             #     cv2.waitKey()
 
             listSamples.append(sample)

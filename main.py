@@ -225,4 +225,4 @@ def prueba():
 # s.compareMatchShape('Images/2-spades7.jpg')
 # aux.obtainColourPercentages(cv2.imread('Samples/sample_clubs.jpg'))
 sampleCreator = SampleCreator()
-sampleCreator.obtainSamples(imgPath='Images/randomCards-6.jpg')
+sampleCreator.obtainSamples(imgPath='Images/randomCards-1.jpg')
