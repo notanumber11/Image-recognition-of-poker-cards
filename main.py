@@ -2,12 +2,18 @@ from __future__ import division
 import cv2
 import numpy as np
 import aux as aux
+from Sample import Sample
+from SampleComparison import SampleComparison
+
 
 
 # Pass cross-image with the dimensions of the bounding rectangle that fit the contour
+from SampleCreator import SampleCreator
+
+
 def matchShapeSpade(img, offsetX=0,offsetY=0,img2=None):
 
-    #img = cv2.imread('Captures/img_2.jpg')
+    #img = cv2.imread('Images/all_spades.jpg')
 
     # Drawing the contours in the sampleImg
     sampleImg = cv2.imread('Samples/samples.jpg')
@@ -52,9 +58,9 @@ def matchShapeSpade(img, offsetX=0,offsetY=0,img2=None):
 
     cntsImgScale = np.copy(cntsImg)
 
-    # Reescale contours of img  0.0109097039178
+    # Reescale contours of img
     for j in range(len(cntsImgScale)):
-        scaleX = listWidthSamples[0] / listWidthImg[j]
+        scaleX = listWidthSamples[2] / listWidthImg[j]
         cntsImgScale[j] = scaleX * np.array(cntsImg[j])
         cntsImgScale[j] = cntsImgScale[j].astype(int)
 
@@ -62,11 +68,11 @@ def matchShapeSpade(img, offsetX=0,offsetY=0,img2=None):
 
     print 'Analisis con escala...'
     for i in range (len(cntsImgScale)):
-        threshold = 0.15
+        threshold = 0.10
         position = -1
         cx,cy = -1,-1
         for j in range (len(cnts_sample)):
-            ret = cv2.matchShapes(cnts_sample[j], cntsImgScale[i], 1, 0.0)
+            ret = cv2.matchShapes(cnts_sample[j], cntsImg[i], 1, 0.0)
             if(ret<threshold):
                 position = j
                 threshold = ret
@@ -74,7 +80,7 @@ def matchShapeSpade(img, offsetX=0,offsetY=0,img2=None):
                 cv2.drawContours(img, cntsImg[i], -1, (0, 255, 255), 2)
 
         if (position != -1):
-            print 'Detectamos ' + symbols[position]
+            #print 'Detectamos ' + symbols[position]
             if(img2!=None):
                 cv2.putText(img2, symbols[position], (cx+offsetX, cy+offsetY), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
             else:
@@ -82,7 +88,7 @@ def matchShapeSpade(img, offsetX=0,offsetY=0,img2=None):
             # print j,ret
 
     if(img2==None):
-        cv2.imshow('image', sampleImg)
+       # cv2.imshow('image', sampleImg)
         cv2.imshow('imgToCompare', img)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
@@ -141,7 +147,7 @@ def cascadeVideoCamera():
 def test():
 
 
-    imagePath = 'Images/twos-1.jpg'
+    imagePath = 'Images/randomCards-1.jpg'
     card_cascade = cv2.CascadeClassifier('Cascades/cascade-20-2-spades.xml')
 
     original = cv2.imread(imagePath)
@@ -161,6 +167,7 @@ def test():
             cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
             crop_img = img[y:y+h,x:x+w]
             matchShapeSpade(crop_img,x,y,img)
+
         cv2.imshow('image', img)
         k = cv2.waitKey(1) & 0xFF
 
@@ -205,9 +212,17 @@ def prueba():
     cv2.imshow('test',original)
     cv2.waitKey(0)
 
-prueba()
+#prueba()
 #cascadeVideoCamera()
 #test()
-#matchShapeSpade(cv2.imread('Captures/img_1.jpg'))
+# matchShapeSpade(cv2.imread('Images/randomCards-1.jpg'))
+
+#s = Sample("Samples/sample_clubs.jpg")
 
 
+#matchShapeSpade(cv2.imread('Images/all_spades.jpg'))
+# s = SampleComparison()
+# s.compareMatchShape('Images/2-spades7.jpg')
+# aux.obtainColourPercentages(cv2.imread('Samples/sample_clubs.jpg'))
+sampleCreator = SampleCreator()
+sampleCreator.obtainSamples(imgPath='Images/randomCards-6.jpg')

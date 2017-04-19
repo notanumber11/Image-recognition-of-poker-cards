@@ -1,3 +1,4 @@
+from __future__ import division
 import cv2
 import numpy as np
 import aux as rF
@@ -60,12 +61,53 @@ def changeRedToBlack(img):
 
     #a =  len(np.extract(mask2, mask2)) + len(np.extract(mask1,mask1))
     a = np.count_nonzero(mask2) +np.count_nonzero(mask1)
+    percentage = a / (img2.shape[0] * img2.shape[1])
+    # print img2.shape
+    # print "La cantidad de rojo es ", a
+    # print "El porcentaje de rojo es ", percentage
 
-    print "La longitud es " ,a
+
     img2[mask1 == 255] = [0, 0, 0]
     img2[mask2 == 255] = [0, 0, 0]
     return img2
 
+
+def obtainColourPercentages(img):
+    img2 = img.copy()
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    
+    # Red colour
+    lower_range = np.array([0, 100, 100], dtype=np.uint8)
+    upper_range = np.array([10, 255, 255], dtype=np.uint8)
+    # Threshold the HSV image to get only red colors
+    mask1 = cv2.inRange(hsv, lower_range, upper_range)
+    lower_range = np.array([170, 100, 100], dtype=np.uint8)
+    upper_range = np.array([190, 255, 255], dtype=np.uint8)
+    # Threshold the HSV image to get only red colors
+    mask2 = cv2.inRange(hsv, lower_range, upper_range)
+    redAmount = np.count_nonzero(mask2) +np.count_nonzero(mask1)
+
+
+    percentageRed = redAmount /(img.shape[0]*img.shape[1])
+    # print "La cantidad de rojo es ", redAmount
+    # print "El porcentaje de rojo es ", percentageRed
+    # img[mask1 == 255] = [0, 255, 0]
+    # img[mask2 == 255] = [0, 255, 0]
+
+
+    # Black colour
+    lower_range = np.array([0, 0, 0], dtype=np.uint8)
+    upper_range = np.array([180, 255, 100], dtype=np.uint8)
+    mask1 = cv2.inRange(hsv, lower_range, upper_range)
+    blackAmount = np.count_nonzero(mask1)
+    percentageBlack = blackAmount / (img.shape[0]*img.shape[1])
+
+    # img[mask1 == 255] = [255, 0, 0]
+    # img[mask2 == 255] = [255, 0, 0]
+    # cv2.imshow("testColor",img)
+    # print "Blac percentage ", percentageBlack
+    # cv2.waitKey()
+    return percentageRed,percentageBlack
 
 def fittingLine(img,cnt):
     rows, cols = img.shape[:2]
@@ -212,7 +254,7 @@ def detectCircles():
 
 
     list = ['dp', 'minDist', 'param1', 'param2']
-    aux.createTrackbars(list, 'img')
+    createTrackbars(list, 'img')
 
     # Circle detection
     circles = cv2.HoughCircles(gray, cv2.HOUGH_GRADIENT, 1, 50, param1=50, param2=30, minRadius=0,

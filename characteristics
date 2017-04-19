@@ -1,0 +1,20 @@
+------------>  spades
+Black =  0.34442800789 Red =  0.0
+Relation area  0.528229783037
+Relation perimeter  0.937368113261
+Aspect Ratio =  0.75
+------------>  clubs
+Black =  0.454266286466 Red =  0.0
+Relation area  0.545569203773
+Relation perimeter  1.07818498318
+Aspect Ratio =  0.969072164948
+------------>  heart
+Black =  0.0 Red =  0.603297035693
+Relation area  0.622353297036
+Relation perimeter  0.816116034619
+Aspect Ratio =  0.873563218391
+------------>  diamond
+Black =  0.0 Red =  0.451842105263
+Relation area  0.460460526316
+Relation perimeter  0.717584500936
+Aspect Ratio =  0.76
