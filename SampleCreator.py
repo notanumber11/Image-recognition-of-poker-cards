@@ -7,7 +7,7 @@ from SampleComparison import SampleComparison
 
 class SampleCreator:
 
-    thresholdArea = 80
+    thresholdArea = 50
     thresholdSize = 0.1
 
 
@@ -18,15 +18,21 @@ class SampleCreator:
 
 
     def obtainImages(self, imgPath = None, img = None):
-        if (img == None):
+        if (img is None):
             img = cv2.imread(imgPath)
 
         else:
             self.img = img
 
+        # Image preparation
         rows,cols,_ = img.shape
         imgBlack = aux.changeRedToBlack(img)
         contours = aux.obtainContours(imgBlack)
+
+        # Draw all the contours
+        # cv2.drawContours(img, contours, -1, (0, 255, 255), 2)
+        # cv2.imshow("imgContours",img)
+        # cv2.waitKey()
 
         listImgs = []
         listOffSetX = []
@@ -49,67 +55,65 @@ class SampleCreator:
                     listOffSetX.append(x)
                     listOffSetY.append(y)
 
-        for sample in listImgs:
-            sampleBlack = aux.changeRedToBlack(sample)
-            contoursSample = aux.obtainContours(sampleBlack)
-            # cv2.drawContours(sample, contoursSample, 0, (0, 255, 255), 2)
+        return img,listImgs,listOffSetX,listOffSetY
 
 
-
-        return listImgs,listOffSetX,listOffSetY
-
-
-    def obtainSamples(self,imgPath = None, img = None):
+    def obtainSamples(self, imgPath = None, img = None):
         listSamples = []
-        image = cv2.imread(imgPath)
 
+        img,listImgs,listOffSetX,listOffSetY  = self.obtainImages(imgPath, img)
 
-
-
-        listImgs,listOffSetX,listOffSetY  = self.obtainImages(imgPath,img)
-        for i,img in enumerate(listImgs):
-            sample = Sample(img = img,offSetX=listOffSetX[i],offSetY=listOffSetY[i])
-            cv2.drawContours(sample.img, sample.contours, 0, (0, 255, 255), 2)
-            cv2.imshow("sample",sample.img)
-
-            # Testing time !!!
-
-
-            flag1 = self.sampleComparison.isSpades(sample)
-            if ( flag1 == True):
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                cv2.putText(image, "Spades", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
-
-
-
-            flag2 = self.sampleComparison.isClubs(sample)
-            if ( flag2 == True):
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                cv2.putText(image, "Clubs", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
-            # if ( flag == False):
-            #     cv2.waitKey()
-
-
-
-            flag3 = self.sampleComparison.isHeart(sample)
-            if (flag3 == True):
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                cv2.putText(image, "Hearts", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
-            # if ( flag == False):
-            #     cv2.waitKey()
-
-            
-            flag4 = self.sampleComparison.isDiamond(sample)
-            if (flag4 == True):
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                cv2.putText(image, "Diamonds", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
-
-            # if ( flag1,flag2,flag3,flag4 == False):
-            #     cv2.waitKey()
-
+        for i, img2 in enumerate(listImgs):
+            sample = Sample(img = img2, offSetX=listOffSetX[i], offSetY=listOffSetY[i])
             listSamples.append(sample)
 
+        return img,listSamples,listOffSetX,listOffSetY
 
-        cv2.imshow("sample", image)
-        cv2.waitKey()
-        return listSamples
+
+    def testSamples(self,img,listSamples,listOffSetX,listOffSetY):
+
+        # Testing time !!!
+        for i,sample in enumerate(listSamples):
+            # cv2.drawContours(sample.img, sample.contours, -1, (0, 255, 255), 2)
+            # cv2.imshow("test", sample.img)
+            # cv2.waitKey()
+
+            flagSpades = self.sampleComparison.isSpades(sample)
+            if (flagSpades == True):
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(img, "Spades", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
+
+            flagClubs = self.sampleComparison.isClubs(sample)
+            if (flagClubs == True):
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(img, "Clubs", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
+
+
+            flagHearts = self.sampleComparison.isHeart(sample)
+            if (flagHearts == True):
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(img, "Hearts", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
+
+            flagDiamonds = self.sampleComparison.isDiamond(sample)
+            if (flagDiamonds == True):
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                cv2.putText(img, "Diamonds", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
+
+            # if ( flagSpades == False):
+            #     cv2.imshow("sample", sample.img)
+            #     cv2.waitKey()
+
+            # if (flagClubs or flagDiamonds or flagHearts or flagSpades):
+            #     cv2.imshow("sample", sample.img)
+            #     cv2.waitKey()
+
+        # print 'Ejecutando test '
+        # cv2.imshow("sample", img)
+        # cv2.waitKey()
+
+
+    def showSamples(self,listSamples):
+        for sample in listSamples:
+            cv2.imshow("sample", sample.img)
+            cv2.waitKey()
+            cv2.destroyAllWindows()

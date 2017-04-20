@@ -10,7 +10,7 @@ class Sample:
     def __init__(self,path = None, img = None, offSetX= 0, offSetY = 0):
         self.offSetX = offSetX
         self.offSetY = offSetY
-        if (img == None):
+        if (img is None):
             # Load image
             self.img = cv2.imread(path)
         else:
@@ -59,13 +59,23 @@ class Sample:
         self.percentageRed,self.percentageBlack = aux.obtainColourPercentages(self.img[self.y:self.y+self.h,self.x:self.x+self.w])
 
 
+    def printSample(self):
+        print 'Rectangle area = ',self.rectangleArea
+        print 'Rectangle perimeter = ',self.rectanglePerimeter
+        print 'Contour area = ' ,self.contourArea
+        print 'Contour perimeter = ',self.contourPerimeter
+
+        print 'Relation area = ', self.relationArea
+        print 'Relation perimeter = ', self.relationPerimeter
+        print 'Aspect ratio = ', self.aspectRatio
+
+        print 'Percentage red = ', self.percentageRed
+        print 'Percentage black =', self.percentageBlack
 
 
-
+    def drawSample(self):
         # Draw contours
         # cv2.drawContours(self.img, self.contours, -1, (0, 255, 255), 2)
-        # Testing code
-        # cv2.imshow("test",self.img[self.y:self.y+self.h,self.x:self.x+self.w])
-        # cv2.waitKey()
-
-
+        cv2.imshow("DrawSample",self.img[self.y:self.y+self.h,self.x:self.x+self.w])
+        cv2.waitKey()
+        cv2.destroyAllWindows()

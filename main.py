@@ -100,9 +100,11 @@ def cascadeVideoCamera():
     cap = cv2.VideoCapture(0)
     watch_cascade = cv2.CascadeClassifier('Cascades/cascade-20-2-spades.xml')
     number = 1
-
+    sampleCreator = SampleCreator()
     while 1:
         ret, img = cap.read()
+
+        sampleCreator.obtainSamples(img=img)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
         # cascade detection
@@ -112,7 +114,7 @@ def cascadeVideoCamera():
         for (x, y, w, h) in cards:
             cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
             crop_img = img[y:y+h,x:x+w]
-            matchShapeSpade(crop_img,x,y)
+            # matchShapeSpade(crop_img,x,y)
             #
             # # Draw rectangle in the contour
             # x1, y1, w1, h1 = cv2.boundingRect(contour)
@@ -144,7 +146,7 @@ def cascadeVideoCamera():
     return
 
 
-def test():
+def photoTest():
 
 
     imagePath = 'Images/randomCards-1.jpg'
@@ -187,6 +189,36 @@ def test():
             break
     cv2.destroyAllWindows()
 
+def photo(imagePath):
+    # Load image
+    img = cv2.imread(imagePath)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    # Load sample creator
+    sampleCreator = SampleCreator()
+    # # Run sample creator
+    # img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(imagePath)
+    # sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
+
+    # Load classifier
+    card_cascade = cv2.CascadeClassifier('Cascades/cascade-20-2-spades.xml')
+    # Params classifier
+    minNeighbors = 70
+    scaleFactor = 1.05
+
+    # Perform first detection with haar cascade
+    cards = card_cascade.detectMultiScale(gray, scaleFactor=scaleFactor, minNeighbors=minNeighbors)
+    for (x, y, w, h) in cards:
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
+        crop_img = img[y:y+h,x:x+w]
+
+        # Run sample creator
+        imgSample, listSamples, listOffSetX, listOffSetY = sampleCreator.obtainSamples(img=crop_img)
+        sampleCreator.testSamples(imgSample, listSamples, listOffSetX, listOffSetY)
+        # Show samples
+        sampleCreator.showSamples(listSamples)
+    cv2.imshow('image', img)
+    cv2.waitKey()
+    cv2.destroyAllWindows()
 
 def prueba():
     imagePath = 'Samples/sample_clubs.jpg'
@@ -212,17 +244,11 @@ def prueba():
     cv2.imshow('test',original)
     cv2.waitKey(0)
 
-#prueba()
-#cascadeVideoCamera()
-#test()
-# matchShapeSpade(cv2.imread('Images/randomCards-1.jpg'))
 
-#s = Sample("Samples/sample_clubs.jpg")
+# cascadeVideoCamera()
 
+photo("Images/fives-1.jpg")
 
-#matchShapeSpade(cv2.imread('Images/all_spades.jpg'))
-# s = SampleComparison()
-# s.compareMatchShape('Images/2-spades7.jpg')
-# aux.obtainColourPercentages(cv2.imread('Samples/sample_clubs.jpg'))
-sampleCreator = SampleCreator()
-sampleCreator.obtainSamples(imgPath='Images/randomCards-1.jpg')
+# sampleCreator = SampleCreator()
+# img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(imgPath='Images/fives-3.jpg')
+# sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
