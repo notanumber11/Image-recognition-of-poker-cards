@@ -2,13 +2,13 @@ from __future__ import division
 import cv2
 
 
-class SampleClubs:
+class SampleClub:
 
-    minClubsAspectRatio = 0.85
-    maxClubsAspectRatio = 1.05
+    minClubAspectRatio = 0.85
+    maxClubAspectRatio = 1.05
 
-    minClubsPerimeter = 0.85
-    maxClubsPerimeter = 1.4
+    minClubPerimeter = 0.85
+    maxClubPerimeter = 1.4
 
     minBlack = 0.25
     maxBlack = 0.70
@@ -31,43 +31,43 @@ class SampleClubs:
         return False
 
 
-    def isClubsPerimeter(self, sample):
-        if (sample.relationPerimeter > self.minClubsPerimeter and sample.relationPerimeter < self.maxClubsPerimeter):
+    def isClubPerimeter(self, sample):
+        if (sample.relationPerimeter > self.minClubPerimeter and sample.relationPerimeter < self.maxClubPerimeter):
             return True
         return False
 
-    def isClubsAspectRatio(self,sample):
-        if (sample.aspectRatio > self.minClubsAspectRatio and sample.aspectRatio < self.maxClubsAspectRatio):
+    def isClubAspectRatio(self,sample):
+        if (sample.aspectRatio > self.minClubAspectRatio and sample.aspectRatio < self.maxClubAspectRatio):
             return True
         return False
 
-    def isClubsMatchShape(self,sample):
+    def isClubMatchShape(self,sample):
         ret = cv2.matchShapes(self.clubsSample.contours[0], sample.contours[0], 1, 0.0)
         if (ret < self.matchShapeThreshold):
             return  True, ret
         return False, ret
 
-    def isClubs(self,sample):
-        matchShape,ret = self.isClubsMatchShape(sample)
-        aspectRatio = self.isClubsAspectRatio(sample)
-        perimeter = self.isClubsPerimeter(sample)
+    def isClub(self,sample):
+        matchShape,ret = self.isClubMatchShape(sample)
+        aspectRatio = self.isClubAspectRatio(sample)
+        perimeter = self.isClubPerimeter(sample)
         Black = self.isBlack(sample)
 
-        # self.printClubs(aspectRatio, Black, matchShape, perimeter, sample)
+        # self.printClub(aspectRatio, Black, matchShape, perimeter, sample)
         return matchShape and aspectRatio and perimeter and Black
 
-    def printClubs(self, aspectRatio, Red, matchShape, perimeter, sample):
+    def printClub(self, aspectRatio, Red, matchShape, perimeter, sample):
         print ""
         print "<--------------------------------------------------------->"
         print " --  CLUBS   ---"
         print  "Is Black ? ", self.isBlack(sample), sample.percentageBlack
-        print " Is  Perimeter? ", self.isClubsPerimeter(sample), sample.relationPerimeter
-        print " Is  Aspect Ratio? ", self.isClubsAspectRatio(sample), sample.aspectRatio
-        print " Is  match shape? ", self.isClubsMatchShape(sample)
+        print " Is  Perimeter? ", self.isClubPerimeter(sample), sample.relationPerimeter
+        print " Is  Aspect Ratio? ", self.isClubAspectRatio(sample), sample.aspectRatio
+        print " Is  match shape? ", self.isClubMatchShape(sample)
         if matchShape and aspectRatio and perimeter and Red:
-            print "Is Clubs !"
+            print "Is Club !"
         else:
-            print "Is not Clubs !"
+            print "Is not Club !"
         print ""
         print "<--------------------------------------------------------->"
         print ""

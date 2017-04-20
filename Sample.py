@@ -43,6 +43,26 @@ class Sample:
 
         # Obtain rectangle dimensions
         self.x,self.y,self.w,self.h = cv2.boundingRect(self.contours[0])
+
+        rect = cv2.minAreaRect(self.contours[0])
+
+        box = cv2.boxPoints(rect)
+        self.box = np.int0(box)
+
+
+
+        # print ' <<<<<<<< Inicio box >>>>>>>>>>'
+        # print rect
+        # print box
+        # print self.x, self.y, self.w, self.h
+        #
+        # print ' <<<<<<<< Fin box >>>>>>>>>>'
+        #
+        # cv2.drawContours(self.img, [self.box], 0, (0, 0, 255), 2)
+        # cv2.rectangle(self.img, (self.x, self.y), (self.x + self.w, self.y + self.h), (0, 255, 0), 2)
+
+
+
         # Obtain dimensions
         self.rectangleArea = self.w * self.h
         self.rectanglePerimeter = self.w*2+self.h*2
@@ -58,12 +78,15 @@ class Sample:
         # Obtain percentage of red/black
         self.percentageRed,self.percentageBlack = aux.obtainColourPercentages(self.img[self.y:self.y+self.h,self.x:self.x+self.w])
 
+        self.label = None
+
 
     def printSample(self):
-        print 'Rectangle area = ',self.rectangleArea
-        print 'Rectangle perimeter = ',self.rectanglePerimeter
-        print 'Contour area = ' ,self.contourArea
-        print 'Contour perimeter = ',self.contourPerimeter
+        print '<<< ----------------------------------- >>>'
+        # print 'Rectangle area = ',self.rectangleArea
+        # print 'Rectangle perimeter = ',self.rectanglePerimeter
+        # print 'Contour area = ' ,self.contourArea
+        # print 'Contour perimeter = ',self.contourPerimeter
 
         print 'Relation area = ', self.relationArea
         print 'Relation perimeter = ', self.relationPerimeter
@@ -71,7 +94,7 @@ class Sample:
 
         print 'Percentage red = ', self.percentageRed
         print 'Percentage black =', self.percentageBlack
-
+        print '<<< ----------------------------------- >>>'
 
     def drawSample(self):
         # Draw contours

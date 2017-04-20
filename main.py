@@ -114,18 +114,6 @@ def cascadeVideoCamera():
         for (x, y, w, h) in cards:
             cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
             crop_img = img[y:y+h,x:x+w]
-            # matchShapeSpade(crop_img,x,y)
-            #
-            # # Draw rectangle in the contour
-            # x1, y1, w1, h1 = cv2.boundingRect(contour)
-            # x1 = x+x1
-            # y1 = y +y1
-            # cv2.rectangle(img, (x1, y1), (x1 + w1, y1 + h1), (0, 255, 0), 2)
-            #
-            # # The rectangle image with the contour
-            # crop_img = img[y1:y1 + h1, x1:x1 + w1]
-
-
 
         # show the results
         cv2.imshow('img', img)
@@ -146,10 +134,7 @@ def cascadeVideoCamera():
     return
 
 
-def photoTest():
-
-
-    imagePath = 'Images/randomCards-1.jpg'
+def photoTest(imagePath):
     card_cascade = cv2.CascadeClassifier('Cascades/cascade-20-2-spades.xml')
 
     original = cv2.imread(imagePath)
@@ -189,9 +174,7 @@ def photoTest():
             break
     cv2.destroyAllWindows()
 
-def photo(imagePath):
-    # Load image
-    img = cv2.imread(imagePath)
+def photo(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # Load sample creator
     sampleCreator = SampleCreator()
@@ -202,7 +185,7 @@ def photo(imagePath):
     # Load classifier
     card_cascade = cv2.CascadeClassifier('Cascades/cascade-20-2-spades.xml')
     # Params classifier
-    minNeighbors = 70
+    minNeighbors = 80
     scaleFactor = 1.05
 
     # Perform first detection with haar cascade
@@ -213,42 +196,38 @@ def photo(imagePath):
 
         # Run sample creator
         imgSample, listSamples, listOffSetX, listOffSetY = sampleCreator.obtainSamples(img=crop_img)
-        sampleCreator.testSamples(imgSample, listSamples, listOffSetX, listOffSetY)
         # Show samples
-        sampleCreator.showSamples(listSamples)
+        # sampleCreator.showSamples(listSamples)
+        # Test samples
+        sampleCreator.testSamples(imgSample, listSamples, listOffSetX, listOffSetY)
+
     cv2.imshow('image', img)
     cv2.waitKey()
     cv2.destroyAllWindows()
 
-def prueba():
-    imagePath = 'Samples/sample_clubs.jpg'
-
-    original = cv2.imread(imagePath)
-    original = cv2.resize(original, (0, 0), fx=1, fy=1)
-
-    # Rotation test
-    rows, cols, m = original.shape
-
-    M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 90, 1)
-   # original = cv2.warpAffine(original, M, (cols, rows))
-
-    black = aux.changeRedToBlack(original)
-    contours = aux.obtainContours(black)
-    print len(contours)
-    aux.drawAllContours(contours,original)
-
-    # aux.drawBoundingRectangle(contours, original, 0, 0)
-    # aux.drawMinimalRectangle(original,contours)
-    for contour in contours[:-1]:
-        aux.fittingLine(original,contour)
-    cv2.imshow('test',original)
-    cv2.waitKey(0)
 
 
 # cascadeVideoCamera()
 
-photo("Images/fives-1.jpg")
 
-# sampleCreator = SampleCreator()
-# img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(imgPath='Images/fives-3.jpg')
+
+sampleCreator = SampleCreator()
+
+img = cv2.imread("Images/all_spades.jpg")
+
+photo(img)
+
+# num_rows, num_cols = img.shape[:2]
+#
+# rotation_matrix = cv2.getRotationMatrix2D((num_cols/2, num_rows/2), 30, 1)
+# img = cv2.warpAffine(img, rotation_matrix, (num_cols, num_rows))
+
+# img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
 # sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
+# cv2.imshow('testSample',img)
+# cv2.waitKey()
+# from PIL import Image
+# from pytesseract import image_to_string
+#
+# # print image_to_string(Image.open('test.png'))
+# print image_to_string(Image.open('Images/text6.png'), lang='eng')

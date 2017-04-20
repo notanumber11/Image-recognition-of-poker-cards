@@ -2,10 +2,10 @@ from __future__ import division
 import cv2
 import aux as aux
 from Sample import Sample
-from SampleClubs import SampleClubs
+from SampleClub import SampleClub
 from SampleDiamond import SampleDiamond
 from SampleHeart import SampleHeart
-from SampleSpades import SampleSpades
+from SampleSpade import SampleSpade
 
 
 class SampleComparison:
@@ -37,8 +37,8 @@ class SampleComparison:
 
         self.sampleHeart = SampleHeart(self.heart)
         self.sampleDiamond = SampleDiamond(self.diamond)
-        self.sampleClubs = SampleClubs(self.clubs)
-        self.sampleSpades = SampleSpades(self.spades)
+        self.sampleClubs = SampleClub(self.clubs)
+        self.sampleSpade = SampleSpade(self.spades)
 
         # self.printInfo()
 
@@ -90,14 +90,26 @@ class SampleComparison:
         # cv2.imshow("img",img2)
         # cv2.waitKey()
 
-    def isSpades(self, sample):
-        return self.sampleSpades.isSpades(sample)
+    def isSpade(self, sample):
+        isSpade = self.sampleSpade.isSpade(sample)
+        if isSpade:
+            sample.label = 'S'
+        return isSpade
 
-    def isClubs(self, sample):
-        return self.sampleClubs.isClubs(sample)
+    def isClub(self, sample):
+        isClub = self.sampleClubs.isClub(sample)
+        if isClub:
+            sample.label = 'C'
+        return isClub
 
     def isHeart(self, sample):
-        return self.sampleHeart.isHeart(sample)
+        isHearts = self.sampleHeart.isHeart(sample)
+        if isHearts:
+            sample.label = 'H'
+        return isHearts 
 
     def isDiamond(self,sample):
-        return self.sampleDiamond.isDiamond(sample)
+        isDiamond = self.sampleDiamond.isDiamond(sample)
+        if isDiamond:
+            sample.label = 'D'
+        return isDiamond 

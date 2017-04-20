@@ -1,5 +1,8 @@
 from __future__ import division
 import cv2
+
+import numpy as np
+
 import aux as aux
 from Sample import Sample
 from SampleComparison import SampleComparison
@@ -9,8 +12,9 @@ class SampleCreator:
 
     thresholdArea = 50
     thresholdSize = 0.1
-
-
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    symbolsColour = (0,255,255)
+    idColour = (255,255,0)
     sampleComparison = SampleComparison()
 
     def __init__(self):
@@ -78,34 +82,35 @@ class SampleCreator:
             # cv2.imshow("test", sample.img)
             # cv2.waitKey()
 
-            flagSpades = self.sampleComparison.isSpades(sample)
-            if (flagSpades == True):
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                cv2.putText(img, "Spades", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
+            flagSpades = self.sampleComparison.isSpade(sample)
 
-            flagClubs = self.sampleComparison.isClubs(sample)
-            if (flagClubs == True):
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                cv2.putText(img, "Clubs", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
-
+            flagClubs = self.sampleComparison.isClub(sample)
 
             flagHearts = self.sampleComparison.isHeart(sample)
-            if (flagHearts == True):
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                cv2.putText(img, "Hearts", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
 
             flagDiamonds = self.sampleComparison.isDiamond(sample)
-            if (flagDiamonds == True):
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                cv2.putText(img, "Diamonds", (listOffSetX[i], listOffSetY[i]), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
 
-            # if ( flagSpades == False):
-            #     cv2.imshow("sample", sample.img)
-            #     cv2.waitKey()
 
-            # if (flagClubs or flagDiamonds or flagHearts or flagSpades):
-            #     cv2.imshow("sample", sample.img)
-            #     cv2.waitKey()
+
+
+            list = [flagHearts,flagSpades,flagDiamonds,flagClubs]
+            if self.TrueXor(list):
+                cv2.putText(img, sample.label, (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.symbolsColour, 2,cv2.LINE_AA)
+                # aux.fittingLine2(img,sample.contours[0],listOffSetX[i], listOffSetY[i])
+                # aux.fittingMinimumRectangle(img,sample.contours[0],listOffSetX[i], listOffSetY[i])
+
+            isSymbol = flagClubs or flagDiamonds or flagHearts or flagSpades
+
+            if not isSymbol:
+
+                vis = np.concatenate((sample.img,sample.img), axis=1)
+                vis = np.concatenate((vis,vis), axis=1)
+                vis = np.concatenate((vis, vis), axis=1)
+                character = self.detectCharacter(vis)
+
+                if character is not None:
+                    cv2.putText(img, character, (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.idColour, 2,cv2.LINE_AA)
+
 
         # print 'Ejecutando test '
         # cv2.imshow("sample", img)
@@ -117,3 +122,32 @@ class SampleCreator:
             cv2.imshow("sample", sample.img)
             cv2.waitKey()
             cv2.destroyAllWindows()
+
+
+    def detectCharacter(self,img):
+        from PIL import Image
+        from pytesseract import image_to_string
+
+        cv2_im = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+
+
+
+        pil_im = Image.fromarray(cv2_im)
+
+
+
+        # print image_to_string(Image.open('test.png'))
+        result = []
+        result = image_to_string(pil_im, lang='eng')
+        
+
+        if len (result) > 0 and ((ord(result[0])>47 and ord(result[0])< 58) or (ord(result[0])>64 and ord(result[0])< 91)):
+            # print 'Detectado ' + result
+
+            return result[0]
+        return None
+
+    def TrueXor(self,iterable):
+        it = iter(iterable)
+        return any(it) and not any(it)
