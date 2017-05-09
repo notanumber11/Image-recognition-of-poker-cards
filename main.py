@@ -9,6 +9,7 @@ from SampleComparison import SampleComparison
 
 # Pass cross-image with the dimensions of the bounding rectangle that fit the contour
 from SampleCreator import SampleCreator
+from matplotlib import pyplot as plt
 
 
 def matchShapeSpade(img, offsetX=0,offsetY=0,img2=None):
@@ -178,6 +179,7 @@ def photo(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # Load sample creator
     sampleCreator = SampleCreator()
+
     # # Run sample creator
     # img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(imagePath)
     # sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
@@ -185,13 +187,13 @@ def photo(img):
     # Load classifier
     card_cascade = cv2.CascadeClassifier('Cascades/cascade-20-2-spades.xml')
     # Params classifier
-    minNeighbors = 80
+    minNeighbors = 20
     scaleFactor = 1.05
 
     # Perform first detection with haar cascade
     cards = card_cascade.detectMultiScale(gray, scaleFactor=scaleFactor, minNeighbors=minNeighbors)
     for (x, y, w, h) in cards:
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
+        # cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
         crop_img = img[y:y+h,x:x+w]
 
         # Run sample creator
@@ -201,11 +203,31 @@ def photo(img):
         # Test samples
         sampleCreator.testSamples(imgSample, listSamples, listOffSetX, listOffSetY)
 
+    # blur = cv2.GaussianBlur(gray, (5, 5), 0)
+    # ret3, th1 = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    # ret, th1 = cv2.threshold(blur, 150, 255, cv2.THRESH_BINARY)
+    # im2, contours, hierarchy = cv2.findContours(th1, cv2.RETR_TREE, cv2.CHAIN_APPROX_TC89_L1)
+    # aux.drawAllContours(contours,img)
     cv2.imshow('image', img)
     cv2.waitKey()
     cv2.destroyAllWindows()
 
 
+def thresholding(img):
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img = cv2.medianBlur(img, 5)
+
+    ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
+    th2 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C,  cv2.THRESH_BINARY, 11, 2)
+    th3 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+    titles = ['Original Image', 'Global Thresholding (v = 127)',
+              'Adaptive Mean Thresholding', 'Adaptive Gaussian Thresholding']
+    images = [img, th1, th2, th3]
+    for i in xrange(4):
+        plt.subplot(2, 2, i + 1), plt.imshow(images[i], 'gray')
+        plt.title(titles[i])
+        plt.xticks([]), plt.yticks([])
+    plt.show()
 
 # cascadeVideoCamera()
 
@@ -213,19 +235,33 @@ def photo(img):
 
 sampleCreator = SampleCreator()
 
-img = cv2.imread("Images/all_spades.jpg")
+img = cv2.imread("Images/randomCards-3.jpg")
 
 photo(img)
+
+# thresholding(img)
+
+# img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
+# sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
+
+# img2 = cv2.imread("Images/all_spades_together_rotated2.jpg")
+# img2,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img2 )
+# sampleCreator.testSamples(img2,listSamples,listOffSetX,listOffSetY )
+# cv2.imshow('testSample2',img2)
+
+# cv2.imshow('testSample',img)
+#
+# cv2.waitKey()
+
+
+
 
 # num_rows, num_cols = img.shape[:2]
 #
 # rotation_matrix = cv2.getRotationMatrix2D((num_cols/2, num_rows/2), 30, 1)
 # img = cv2.warpAffine(img, rotation_matrix, (num_cols, num_rows))
 
-# img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
-# sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
-# cv2.imshow('testSample',img)
-# cv2.waitKey()
+
 # from PIL import Image
 # from pytesseract import image_to_string
 #

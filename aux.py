@@ -128,17 +128,16 @@ def fittingLine2(img,cnt,offSetX,offSetY):
     [vx, vy, x, y] = cv2.fitLine(cnt, cv2.DIST_L2, 0, 0.01, 0.01)
     lefty = int((-x * vy / vx) + y)
     righty = int(((cols - x) * vy / vx) + y)
-    cv2.line(img, (cols - 1+offSetX, righty+offSetY), (0+offSetX, lefty+offSetY), (0, 255, 0), 2)
+    if (cols - 1+offSetX > 0 and  righty+offSetY > 0 and 0+offSetX>0 and lefty+offSetY):
+        cv2.line(img, (cols - 1+offSetX, righty+offSetY), (0+offSetX, lefty+offSetY), (0, 255, 0), 2)
+    # print vx,vy
 
-
-def fittingMinimumRectangle(img,cnt,offSetX,offSetY):
-        rect = cv2.minAreaRect(cnt)
-        box = cv2.boxPoints(rect)
-        box = np.int0(box)
-        for b in box:
-            b[0] += b[0]+offSetX
-            b[1] += b[1]+offSetY
-        cv2.drawContours(img,[box],0,(0,0,255),2)
+def fittingMinimumRectangle(img,cnt):
+    rect = cv2.minAreaRect(cnt)
+    box = cv2.boxPoints(rect)
+    box = np.int0(box)
+    # cv2.drawContours(img, [box], 0, (0, 0, 255), 2)
+    return rect[2]
 
 def extractCentroid(contours):
     listCX = []

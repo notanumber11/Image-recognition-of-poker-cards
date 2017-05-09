@@ -4,11 +4,11 @@ import cv2
 
 class SampleClub:
 
+    minClubPerimeter = 0.80
+    maxClubPerimeter = 1.4
+
     minClubAspectRatio = 0.85
     maxClubAspectRatio = 1.05
-
-    minClubPerimeter = 0.85
-    maxClubPerimeter = 1.4
 
     minBlack = 0.25
     maxBlack = 0.70
