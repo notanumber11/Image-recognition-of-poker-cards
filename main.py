@@ -237,21 +237,21 @@ sampleCreator = SampleCreator()
 
 img = cv2.imread("Images/randomCards-3.jpg")
 
-photo(img)
+# photo(img)
 
 # thresholding(img)
 
-# img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
-# sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
+img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
+sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
 
 # img2 = cv2.imread("Images/all_spades_together_rotated2.jpg")
 # img2,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img2 )
 # sampleCreator.testSamples(img2,listSamples,listOffSetX,listOffSetY )
 # cv2.imshow('testSample2',img2)
 
-# cv2.imshow('testSample',img)
-#
-# cv2.waitKey()
+cv2.imshow('testSample',img)
+
+cv2.waitKey()
 
 
 

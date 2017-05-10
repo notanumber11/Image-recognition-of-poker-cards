@@ -97,7 +97,7 @@ class SampleCreator:
             if self.TrueXor(list):
                 # cv2.putText(img, sample.label, (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.symbolsColour, 2,cv2.LINE_AA)
                 angle = aux.fittingMinimumRectangle(sample.img, sample.contours[0])
-                # cv2.putText(img, str(int(angle)), (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.symbolsColour, 2,cv2.LINE_AA)
+                cv2.putText(img, str(int(angle)), (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.symbolsColour, 2,cv2.LINE_AA)
 
             isSymbol = flagClubs or flagDiamonds or flagHearts or flagSpades
 
@@ -129,9 +129,9 @@ class SampleCreator:
                 # cv2.destroyAllWindows()
             #     character = self.detectCharacter(img,sample,listOffSetX[i],listOffSetY[i])
 
-            if not isSymbol:
-                ocr = OCR()
-                character = ocr.detectCharacter(img, sample, listOffSetX[i], listOffSetY[i])
+            # if not isSymbol:
+            #     ocr = OCR()
+            #     character = ocr.detectCharacter(img, sample, listOffSetX[i], listOffSetY[i])
         print minAngle,maxAngle
 
     def showSamples(self,listSamples):
