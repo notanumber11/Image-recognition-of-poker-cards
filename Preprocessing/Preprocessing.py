@@ -10,7 +10,8 @@ class Preprocessing:
     def __init__(self):
         pass
 
-    def preprocessingImage(self,pathImage):
+    @staticmethod
+    def preprocessingImage(pathImage):
         # Read image from path
         img = cv2.imread(pathImage)
 
@@ -32,26 +33,26 @@ class Preprocessing:
         contrastImg = grayNoise
         # histogram
         # contrastImg = cv2.equalizeHist(grayNoise)
-
         clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
         contrastImg = clahe.apply(grayNoise)
 
 
         # Thresholding
-        ret, threshold = cv2.threshold(contrastImg,180 , 255, cv2.THRESH_BINARY)
+        # blur = cv2.GaussianBlur(gray, (5, 5), 0)
+        # ret, threshold = cv2.threshold(blur,200 , 255, cv2.THRESH_BINARY)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 2)
-        ret2, threshold = cv2.threshold(contrastImg, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-        # print ret2
-
+        ret2, threshold = cv2.threshold(contrastImg, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
         # Contours
         imgContours = np.copy(img)
-        _, contours, hierarchy = cv2.findContours(threshold, cv2.RETR_TREE, cv2.CHAIN_APPROX_TC89_L1)
+        _, contours, hierarchy = cv2.findContours(threshold,cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         cv2.drawContours(imgContours, contours, -1, (0, 255, 255), 2)
 
 
-        Preprocessing.printImages(listImage = [gray,contrastImg,threshold,imgContours])
+        # Preprocessing.printImages(listImage = [gray,contrastImg,threshold,imgContours])
+
+        return img,gray,threshold,contours
 
     @staticmethod
     def printImages(listImage):
@@ -106,3 +107,38 @@ class Preprocessing:
         img2[mask1 == 255] = [0, 0, 0]
         img2[mask2 == 255] = [0, 0, 0]
         return img2
+
+    @staticmethod
+    def deleteContours(contours, height, area):
+        deleteList = []
+        for i in range(0, (len(contours))):
+            x, y, w, h = cv2.boundingRect(contours[i])
+            # print h
+            if (h < height or h > 2 * height):
+                deleteList.append(i)
+
+        contoursFiltered = np.delete(contours, deleteList, axis=0)
+        # print 'Lenght ', len(contours)
+        return contoursFiltered
+
+    @staticmethod
+    def printContours1by1(contours, finalImage):
+        print "Drawing contours = ", len(contours)
+        for cnt in contours:
+            img2 = np.copy(finalImage)
+            x, y, w, h = cv2.boundingRect(cnt)
+            cv2.rectangle(img2, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            cv2.drawContours(img2, cnt, -1, (0, 0, 255), 2)
+            cv2.imshow("image", img2)
+            cv2.waitKey()
+
+    @staticmethod
+    def obtainCentroid(cnts):
+        centroidList = []
+        for cnt in cnts:
+            x, y, w, h = cv2.boundingRect(cnt)
+            cx = x + w / 2
+            cy = y + h / 2
+            # print cx,cy
+            centroidList.append([cx, cy])
+        return centroidList

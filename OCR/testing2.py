@@ -2,15 +2,15 @@ import cv2
 import numpy as np
 
 #######   training part    ###############
-samples = np.loadtxt('generalsamples.data',np.float32)
-responses = np.loadtxt('generalresponses.data',np.float32)
+samples = np.loadtxt('example_test_samples.data',np.float32)
+responses = np.loadtxt('example_test_responses.data',np.float32)
 responses = responses.reshape((responses.size,1))
 
 knn = cv2.ml.KNearest_create()
 knn.train(samples,cv2.ml.ROW_SAMPLE,responses)
 ############################# testing part  #########################
 
-im = cv2.imread('../Images/randomCards-3.jpg')
+im = cv2.imread('../CardImages/randomCards-3.jpg')
 im = cv2.imread('randomCards-3.jpg')
 out = np.zeros(im.shape,np.uint8)
 gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)

@@ -227,7 +227,7 @@ def nothing(x):
 
 def rgbTest():
     # Create a black image, a window
-    img = cv2.imread('Images/fives-1.jpg')
+    img = cv2.imread('CardImages/fives-1.jpg')
     cv2.namedWindow('image')
 
     list = ['R','G','B']
@@ -263,7 +263,7 @@ def createTrackbars(list,imageName,initValue):
         cv2.createTrackbar(x, imageName, initValue, 255, nothing)
 
 def detectCircles():
-    img = cv2.imread('Images/fives-3.jpg')
+    img = cv2.imread('CardImages/fives-3.jpg')
     img = cv2.medianBlur(img, 5)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # cimg = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)

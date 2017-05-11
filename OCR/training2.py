@@ -3,7 +3,7 @@ import sys
 import numpy as np
 import cv2
 
-im = cv2.imread('clubs.png')
+im = cv2.imread('/home/notanumber/Desktop/workspacePython/Tutorial/OCR/ImagesCharacters/example_training.png')
 im3 = im.copy()
 
 gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
@@ -27,8 +27,8 @@ for cnt in contours:
 
         if  h>28:
             img2 = im.copy()
-            cv2.rectangle(img2,(x,y),(x+w,y+h),(0,0,255),2)
-            cv2.drawContours(img2, cnt, -1, (0, 255, 255), 2)
+            # cv2.rectangle(img2,(x,y),(x+w,y+h),(0,0,255),2)
+            cv2.drawContours(img2, cnt, -1, (0, 0, 255), 2)
             roi = thresh[y:y+h,x:x+w]
             roismall = cv2.resize(roi,(10,10))
             cv2.imshow('norm',img2)
@@ -45,6 +45,6 @@ responses = np.array(responses,np.int32)
 responses = responses.reshape((responses.size,1))
 print "training complete"
 
-np.savetxt('generalsamples.data',samples)
-np.savetxt('generalresponses.data',responses)
+np.savetxt('example_test_samples.data',samples)
+np.savetxt('example_test_responses.data',responses)
 
