@@ -1,19 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/OCR/createSampleImages.py" line="56" />
+    <bookmark url="file://$PROJECT_DIR$/OCR/createSampleImages.py" />
+    <bookmark url="file://$PROJECT_DIR$/main.py" description="&#10;img = cv2.imread(&quot;Images/randomCards-3.jpg&quot;)&#10;samp..." line="122" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="dd52b43f-ef69-4c87-a641-41ccb369c3b6" name="Default" comment="Several test of image processing with openCV and Python">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/all_clubs.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/all_diamonds.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/all_hearts.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/all_spades.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/randomCards-3.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OCR/generalresponses.data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/OCR/generalsamples.data" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/createSampleImages.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/generalresponses_ocr.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OCR/generalsamples_ocr.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Preprocessing/Preprocessing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Preprocessing/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Samples/__init__.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/6-spades1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/all_spades_together_rotated.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/all_spades_together_rotated2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/otherCards-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/otherCards-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/otherCards-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/otherCards-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/randomCards-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/text.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/text2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/text3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/text4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/text5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/text6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Images/twos-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/OCR/all_clubs.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/OCR/all_diamonds.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/OCR/all_hearts.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/OCR/all_spades.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/OCR.py" afterPath="$PROJECT_DIR$/tesseract.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Sample.py" afterPath="$PROJECT_DIR$/Samples/Sample.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SampleClub.py" afterPath="$PROJECT_DIR$/Samples/SampleClub.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SampleDiamond.py" afterPath="$PROJECT_DIR$/Samples/SampleDiamond.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SampleHeart.py" afterPath="$PROJECT_DIR$/Samples/SampleHeart.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SampleSpade.py" afterPath="$PROJECT_DIR$/Samples/SampleSpade.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/.directory" afterPath="$PROJECT_DIR$/SampleImages/.directory" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/sample_clubs.jpg" afterPath="$PROJECT_DIR$/SampleImages/sample_clubs.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/sample_clubs2.jpg" afterPath="$PROJECT_DIR$/SampleImages/sample_clubs2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/sample_diamonds.jpg" afterPath="$PROJECT_DIR$/SampleImages/sample_diamonds.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/sample_diamonds2.jpg" afterPath="$PROJECT_DIR$/SampleImages/sample_diamonds2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/sample_heart.jpg" afterPath="$PROJECT_DIR$/SampleImages/sample_heart.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/sample_heart2.jpg" afterPath="$PROJECT_DIR$/SampleImages/sample_heart2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/sample_spades.jpg" afterPath="$PROJECT_DIR$/SampleImages/sample_spades.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/sample_spades2.jpg" afterPath="$PROJECT_DIR$/SampleImages/sample_spades2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/samples.jpg" afterPath="$PROJECT_DIR$/SampleImages/samples.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Samples/samples.png" afterPath="$PROJECT_DIR$/SampleImages/samples.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/aux.py" afterPath="$PROJECT_DIR$/Preprocessing/aux.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OCR/generalresponses.data" afterPath="$PROJECT_DIR$/OCR/generalresponses.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OCR/generalsamples.data" afterPath="$PROJECT_DIR$/OCR/generalsamples.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OCR/testing.py" afterPath="$PROJECT_DIR$/OCR/testing.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OCR/training.py" afterPath="$PROJECT_DIR$/OCR/training.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SampleComparison.py" afterPath="$PROJECT_DIR$/SampleComparison.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SampleCreator.py" afterPath="$PROJECT_DIR$/SampleCreator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aux.py" afterPath="$PROJECT_DIR$/aux.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,10 +68,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Tutorial$trainingOCR.coverage" NAME="trainingOCR Coverage Results" MODIFIED="1494320482569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
+    <SUITE FILE_PATH="coverage/Tutorial$trainingOCR.coverage" NAME="trainingOCR Coverage Results" MODIFIED="1494450264748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
     <SUITE FILE_PATH="coverage/Tutorial$digits.coverage" NAME="digits Coverage Results" MODIFIED="1492712860705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Tutorial$testing.coverage" NAME="testing Coverage Results" MODIFIED="1494403722991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
-    <SUITE FILE_PATH="coverage/Tutorial$main.coverage" NAME="main Coverage Results" MODIFIED="1494319886342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Tutorial$testing.coverage" NAME="testing Coverage Results" MODIFIED="1494452802929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
+    <SUITE FILE_PATH="coverage/Tutorial$main.coverage" NAME="main Coverage Results" MODIFIED="1494505007829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -44,66 +88,116 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SampleClub.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SampleClub.py">
+      <file leaf-file-name="createSampleImages.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OCR/createSampleImages.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#2569#2897#0" expanded="false" />
+                <element signature="e#3549#3924#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="supersample.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supersample.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_spades.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SampleImages/sample_spades.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Preprocessing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/Preprocessing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <element signature="e#168#172#0" expanded="false" />
+                <element signature="e#518#553#0" expanded="false" />
+                <element signature="e#797#808#0" expanded="false" />
+                <element signature="e#1088#1195#0" expanded="false" />
+                <element signature="e#1421#1433#0" expanded="false" />
+                <element signature="e#1812#2556#0" expanded="false" />
+                <element signature="e#1812#1843#0" expanded="false" />
+                <element signature="e#2180#2556#0" expanded="false" />
+                <element signature="e#2240#2255#0" expanded="false" />
+                <element signature="e#2615#3590#0" expanded="false" />
+                <element signature="e#3371#3389#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aux.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Preprocessing/aux.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="131" column="51" lean-forward="false" selection-start-line="131" selection-start-column="51" selection-end-line="131" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#200#1218#0" expanded="false" />
+                <element signature="e#376#1118#0" expanded="false" />
+                <element signature="e#687#787#0" expanded="false" />
+                <element signature="e#918#1065#0" expanded="false" />
+                <element signature="e#1250#2471#0" expanded="false" />
+                <element signature="e#1535#2443#0" expanded="false" />
+                <element signature="e#1801#1901#0" expanded="false" />
+                <element signature="e#2048#2251#0" expanded="false" />
+                <element signature="e#2493#3962#0" expanded="false" />
+                <element signature="e#2605#2627#0" expanded="false" />
+                <element signature="e#3146#3554#0" expanded="false" />
+                <element signature="e#3384#3398#0" expanded="false" />
+                <element signature="e#3560#3602#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SampleCreator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SampleCreator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="31" />
+              <folding>
+                <element signature="e#401#405#0" expanded="false" />
+                <element signature="e#738#761#0" expanded="false" />
+                <element signature="e#2059#2128#0" expanded="false" />
+                <element signature="e#4639#4701#0" expanded="false" />
+                <element signature="e#4744#4830#0" expanded="false" />
+                <element signature="e#4872#4930#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OCR/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SampleDiamond.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SampleDiamond.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="23" column="117" lean-forward="false" selection-start-line="23" selection-start-column="117" selection-end-line="23" selection-end-column="117" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SampleComparison.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SampleComparison.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-              <folding>
-                <element signature="e#1572#1629#0" expanded="false" />
-                <element signature="e#2254#2314#0" expanded="false" />
-                <element signature="e#2638#2987#0" expanded="false" />
-                <element signature="e#2844#2987#0" expanded="false" />
-                <element signature="e#2922#2951#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SampleHeart.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SampleHeart.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sample.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Sample.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,16 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>black</find>
-      <find>Perimeter</find>
-      <find>Area</find>
-      <find>---&gt;</find>
-      <find>shape</find>
-      <find>Hearts</find>
-      <find>Diamond</find>
-      <find>sa</find>
-      <find>heart</find>
-      <find>comp</find>
       <find>Heart</find>
       <find>isBlack</find>
       <find>imshow</find>
@@ -149,6 +233,16 @@
       <find>drawCon</find>
       <find>copy</find>
       <find>rectangle</find>
+      <find>clahe</find>
+      <find>grayMedian</find>
+      <find>drawA</find>
+      <find>changeR</find>
+      <find>findC</find>
+      <find>dra</find>
+      <find>rectangl</find>
+      <find>1</find>
+      <find>putT</find>
+      <find>put</find>
     </findStrings>
     <replaceStrings>
       <replace>cntsImgScale</replace>
@@ -171,6 +265,9 @@
       <replace>Club</replace>
       <replace>Spade</replace>
       <replace>img2</replace>
+      <replace>contrast</replace>
+      <replace>grayNoise</replace>
+      <replace>2</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -194,15 +291,18 @@
         <option value="$PROJECT_DIR$/Digits.py" />
         <option value="$PROJECT_DIR$/Sample.py" />
         <option value="$PROJECT_DIR$/SampleSpades.py" />
-        <option value="$PROJECT_DIR$/SampleComparison.py" />
         <option value="$PROJECT_DIR$/SampleClub.py" />
-        <option value="$PROJECT_DIR$/OCR.py" />
         <option value="$PROJECT_DIR$/OCR/generalresponses.data" />
+        <option value="$PROJECT_DIR$/aux.py" />
+        <option value="$PROJECT_DIR$/OCR.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/Preprocessing.py" />
+        <option value="$PROJECT_DIR$/SampleComparison.py" />
+        <option value="$PROJECT_DIR$/SampleCreator.py" />
         <option value="$PROJECT_DIR$/OCR/training.py" />
         <option value="$PROJECT_DIR$/OCR/testing.py" />
-        <option value="$PROJECT_DIR$/SampleCreator.py" />
+        <option value="$PROJECT_DIR$/Preprocessing/aux.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/aux.py" />
+        <option value="$PROJECT_DIR$/OCR/createSampleImages.py" />
       </list>
     </option>
   </component>
@@ -234,8 +334,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,27 +346,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SampleImages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Preprocessing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OCR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/OCR/testing.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Preprocessing" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/OCR" />
+      <recent name="$PROJECT_DIR$/Samples" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Cascades" />
       <recent name="$PROJECT_DIR$/Images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Preprocessing" />
+      <recent name="$PROJECT_DIR$/Samples" />
       <recent name="$PROJECT_DIR$/Images" />
       <recent name="$PROJECT_DIR$/NegativeSamples" />
-      <recent name="$PROJECT_DIR$/Samples" />
       <recent name="$PROJECT_DIR$/Cascades" />
     </key>
   </component>
@@ -284,7 +428,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testing">
+  <component name="RunManager" selected="Python.main">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -551,27 +695,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2531915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2531915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893618" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32765958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,17 +731,53 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <option name="time" value="33" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="heightThreshold" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Images/10-hearts.jpg">
+    <entry file="file://$PROJECT_DIR$/Images/text.png" />
+    <entry file="file://$PROJECT_DIR$/Images/text2.png" />
+    <entry file="file://$PROJECT_DIR$/Images/text3.png" />
+    <entry file="file://$PROJECT_DIR$/Images/text4.png" />
+    <entry file="file://$PROJECT_DIR$/Images/text5.png" />
+    <entry file="file://$PROJECT_DIR$/Images/text6.png" />
+    <entry file="file://$PROJECT_DIR$/Images/twos-2.jpg" />
+    <entry file="file:///usr/lib/python2.7/site-packages/numpy/core/shape_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="287" column="0" lean-forward="false" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/all_diamonds.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Images/all_diamonds.jpg">
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1125584163/cv2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="2348" column="4" lean-forward="false" selection-start-line="2348" selection-start-column="4" selection-end-line="2348" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/2-spades7.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/5-diamonds.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/10-hearts.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -606,42 +787,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Images/fives-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/otherCards-1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/otherCards-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/otherCards-3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/otherCards-4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/randomCards-4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/twos-1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/twos-2.jpg">
+    <entry file="file://$PROJECT_DIR$/Images/all_spades.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -651,79 +797,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python2.7/site-packages/pytesseract/pytesseract.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-694">
-          <caret line="127" column="4" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OCR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="109" lean-forward="false" selection-start-line="29" selection-start-column="103" selection-end-line="29" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/characteristics">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Digits.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="47" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/text2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/text.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/text3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/text4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/text5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/text6.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OCR/generalsamples1.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OCR/generalresponses1.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/all_spades.jpg">
+    <entry file="file://$PROJECT_DIR$/Images/fives-2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -738,7 +812,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Images/randomCards-2.jpg">
+    <entry file="file://$PROJECT_DIR$/Images/all_clubs.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Images/twos-1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -748,59 +827,78 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Images/2-spades7.jpg">
+    <entry file="file://$PROJECT_DIR$/Images/randomCards-2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Images/5-diamonds.jpg">
+    <entry file="file://$PROJECT_DIR$/Samples/Sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tesseract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Samples/SampleClub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SampleComparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="114" lean-forward="false" selection-start-line="22" selection-start-column="114" selection-end-line="22" selection-end-column="114" />
+          <folding>
+            <element signature="e#725#1242#0" expanded="false" />
+            <element signature="e#1277#2022#0" expanded="false" />
+            <element signature="e#1328#2022#0" expanded="false" />
+            <element signature="e#1498#1555#0" expanded="false" />
+            <element signature="e#1723#1790#0" expanded="false" />
+            <element signature="e#2064#2180#0" expanded="false" />
+            <element signature="e#2220#2332#0" expanded="false" />
+            <element signature="e#2373#2492#0" expanded="false" />
+            <element signature="e#2535#2662#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SampleImages/sample_diamonds.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Images/6-spades1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Images/all_clubs.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OCR/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="251" column="0" lean-forward="false" selection-start-line="251" selection-start-column="0" selection-end-line="253" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aux.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="138" column="4" lean-forward="false" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OCR/generalsamples.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="64" lean-forward="false" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OCR/generalresponses.data">
+    <entry file="file://$PROJECT_DIR$/OCR/generalresponses_ocr.data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCR/generalsamples_ocr.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCR/training4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCR/training3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OCR/training1.png">
@@ -813,90 +911,152 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OCR/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCR/randomCards-3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OCR/text6.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OCR/training4.png">
+    <entry file="file://$PROJECT_DIR$/OCR/clubs.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SampleCreator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="98" column="37" lean-forward="false" selection-start-line="98" selection-start-column="37" selection-end-line="98" selection-end-column="37" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/SampleImages/sample_clubs.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SampleImages/sample_spades2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SampleImages/sample_clubs2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OCR/testing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        <state relative-caret-position="-2">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OCR/testing1.png">
+    <entry file="file://$PROJECT_DIR$/Preprocessing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OCR/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SampleImages/sample_spades.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OCR/training3.jpg">
+    <entry file="file://$PROJECT_DIR$/supersample.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SampleClub.py">
+    <entry file="file://$PROJECT_DIR$/Preprocessing/aux.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SampleDiamond.py">
+    <entry file="file://$PROJECT_DIR$/SampleCreator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="117" lean-forward="false" selection-start-line="23" selection-start-column="117" selection-end-line="23" selection-end-column="117" />
+        <state relative-caret-position="119">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="31" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#401#405#0" expanded="false" />
+            <element signature="e#738#761#0" expanded="false" />
+            <element signature="e#2059#2128#0" expanded="false" />
+            <element signature="e#4639#4701#0" expanded="false" />
+            <element signature="e#4744#4830#0" expanded="false" />
+            <element signature="e#4872#4930#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SampleComparison.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="408">
+          <caret line="131" column="51" lean-forward="false" selection-start-line="131" selection-start-column="51" selection-end-line="131" selection-end-column="51" />
           <folding>
-            <element signature="e#1572#1629#0" expanded="false" />
-            <element signature="e#2254#2314#0" expanded="false" />
-            <element signature="e#2638#2987#0" expanded="false" />
-            <element signature="e#2844#2987#0" expanded="false" />
-            <element signature="e#2922#2951#0" expanded="false" />
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#200#1218#0" expanded="false" />
+            <element signature="e#376#1118#0" expanded="false" />
+            <element signature="e#687#787#0" expanded="false" />
+            <element signature="e#918#1065#0" expanded="false" />
+            <element signature="e#1250#2471#0" expanded="false" />
+            <element signature="e#1535#2443#0" expanded="false" />
+            <element signature="e#1801#1901#0" expanded="false" />
+            <element signature="e#2048#2251#0" expanded="false" />
+            <element signature="e#2493#3962#0" expanded="false" />
+            <element signature="e#2605#2627#0" expanded="false" />
+            <element signature="e#3146#3554#0" expanded="false" />
+            <element signature="e#3384#3398#0" expanded="false" />
+            <element signature="e#3560#3602#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SampleHeart.py">
+    <entry file="file://$PROJECT_DIR$/Preprocessing/Preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#168#172#0" expanded="false" />
+            <element signature="e#518#553#0" expanded="false" />
+            <element signature="e#797#808#0" expanded="false" />
+            <element signature="e#1088#1195#0" expanded="false" />
+            <element signature="e#1421#1433#0" expanded="false" />
+            <element signature="e#1812#2556#0" expanded="false" />
+            <element signature="e#1812#1843#0" expanded="false" />
+            <element signature="e#2180#2556#0" expanded="false" />
+            <element signature="e#2240#2255#0" expanded="false" />
+            <element signature="e#2615#3590#0" expanded="false" />
+            <element signature="e#3371#3389#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sample.py">
+    <entry file="file://$PROJECT_DIR$/OCR/createSampleImages.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#2569#2897#0" expanded="false" />
+            <element signature="e#3549#3924#0" expanded="false" />
           </folding>
         </state>
       </provider>

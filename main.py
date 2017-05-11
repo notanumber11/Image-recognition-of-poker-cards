@@ -1,100 +1,10 @@
 from __future__ import division
+
 import cv2
-import numpy as np
-import aux as aux
-from Sample import Sample
-from SampleComparison import SampleComparison
 
-
-
-# Pass cross-image with the dimensions of the bounding rectangle that fit the contour
+from Preprocessing import aux as aux
+from OCR import createSampleImages as sampler
 from SampleCreator import SampleCreator
-from matplotlib import pyplot as plt
-
-
-def matchShapeSpade(img, offsetX=0,offsetY=0,img2=None):
-
-    #img = cv2.imread('Images/all_spades.jpg')
-
-    # Drawing the contours in the sampleImg
-    sampleImg = cv2.imread('Samples/samples.jpg')
-    sampleImgBlack = aux.changeRedToBlack(sampleImg)
-    cnts_sample = aux.obtainContours(sampleImgBlack)
-    cnts_sample = cnts_sample[:-1]
-    cv2.drawContours(sampleImg, cnts_sample, -1, (0, 255, 255), 2)
-
-    # Label the contours
-    symbols = ['diamond', 'heart', 'spades', 'clubs']
-    listX,listY = aux.extractCentroid(cnts_sample)
-    for j,x in enumerate(listX):
-        x = listX[j]
-        y = listY[j]
-        font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(sampleImg, str(j), (x,y), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
-
-    # Obtain the width of every contour in the sample
-    listWidthSamples = []
-    for cnt in cnts_sample:
-        x1, y1, w1, h1 = cv2.boundingRect(cnt)
-        listWidthSamples.append(w1)
-
-
-   # Section img
-    img = cv2.resize(img, (0, 0), fx=1, fy=1)
-    imgBlack = aux.changeRedToBlack(img)
-    cntsImg = aux.obtainContours(imgBlack)
-
-
-    # Controlar cuantos contornos analizamos y pintamos
-    cntsImg = cntsImg[:-1]
-    print 'Analizando ' + str(len(cntsImg)) + ' contours '
-    #cv2.drawContours(img, cntsImg, -1, (0, 255, 255), 2)
-
-
-    # Obtain the width of every contour in the image
-    listWidthImg = []
-    for cnt in cntsImg:
-        x1, y1, w1, h1 = cv2.boundingRect(cnt)
-        listWidthImg.append(w1)
-
-    cntsImgScale = np.copy(cntsImg)
-
-    # Reescale contours of img
-    for j in range(len(cntsImgScale)):
-        scaleX = listWidthSamples[2] / listWidthImg[j]
-        cntsImgScale[j] = scaleX * np.array(cntsImg[j])
-        cntsImgScale[j] = cntsImgScale[j].astype(int)
-
-
-
-    print 'Analisis con escala...'
-    for i in range (len(cntsImgScale)):
-        threshold = 0.10
-        position = -1
-        cx,cy = -1,-1
-        for j in range (len(cnts_sample)):
-            ret = cv2.matchShapes(cnts_sample[j], cntsImg[i], 1, 0.0)
-            if(ret<threshold):
-                position = j
-                threshold = ret
-                cx, cy = aux.extractSingleCentroid(cntsImg[i])
-                cv2.drawContours(img, cntsImg[i], -1, (0, 255, 255), 2)
-
-        if (position != -1):
-            #print 'Detectamos ' + symbols[position]
-            if(img2!=None):
-                cv2.putText(img2, symbols[position], (cx+offsetX, cy+offsetY), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
-            else:
-                cv2.putText(img, symbols[position], (cx+offsetX, cy+offsetY), font, 0.5, (11, 255, 255), 2, cv2.LINE_AA)
-            # print j,ret
-
-    if(img2==None):
-       # cv2.imshow('image', sampleImg)
-        cv2.imshow('imgToCompare', img)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
-
-    return 1
 
 
 def cascadeVideoCamera():
@@ -134,7 +44,6 @@ def cascadeVideoCamera():
     cv2.destroyAllWindows()
     return
 
-
 def photoTest(imagePath):
     card_cascade = cv2.CascadeClassifier('Cascades/cascade-20-2-spades.xml')
 
@@ -142,7 +51,7 @@ def photoTest(imagePath):
 
     list = ['minNeighbors','scaleFactor','B']
 
-    aux.createTrackbars(list,'image',40)
+    aux.createTrackbars(list, 'image', 40)
     minNeighbors = 30
     scaleFactor = 1.05
     number = 0
@@ -154,7 +63,6 @@ def photoTest(imagePath):
         for (x, y, w, h) in cards:
             cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
             crop_img = img[y:y+h,x:x+w]
-            matchShapeSpade(crop_img,x,y,img)
 
         cv2.imshow('image', img)
         k = cv2.waitKey(1) & 0xFF
@@ -213,57 +121,16 @@ def photo(img):
     cv2.destroyAllWindows()
 
 
-def thresholding(img):
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    img = cv2.medianBlur(img, 5)
-
-    ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
-    th2 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C,  cv2.THRESH_BINARY, 11, 2)
-    th3 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
-    titles = ['Original Image', 'Global Thresholding (v = 127)',
-              'Adaptive Mean Thresholding', 'Adaptive Gaussian Thresholding']
-    images = [img, th1, th2, th3]
-    for i in xrange(4):
-        plt.subplot(2, 2, i + 1), plt.imshow(images[i], 'gray')
-        plt.title(titles[i])
-        plt.xticks([]), plt.yticks([])
-    plt.show()
-
-# cascadeVideoCamera()
+# img = cv2.imread("Images/randomCards-3.jpg")
+# sampleCreator = SampleCreator()
+# img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
+# sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
+# cv2.imshow('testSample',img)
+# cv2.waitKey()
 
 
-
-sampleCreator = SampleCreator()
-
-img = cv2.imread("Images/randomCards-3.jpg")
-
-# photo(img)
-
-# thresholding(img)
-
-img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
-sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
-
-# img2 = cv2.imread("Images/all_spades_together_rotated2.jpg")
-# img2,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img2 )
-# sampleCreator.testSamples(img2,listSamples,listOffSetX,listOffSetY )
-# cv2.imshow('testSample2',img2)
-
-cv2.imshow('testSample',img)
-
-cv2.waitKey()
+sampler.create360samples("SampleImages/sample_clubs.jpg")
+# pre = Preprocessing()
+# pre .preprocessingImage("Images/all_spades_together.jpg")
 
 
-
-
-# num_rows, num_cols = img.shape[:2]
-#
-# rotation_matrix = cv2.getRotationMatrix2D((num_cols/2, num_rows/2), 30, 1)
-# img = cv2.warpAffine(img, rotation_matrix, (num_cols, num_rows))
-
-
-# from PIL import Image
-# from pytesseract import image_to_string
-#
-# # print image_to_string(Image.open('test.png'))
-# print image_to_string(Image.open('Images/text6.png'), lang='eng')

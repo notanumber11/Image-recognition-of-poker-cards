@@ -1,11 +1,10 @@
 from __future__ import division
+
 import cv2
 
-import numpy as np
-from OCR import OCR
-import aux as aux
-from Sample import Sample
+from Preprocessing import aux as aux
 from SampleComparison import SampleComparison
+from Samples.Sample import Sample
 
 
 class SampleCreator:
@@ -21,7 +20,7 @@ class SampleCreator:
         pass
 
 
-    def obtainImages(self, imgPath = None, img = None):
+    def obtainAllSamples(self, imgPath = None, img = None):
         if (img is None):
             img = cv2.imread(imgPath)
 
@@ -66,7 +65,7 @@ class SampleCreator:
     def obtainSamples(self, imgPath = None, img = None):
         listSamples = []
 
-        img,listImgs,listOffSetX,listOffSetY  = self.obtainImages(imgPath, img)
+        img,listImgs,listOffSetX,listOffSetY  = self.obtainAllSamples(imgPath, img)
 
         for i, img2 in enumerate(listImgs):
             sample = Sample(img = img2, offSetX=listOffSetX[i], offSetY=listOffSetY[i])
@@ -95,9 +94,9 @@ class SampleCreator:
 
             list = [flagHearts,flagSpades,flagDiamonds,flagClubs]
             if self.TrueXor(list):
-                # cv2.putText(img, sample.label, (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.symbolsColour, 2,cv2.LINE_AA)
+                cv2.putText(img, sample.label, (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.symbolsColour, 2,cv2.LINE_AA)
                 angle = aux.fittingMinimumRectangle(sample.img, sample.contours[0])
-                cv2.putText(img, str(int(angle)), (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.symbolsColour, 2,cv2.LINE_AA)
+                # cv2.putText(img, str(int(angle)), (listOffSetX[i], listOffSetY[i]), self.font, 0.5, self.symbolsColour, 2,cv2.LINE_AA)
 
             isSymbol = flagClubs or flagDiamonds or flagHearts or flagSpades
 

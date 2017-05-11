@@ -76,3 +76,17 @@ class OCR:
         tesseract_ocr.SetVariable("classify_enable_adaptive_matcher", FALSE)
 
         return tesseract_ocr
+
+    def detectCharacter(self,pathImg):
+        img = cv2.imread(pathImg)
+        cv2_im = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        pil_im = Image.fromarray(cv2_im)
+        result = image_to_string(pil_im, lang='eng',config="-c tessedit_char_whitelist=01234567890AJQK -psm 6")
+
+        cv2.putText(img, result, (200, 200), 0, 1, (0, 255, 0))
+        for c in result:
+            print str(c)
+            # cv2.putText(img,result[i],(80,80),0,1,(0,255,0))
+
+        cv2.imshow("test", img)
+        cv2.waitKey()

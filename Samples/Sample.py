@@ -1,8 +1,10 @@
 from __future__ import division
-import cv2
-import numpy as np
-import aux as aux
 
+import cv2
+
+import numpy as np
+
+from Preprocessing import aux as aux
 
 
 class Sample:
@@ -76,7 +78,7 @@ class Sample:
         if (self.aspectRatio>1):
             self.aspectRatio = 1/self.aspectRatio
         # Obtain percentage of red/black
-        self.percentageRed,self.percentageBlack = aux.obtainColourPercentages(self.img[self.y:self.y+self.h,self.x:self.x+self.w])
+        self.percentageRed,self.percentageBlack = aux.obtainColourPercentages(self.img[self.y:self.y + self.h, self.x:self.x + self.w])
 
         self.label = None
 

@@ -10,7 +10,8 @@ knn = cv2.ml.KNearest_create()
 knn.train(samples,cv2.ml.ROW_SAMPLE,responses)
 ############################# testing part  #########################
 
-im = cv2.imread('training4.png')
+im = cv2.imread('../Images/randomCards-3.jpg')
+im = cv2.imread('randomCards-3.jpg')
 out = np.zeros(im.shape,np.uint8)
 gray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
 blur = cv2.GaussianBlur(gray,(5,5),0)
@@ -28,7 +29,7 @@ ret, thresh = cv2.threshold(blur, 180, 255, cv2.THRESH_BINARY)
 _,contours,hierarchy = cv2.findContours(thresh,cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)
 
 for cnt in contours:
-    if cv2.contourArea(cnt)>70:
+    if cv2.contourArea(cnt)>80:
         [x,y,w,h] = cv2.boundingRect(cnt)
         if  h>28:
             cv2.rectangle(im,(x,y),(x+w,y+h),(0,255,0),2)
