@@ -4,11 +4,11 @@ import cv2
 from Preprocessing.Preprocessing import Preprocessing
 from OCR.createSampleImages import createSamples
 from OCR.obtainPixelCharasteristics import extractPixelCharacteristics
-from OCR.knearest import applyKnearest
+
+from OCR.knearest import knearest as knearest
 from Preprocessing import aux as aux
 from OCR import createSampleImages as sampler
 from SampleCreator import SampleCreator
-
 
 def cascadeVideoCamera():
     cap = cv2.VideoCapture(0)
@@ -46,7 +46,6 @@ def cascadeVideoCamera():
     cap.release()
     cv2.destroyAllWindows()
     return
-
 
 def photoTest(imagePath):
     card_cascade = cv2.CascadeClassifier('Cascades/cascade-20-2-spades.xml')
@@ -125,22 +124,22 @@ def photo(img):
     cv2.waitKey()
     cv2.destroyAllWindows()
 
+def currentResults():
+    img = cv2.imread("CardImages/randomCards-3.jpg")
+    sampleCreator = SampleCreator()
+    img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
+    sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
+    cv2.imshow('testSample',img)
+    cv2.waitKey()
 
-# img = cv2.imread("CardImages/randomCards-3.jpg")
-# sampleCreator = SampleCreator()
-# img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
-# sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
-# cv2.imshow('testSample',img)
-# cv2.waitKey()
 
 
-# sampler.createSamples("SampleImages/sample_clubs.jpg")
 
 # Preprocessing.preprocessingImage("CardImages/all_spades_together.jpg")
 
-# createSamples('/home/notanumber/Desktop/workspacePython/Tutorial/SampleImages/sample_clubs.jpg')
-#
-# extractPixelCharacteristics('OCR/ImagesSymbols/clubs.jpg', 'OCR/ImagesSymbols/clubs_angle.txt')
+createSamples('/home/notanumber/Desktop/workspacePython/Tutorial/SampleImages/sample_diamonds.jpg','OCR/AngleTraining/diamonds_360.jpg')
 
-applyKnearest('/home/notanumber/Desktop/workspacePython/Tutorial/CardImages/randomCards-1.jpg')
+# extractPixelCharacteristics('OCR/AngleTraining/diamonds_360.jpg', 'OCR/AngleTraining/angles.data')
+# knn = knearest('OCR/TrainingData/samples.data','OCR/AngleTraining/angles.data')
+# knn.applyKnearest('/home/notanumber/Desktop/workspacePython/Tutorial/CardImages/randomCards-3.jpg')
 

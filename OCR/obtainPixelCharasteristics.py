@@ -1,7 +1,8 @@
+from __future__ import division
+
 import sys
 import numpy as np
 import cv2
-
 from Preprocessing.Preprocessing import Preprocessing
 
 # Variables for training
@@ -12,7 +13,7 @@ shapeSample = (10, 10)
 # Keys range accepted from the keyboard
 keys = [i for i in range(48, 81)]
 # height threhold
-heightThreshold = 100
+heightThreshold = 50
 areaThreshold = 200
 
 def extractPixelCharacteristics(imgPath, labelPath = None):
@@ -34,7 +35,6 @@ def extractPixelCharacteristics(imgPath, labelPath = None):
 
     # Showing thesholding
     cv2.imshow("sample", thresh)
-
     cv2.waitKey()
 
     # Loop contours
@@ -42,13 +42,23 @@ def extractPixelCharacteristics(imgPath, labelPath = None):
         if cv2.contourArea(cnt) > areaThreshold:
             [x, y, w, h] = cv2.boundingRect(cnt)
             if h > heightThreshold and h < heightThreshold * 4:
-
                 # Preprocessing image
                 imgCopy = im.copy()
                 cv2.rectangle(imgCopy, (x, y), (x + w, y + h), (0, 0, 255), 2)
                 cv2.drawContours(imgCopy, cnt, -1, (0, 0, 255), 2)
+
+                diffY = (int)(0.1*h)
+                diffX = (int)(0.1*w)
+                h = h + diffY*2
+                w = w + diffX*2
+
                 roi = thresh[y:y + h, x:x + w]
                 roismall = cv2.resize(roi, shapeSample)
+
+                cv2.imshow(',meh', roismall)
+                cv2.waitKey()
+
+                roismall = roismall.reshape((1, sizeSample))
 
                 # Sampling with keyboard
                 if keyboard:
@@ -58,8 +68,7 @@ def extractPixelCharacteristics(imgPath, labelPath = None):
                         sys.exit()
                     elif key in keys:
                         responses.append(key)
-                        sample = roismall.reshape((1, sizeSample))
-                        samples = np.append(samples, sample, 0)
+                        samples = np.append(samples, roismall, 0)
                 else:
                     sample = roismall.reshape((1, sizeSample))
                     samples = np.append(samples, sample, 0)
