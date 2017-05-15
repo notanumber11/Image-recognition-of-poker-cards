@@ -2,7 +2,7 @@ from __future__ import division
 
 import cv2
 
-from Preprocessing import aux as aux
+from Utilities import aux as aux
 from Samples.Sample import Sample
 from Samples.SampleClub import SampleClub
 from Samples.SampleDiamond import SampleDiamond

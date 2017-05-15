@@ -38,8 +38,8 @@ class Preprocessing:
 
 
         # Thresholding
-        # blur = cv2.GaussianBlur(gray, (5, 5), 0)
-        # ret, threshold = cv2.threshold(blur,200 , 255, cv2.THRESH_BINARY)
+        # blur = cv2.GaussianBlur(gray, (1, 1), 1000)
+        # ret, threshold = cv2.threshold(blur,120 , 255, cv2.THRESH_BINARY)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 2)
         ret2, threshold = cv2.threshold(contrastImg, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
@@ -50,7 +50,7 @@ class Preprocessing:
         cv2.drawContours(imgContours, contours, -1, (0, 255, 255), 2)
 
 
-        # Preprocessing.printImages(listImage = [gray,contrastImg,threshold,imgContours])
+        # Utilities.printImages(listImage = [gray,contrastImg,threshold,imgContours])
 
         return img,gray,threshold,contours
 
@@ -142,3 +142,19 @@ class Preprocessing:
             # print cx,cy
             centroidList.append([cx, cy])
         return centroidList
+
+    @staticmethod
+    def compareContours(cnt1, cnt2):
+        x, y, w, h = cv2.boundingRect(cnt1)
+        cx1 = x + w / 2
+        cy1 = y + h / 2
+        x, y, w, h = cv2.boundingRect(cnt2)
+        cx2 = x + w / 2
+        cy2 = y + h / 2
+
+        # we are in different columns ( sort top to bottom )
+        if (cy1 + h / 4 >= cy2):
+            # Sort from left to right
+            if (cx1 >= cx2):
+                return 1
+        return -1

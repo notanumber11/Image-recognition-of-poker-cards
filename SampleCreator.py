@@ -2,7 +2,7 @@ from __future__ import division
 
 import cv2
 
-from Preprocessing import aux as aux
+from Utilities import aux as aux
 from SampleComparison import SampleComparison
 from Samples.Sample import Sample
 
@@ -129,7 +129,7 @@ class SampleCreator:
             #     character = self.detectCharacter(img,sample,listOffSetX[i],listOffSetY[i])
 
             # if not isSymbol:
-            #     ocr = OCR()
+            #     ocr = MachineLearning()
             #     character = ocr.detectCharacter(img, sample, listOffSetX[i], listOffSetY[i])
         print minAngle,maxAngle
 

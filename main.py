@@ -1,14 +1,10 @@
 from __future__ import division
 
 import cv2
-from Preprocessing.Preprocessing import Preprocessing
-from OCR.createSampleImages import createSamples
-from OCR.obtainPixelCharasteristics import extractPixelCharacteristics
 
-from OCR.knearest import knearest as knearest
-from Preprocessing import aux as aux
-from OCR import createSampleImages as sampler
 from SampleCreator import SampleCreator
+from Utilities import aux as aux
+from Utilities.createSampleImages import createSamples
 
 def cascadeVideoCamera():
     cap = cv2.VideoCapture(0)
@@ -125,21 +121,24 @@ def photo(img):
     cv2.destroyAllWindows()
 
 def currentResults():
-    img = cv2.imread("CardImages/randomCards-3.jpg")
+    img = cv2.imread("CardImages/randomCards-1.jpg")
     sampleCreator = SampleCreator()
     img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
-    sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
+    # sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
     cv2.imshow('testSample',img)
     cv2.waitKey()
 
+currentResults()
 
 
 
-# Preprocessing.preprocessingImage("CardImages/all_spades_together.jpg")
+# Utilities.preprocessingImage("CardImages/all_spades_together.jpg")
 
-createSamples('/home/notanumber/Desktop/workspacePython/Tutorial/SampleImages/sample_diamonds.jpg','OCR/AngleTraining/diamonds_360.jpg')
+# createSamples('/home/notanumber/Desktop/workspacePython/Tutorial/SampleImages/sample_diamonds.jpg','MachineLearning/AngleTraining/diamonds-360.jpg')
 
-# extractPixelCharacteristics('OCR/AngleTraining/diamonds_360.jpg', 'OCR/AngleTraining/angles.data')
-# knn = knearest('OCR/TrainingData/samples.data','OCR/AngleTraining/angles.data')
-# knn.applyKnearest('/home/notanumber/Desktop/workspacePython/Tutorial/CardImages/randomCards-3.jpg')
+# roiDetector = RoiDetector()
+# extractor = Extractor()
+# extractor.pixelClassifier(roiDetector, 'MachineLearning/AngleTraining/hearts-360.jpg', 'MachineLearning/AngleTraining/angles.data')
+# knn = knearest('MachineLearning/TrainingData/samples.data','MachineLearning/AngleTraining/angles.data')
+# knn.applyKnearest(roiDetector,'/home/notanumber/Desktop/workspacePython/Tutorial/CardImages/randomCards-3.jpg')
 

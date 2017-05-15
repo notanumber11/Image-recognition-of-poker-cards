@@ -216,6 +216,10 @@ def obtainContours(imgSrc):
     # prepare for contour detection
     blur = cv2.GaussianBlur(crop_img, (1, 1), 1000)
     flag, thresh = cv2.threshold(blur, 120, 255, cv2.THRESH_BINARY)
+
+    cv2.imshow('meh',thresh)
+    cv2.waitKey()
+
     im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_TC89_L1)
     # change to 0
     contours = sorted(contours, key=cv2.contourArea)

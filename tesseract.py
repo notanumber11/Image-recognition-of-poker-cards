@@ -45,10 +45,10 @@ class OCR:
         """ 
         .. py:function:: init_ocr()
 
-            Utilize the Tesseract-OCR library to create an tesseract_ocr that 
+            Utilize the Tesseract-MachineLearning library to create an tesseract_ocr that 
             predicts the numbers to be read off of the meter. 
 
-            :return: tesseract_ocr Tesseracts OCR API.
+            :return: tesseract_ocr Tesseracts MachineLearning API.
             :rtype: Class
         """
         # Initialize the tesseract_ocr with the english language package.

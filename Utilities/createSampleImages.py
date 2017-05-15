@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Properties
-from Preprocessing.Preprocessing import Preprocessing
+from Utilities.Preprocessing import Preprocessing
 import math as math
 
 samplesPerLine = 30
@@ -80,7 +80,7 @@ def createSamples(imgpath,imgOut):
     # Print in a file the angle of each sample
     printResults(contours)
     
-    # Preprocessing.printContours1by1(contours, finalImage)
+    # Utilities.printContours1by1(contours, finalImage)
 
     # cv2.imshow("image", finalImage)
     cv2.imshow("threshold", finalImage)
@@ -101,7 +101,7 @@ def printResults(contours):
     listResults = listResults.reshape(listResults.size, 1)
 
     # Saving results
-    np.savetxt('OCR/AngleTraining/angles.data', listResults)
+    np.savetxt('MachineLearning/AngleTraining/angles.data', listResults)
 
 def compareContours(cnt1, cnt2):
     x, y, w, h = cv2.boundingRect(cnt1)
