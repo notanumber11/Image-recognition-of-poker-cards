@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from Utilities.Preprocessing import Preprocessing
+from Utilities.preprocessing import Preprocessing
 
 
 

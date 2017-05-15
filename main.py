@@ -2,9 +2,12 @@ from __future__ import division
 
 import cv2
 
-from SampleCreator import SampleCreator
+from SymbolsProcessing.classifyCandidates import ClasifyCandidates
+from SymbolsProcessing.extract_characteristics import ExtractCharacteristics
+from SymbolsProcessing.generate_candidates import GenerateCandidates
 from Utilities import aux as aux
-from Utilities.createSampleImages import createSamples
+from Utilities.preprocessing import Preprocessing
+
 
 def cascadeVideoCamera():
     cap = cv2.VideoCapture(0)
@@ -121,10 +124,21 @@ def photo(img):
     cv2.destroyAllWindows()
 
 def currentResults():
-    img = cv2.imread("CardImages/randomCards-1.jpg")
-    sampleCreator = SampleCreator()
-    img,listSamples,listOffSetX,listOffSetY = sampleCreator.obtainSamples(img = img )
-    # sampleCreator.testSamples(img,listSamples,listOffSetX,listOffSetY )
+    # Preprocessing image
+    img, gray, threshold, contours = Preprocessing.preprocessingImage('CardImages/2-spades7.jpg')
+
+    # Generate candidates
+    generateCandidates = GenerateCandidates()
+    img, listROIs, listOffSetX, listOffSetY = generateCandidates.generateCandidates(img,contours)
+
+    # Extract characteristics
+    extractCharacteristics = ExtractCharacteristics()
+    listSamples = extractCharacteristics.extractCharacteristics(listROIs, listOffSetX, listOffSetY)
+
+    # Classifier
+    classifier = ClasifyCandidates()
+    classifier.clasifyCandidates(img,listSamples)
+
     cv2.imshow('testSample',img)
     cv2.waitKey()
 
@@ -136,9 +150,9 @@ currentResults()
 
 # createSamples('/home/notanumber/Desktop/workspacePython/Tutorial/SampleImages/sample_diamonds.jpg','MachineLearning/AngleTraining/diamonds-360.jpg')
 
-# roiDetector = RoiDetector()
+# roiDetector = RoiDetector(heightThreshold=20,areaThreshold=100)
 # extractor = Extractor()
-# extractor.pixelClassifier(roiDetector, 'MachineLearning/AngleTraining/hearts-360.jpg', 'MachineLearning/AngleTraining/angles.data')
-# knn = knearest('MachineLearning/TrainingData/samples.data','MachineLearning/AngleTraining/angles.data')
-# knn.applyKnearest(roiDetector,'/home/notanumber/Desktop/workspacePython/Tutorial/CardImages/randomCards-3.jpg')
+# extractor.pixelClassifier(roiDetector, 'MachineLearning/AngleTraining/spades-360.jpg', 'MachineLearning/AngleTraining/angles.data')
+# knn = knearest('MachineLearning/TrainingData/samples.data','MachineLearning/TrainingData/responses.data')
+# knn.applyKnearest(roiDetector,'/home/notanumber/Desktop/workspacePython/Tutorial/CardImages/2-spades7.jpg')
 

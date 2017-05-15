@@ -3,7 +3,7 @@ from __future__ import division
 import sys
 import numpy as np
 import cv2
-from Utilities.Preprocessing import Preprocessing
+from Utilities.preprocessing import Preprocessing
 
 
 # Keys range accepted from the keyboard
@@ -36,9 +36,9 @@ class Extractor():
         contours = sorted(contours, cmp=Preprocessing.compareContours)
 
         # Showing thesholding
-        cv2.imshow("sample", thresh)
-        cv2.waitKey()
-        cv2.destroyAllWindows()
+        # cv2.imshow("sample", thresh)
+        # cv2.waitKey()
+        # cv2.destroyAllWindows()
 
         # Obtaining the rois
         roiList,roiPointList = roiDetector.roiDetection(thresh, contours)

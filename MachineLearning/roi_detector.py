@@ -14,7 +14,7 @@ class RoiDetector:
         for cnt in contours:
             if cv2.contourArea(cnt) > self.areaThreshold:
                 [x, y, w, h] = cv2.boundingRect(cnt)
-                if h > self.heightThreshold and h < self.heightThreshold * 4:
+                if h > self.heightThreshold and h < self.heightThreshold * 20:
                     # Utilities image
                     roi = thresh[y:y + h, x:x + w]
                     roiList.append(roi)

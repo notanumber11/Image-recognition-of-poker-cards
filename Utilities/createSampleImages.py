@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 # Properties
-from Utilities.Preprocessing import Preprocessing
+from Utilities.preprocessing import Preprocessing
 import math as math
 
 samplesPerLine = 30
