@@ -6,6 +6,7 @@ from SymbolsProcessing.SymbolsSamples.SampleClub import SampleClub
 from SymbolsProcessing.SymbolsSamples.SampleDiamond import SampleDiamond
 from SymbolsProcessing.SymbolsSamples.SampleHeart import SampleHeart
 from SymbolsProcessing.SymbolsSamples.SampleSpade import SampleSpade
+from Utilities.preprocessing import Preprocessing
 
 
 class ClasifyCandidates:
@@ -27,10 +28,14 @@ class ClasifyCandidates:
     def __init__(self, pathClub = pathClub,pathDiamond = pathDiamond,pathHeart = pathHeart,pathSpades=pathSpades):
 
         # SampleImages
-        self.diamond = Sample(pathDiamond)
-        self.clubs = Sample(pathClub)
-        self.heart = Sample(pathHeart)
-        self.spades = Sample(pathSpades)
+        img, gray, threshold, contours = Preprocessing.preprocessingImage(pathDiamond)
+        self.diamond = Sample(img,contours[0])
+        img, gray, threshold, contours = Preprocessing.preprocessingImage(pathClub)
+        self.clubs = Sample(img,contours[0])
+        img, gray, threshold, contours = Preprocessing.preprocessingImage(pathHeart)
+        self.heart = Sample(img,contours[0])
+        img, gray, threshold, contours = Preprocessing.preprocessingImage(pathSpades)
+        self.spades = Sample(img,contours[0])
 
         # List of samples
         self.listSamples = [self.spades,self.clubs,self.heart,self.diamond]
@@ -43,6 +48,7 @@ class ClasifyCandidates:
 
     def clasifyCandidates(self, img, listSamples):
 
+        listFinal = []
         for i, sample in enumerate(listSamples):
 
             flagSpades = self.isSpade(sample)
@@ -55,10 +61,16 @@ class ClasifyCandidates:
 
             list = [flagHearts, flagSpades, flagDiamonds, flagClubs]
             if self.TrueXor(list):
-                cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), self.font, 0.5, self.symbolsColour, 2,
-                            cv2.LINE_AA)
-
+                # cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), self.font, 0.5, self.symbolsColour, 2, cv2.LINE_AA)
+                listFinal.append(sample)
             isSymbol = flagClubs or flagDiamonds or flagHearts or flagSpades
+
+            # if not isSymbol:
+            #     cv2.imshow("classifyCandidates.py",sample.img)
+            #     self.sampleSpade.printSpade(sample)
+            #     cv2.waitKey()
+
+        return listFinal
 
     def showSamples(self, listSamples):
         for sample in listSamples:

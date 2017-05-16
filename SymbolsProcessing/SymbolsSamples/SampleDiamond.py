@@ -28,7 +28,7 @@ class SampleDiamond:
 
 
     def isDiamondsMatchShape(self,sample):
-        ret = cv2.matchShapes(self.diamondSample.contours[0], sample.contours[0], 1, 0.0)
+        ret = cv2.matchShapes(self.diamondSample.cnt, sample.cnt, 1, 0.0)
         if (ret < self.matchShapeThreshold):
             return  True, ret
         return False, ret

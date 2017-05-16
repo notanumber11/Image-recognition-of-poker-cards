@@ -1,11 +1,12 @@
 from __future__ import division
 import cv2
 import numpy as np
-import aux as rF
 import matplotlib.pyplot as plt
 import os
 from rectangle import Rectangle
 
+font = cv2.FONT_HERSHEY_SIMPLEX
+colour = (255,0, 0)
 
 def helloworld():
     print 'hello world'

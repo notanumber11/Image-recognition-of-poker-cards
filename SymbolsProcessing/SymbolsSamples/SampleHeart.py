@@ -5,7 +5,7 @@ import cv2
 
 class SampleHeart:
 
-    minHeartRelationArea = 0.57
+    minHeartRelationArea = 0.50
     maxHeartRelationArea = 0.7
     minRed = 0.25
     maxRed = 0.7
@@ -28,7 +28,7 @@ class SampleHeart:
         return False
 
     def isHeartsMatchShape(self,sample):
-        ret = cv2.matchShapes(self.heartSample.contours[0], sample.contours[0], 1, 0.0)
+        ret = cv2.matchShapes(self.heartSample.cnt, sample.cnt, 1, 0.0)
         if (ret < self.matchShapeThreshold):
             return  True, ret
         return False, ret

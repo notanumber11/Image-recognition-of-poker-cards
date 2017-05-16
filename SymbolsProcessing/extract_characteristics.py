@@ -9,10 +9,10 @@ class ExtractCharacteristics:
         pass
 
 
-    def extractCharacteristics(self, listImgs, listOffSetX,listOffSetY):
+    def extractCharacteristics(self, listImgs, listContours, listOffSetX,listOffSetY):
         listSamples = []
-        for i, img2 in enumerate(listImgs):
-            sample = Sample(img = img2, offSetX=listOffSetX[i], offSetY=listOffSetY[i])
+        for i, img in enumerate(listImgs):
+            sample = Sample(img , listContours[i], offSetX=listOffSetX[i], offSetY=listOffSetY[i])
             listSamples.append(sample)
 
         return listSamples

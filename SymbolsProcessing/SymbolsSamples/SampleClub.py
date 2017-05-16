@@ -42,7 +42,7 @@ class SampleClub:
         return False
 
     def isClubMatchShape(self,sample):
-        ret = cv2.matchShapes(self.clubsSample.contours[0], sample.contours[0], 1, 0.0)
+        ret = cv2.matchShapes(self.clubsSample.cnt, sample.cnt, 1, 0.0)
         if (ret < self.matchShapeThreshold):
             return  True, ret
         return False, ret

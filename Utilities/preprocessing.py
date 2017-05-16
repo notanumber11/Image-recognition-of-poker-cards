@@ -3,7 +3,6 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-import aux as aux
 
 class Preprocessing:
 
@@ -47,7 +46,8 @@ class Preprocessing:
         # Contours
         imgContours = np.copy(img)
         _, contours, hierarchy = cv2.findContours(threshold,cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-        cv2.drawContours(imgContours, contours, -1, (0, 255, 255), 2)
+        contours = sorted(contours, key=cv2.contourArea)
+        # cv2.drawContours(imgContours, contours, -1, (0, 255, 255), 2)
 
 
         # Utilities.printImages(listImage = [gray,contrastImg,threshold,imgContours])

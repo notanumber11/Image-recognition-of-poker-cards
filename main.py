@@ -2,10 +2,14 @@ from __future__ import division
 
 import cv2
 
+from MachineLearning.extractor import Extractor
+from MachineLearning.knearest import knearest
+from MachineLearning.roi_detector import RoiDetector
 from SymbolsProcessing.classifyCandidates import ClasifyCandidates
 from SymbolsProcessing.extract_characteristics import ExtractCharacteristics
 from SymbolsProcessing.generate_candidates import GenerateCandidates
-from Utilities import aux as aux
+from SymbolsProcessing.refinate_decission import RefinateDecission
+from Utilities import utility as aux
 from Utilities.preprocessing import Preprocessing
 
 
@@ -125,19 +129,26 @@ def photo(img):
 
 def currentResults():
     # Preprocessing image
-    img, gray, threshold, contours = Preprocessing.preprocessingImage('CardImages/2-spades7.jpg')
+    img, gray, threshold, contours = Preprocessing.preprocessingImage('CardImages/all_hearts.jpg')
 
     # Generate candidates
     generateCandidates = GenerateCandidates()
-    img, listROIs, listOffSetX, listOffSetY = generateCandidates.generateCandidates(img,contours)
+    img, listROIs,listContours, listOffSetX, listOffSetY = generateCandidates.generateCandidates(img,contours)
 
     # Extract characteristics
     extractCharacteristics = ExtractCharacteristics()
-    listSamples = extractCharacteristics.extractCharacteristics(listROIs, listOffSetX, listOffSetY)
+    listSamples = extractCharacteristics.extractCharacteristics(listROIs,listContours, listOffSetX, listOffSetY)
 
     # Classifier
     classifier = ClasifyCandidates()
-    classifier.clasifyCandidates(img,listSamples)
+    listSamples = classifier.clasifyCandidates(img,listSamples)
+
+    # Refinate decission
+    refinateDecission = RefinateDecission()
+    listSamples = refinateDecission.refinateDecission(listSamples)
+
+    for sample in listSamples:
+        cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), aux.font, 0.5, aux.colour, 2,cv2.LINE_AA)
 
     cv2.imshow('testSample',img)
     cv2.waitKey()
@@ -154,5 +165,5 @@ currentResults()
 # extractor = Extractor()
 # extractor.pixelClassifier(roiDetector, 'MachineLearning/AngleTraining/spades-360.jpg', 'MachineLearning/AngleTraining/angles.data')
 # knn = knearest('MachineLearning/TrainingData/samples.data','MachineLearning/TrainingData/responses.data')
-# knn.applyKnearest(roiDetector,'/home/notanumber/Desktop/workspacePython/Tutorial/CardImages/2-spades7.jpg')
+# knn.applyKnearest(roiDetector,'CardImages/2-spades7.jpg')
 

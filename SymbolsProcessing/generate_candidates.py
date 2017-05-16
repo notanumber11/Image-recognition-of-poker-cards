@@ -15,7 +15,7 @@ class GenerateCandidates:
         listROIs = []
         listOffSetX = []
         listOffSetY = []
-
+        listContours = []
         for cnt in contours[:-1]:
             if (cv2.contourArea(cnt) > self.thresholdArea):
                 x, y, w, h = cv2.boundingRect(cnt)
@@ -32,5 +32,6 @@ class GenerateCandidates:
                     listROIs.append(sample)
                     listOffSetX.append(x)
                     listOffSetY.append(y)
+                    listContours.append(cnt)
 
-        return img, listROIs, listOffSetX, listOffSetY
+        return img, listROIs, listContours, listOffSetX, listOffSetY
