@@ -6,8 +6,8 @@ import numpy as np
 from Utilities.preprocessing import Preprocessing
 import math as math
 
-samplesPerLine = 30
-numberOfSamples = 360
+samplesPerLine = 4
+numberOfSamples = 8
 gradeStep = 360 / numberOfSamples
 
 # Thresholds

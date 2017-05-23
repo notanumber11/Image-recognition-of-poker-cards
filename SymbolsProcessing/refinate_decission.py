@@ -16,7 +16,7 @@ class RefinateDecission():
 
         smalSamples = []
         if( std/mean > self.bigThreshold):
-            print 'removing big symbols... '
+            # print 'removing big symbols... '
             for s in samples:
                 if(s.rectangleArea  < mean   ):
                     smalSamples.append(s)
@@ -42,8 +42,8 @@ class RefinateDecission():
 
 
         sizes = np.array(sizes)
-        print sizes
+        # print sizes
         mean = np.mean(sizes)
         std = np.std(sizes)
-        print mean,std,std/mean
+        # print mean,std,std/mean
         return mean,std

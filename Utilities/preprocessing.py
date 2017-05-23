@@ -153,7 +153,7 @@ class Preprocessing:
         cy2 = y + h / 2
 
         # we are in different columns ( sort top to bottom )
-        if (cy1 + h / 4 >= cy2):
+        if (cy1 + h / 2 >= cy2):
             # Sort from left to right
             if (cx1 >= cx2):
                 return 1

@@ -9,14 +9,14 @@ from Utilities import utility as aux
 
 class Sample:
 
-    def __init__(self,img,cnt, offSetX= 0, offSetY = 0):
+    def __init__(self,img,thresh,cnt, offSetX= 0, offSetY = 0):
 
 
         self.offSetX = offSetX
         self.offSetY = offSetY
         self.img = img
         self.cnt = cnt
-
+        self.thresh = thresh
         # Obtain rectangle dimensions
         self.x,self.y,self.w,self.h = cv2.boundingRect(self.cnt)
 

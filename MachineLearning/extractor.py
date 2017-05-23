@@ -19,6 +19,7 @@ class Extractor():
 
     def pixelClassifier(self, roiDetector, imgPath, labelPath = None):
 
+        self.roiDetector = roiDetector
         # Init variables
         samples = np.empty((0, self.sizeSample))
         responses = []
@@ -33,8 +34,14 @@ class Extractor():
 
         # Utilities image
         im, gray, thresh, contours = Preprocessing.preprocessingImage(imgPath)
-        contours = sorted(contours, cmp=Preprocessing.compareContours)
+        print len(contours)
+        contours = sorted(contours, self.compareContours)
 
+        for cnt in contours:
+            img2 = im.copy()
+            cv2.drawContours(img2, cnt, -1, (0, 0, 255), 2)
+            cv2.waitKey()
+            cv2.destroyAllWindows()
         # Showing thesholding
         # cv2.imshow("sample", thresh)
         # cv2.waitKey()
@@ -80,3 +87,19 @@ class Extractor():
         cv2.imshow('imgCopy', imgCopy)
         key = cv2.waitKey(0)
         return key
+
+    def compareContours(self, cnt1, cnt2):
+        # print 'La altura es ', self.roiDetector.heightThreshold
+        x, y, w, h = cv2.boundingRect(cnt1)
+        cx1 = x + w / 2
+        cy1 = y + h / 2
+        x, y, w, h = cv2.boundingRect(cnt2)
+        cx2 = x + w / 2
+        cy2 = y + h / 2
+
+        # we are in different columns ( sort top to bottom )
+        if (cy1 + self.roiDetector.heightThreshold >= cy2):
+            # Sort from left to right
+            if (cx1 >= cx2):
+                return 1
+        return -1

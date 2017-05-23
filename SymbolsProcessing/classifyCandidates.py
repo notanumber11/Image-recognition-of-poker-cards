@@ -29,13 +29,13 @@ class ClasifyCandidates:
 
         # SampleImages
         img, gray, threshold, contours = Preprocessing.preprocessingImage(pathDiamond)
-        self.diamond = Sample(img,contours[0])
+        self.diamond = Sample(img,threshold,contours[0])
         img, gray, threshold, contours = Preprocessing.preprocessingImage(pathClub)
-        self.clubs = Sample(img,contours[0])
+        self.clubs = Sample(img,threshold,contours[0])
         img, gray, threshold, contours = Preprocessing.preprocessingImage(pathHeart)
-        self.heart = Sample(img,contours[0])
+        self.heart = Sample(img,threshold,contours[0])
         img, gray, threshold, contours = Preprocessing.preprocessingImage(pathSpades)
-        self.spades = Sample(img,contours[0])
+        self.spades = Sample(img,threshold,contours[0])
 
         # List of samples
         self.listSamples = [self.spades,self.clubs,self.heart,self.diamond]
