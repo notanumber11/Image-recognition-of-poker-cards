@@ -6,8 +6,8 @@ import numpy as np
 from Utilities.preprocessing import Preprocessing
 import math as math
 
-samplesPerLine = 4
-numberOfSamples = 8
+samplesPerLine = 5
+numberOfSamples = 30
 gradeStep = 360 / numberOfSamples
 
 # Thresholds
@@ -78,7 +78,7 @@ def createSamples(imgpath,imgOut):
     finalImage = drawAngle(finalImage,contours)
     
     # Print in a file the angle of each sample
-    printResults(contours)
+    # printResults(contours)
     
     # Utilities.printContours1by1(contours, finalImage)
 
@@ -129,7 +129,8 @@ def drawAngle(img,contours):
     return imgClone
 
 def obtainAngle(cnt,imgClone):
-    point1, point2, point3, point4 = obtainPoints(cnt)
+    print len(cnt)
+    point1, point2, point3, point4 = obtainExtremePoints(cnt)
 
     cv2.line(imgClone, point1, point2, (0, 255, 0), 2)
     cv2.line(imgClone, point3, point4, (0, 255, 255), 2)
@@ -139,7 +140,7 @@ def obtainAngle(cnt,imgClone):
         angle = angle + 180
     return angle
 
-def obtainPoints(cnt):
+def obtainExtremePoints(cnt):
     leftmost = tuple(cnt[cnt[:, :, 0].argmin()][0])
     rightmost = tuple(cnt[cnt[:, :, 0].argmax()][0])
     topmost = tuple(cnt[cnt[:, :, 1].argmin()][0])
@@ -177,4 +178,5 @@ def calculateAngle(point1,point2,point3,point4):
         m2 = (point4[1]-point3[1])/(point4[0]-point3[0])
     angle = math.atan((m2-m1)/(1+m1*m2))
     angle = math.degrees(angle)
+    print 'CreateSampleImages angle ', angle
     return angle

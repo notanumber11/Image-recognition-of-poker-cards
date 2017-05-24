@@ -8,7 +8,7 @@ class GenerateCandidates:
         pass
 
     def generateCandidates(self, img,threshold, contours, thresholdArea=50, thresholdSize=0.1):
-
+        contours = sorted(contours, key=cv2.contourArea)
         self.thresholdArea = thresholdArea
         self.thresholdSize = thresholdSize
         rows, cols, _ = img.shape

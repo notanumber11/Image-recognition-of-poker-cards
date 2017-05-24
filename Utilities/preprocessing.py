@@ -46,7 +46,7 @@ class Preprocessing:
         # Contours
         imgContours = np.copy(img)
         _, contours, hierarchy = cv2.findContours(threshold,cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-        contours = sorted(contours, key=cv2.contourArea)
+        # contours = sorted(contours, key=cv2.contourArea)
         # cv2.drawContours(imgContours, contours, -1, (0, 255, 255), 2)
 
 

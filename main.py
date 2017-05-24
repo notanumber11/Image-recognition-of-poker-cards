@@ -9,9 +9,10 @@ from SymbolsProcessing.angleDetector import AngleDetector
 from SymbolsProcessing.classifyCandidates import ClasifyCandidates
 from SymbolsProcessing.extract_characteristics import ExtractCharacteristics
 from SymbolsProcessing.generate_candidates import GenerateCandidates
+from SymbolsProcessing.obtainROICharacters import ObtainROICharacters
 from SymbolsProcessing.refinate_decission import RefinateDecission
 from Utilities import utility as aux
-from Utilities.createSampleImages import createSamples
+from Utilities.createSampleImages import createSamples, drawAngle
 from Utilities.preprocessing import Preprocessing
 
 
@@ -131,7 +132,11 @@ def photo(img):
 
 def currentResults():
     # Preprocessing image
-    img, gray, threshold, contours = Preprocessing.preprocessingImage('CardImages/10-hearts.jpg')
+    img, gray, threshold, contours = Preprocessing.preprocessingImage('CardImages/2-spades7.jpg')
+
+    # imgCopy= drawAngle(img,contours)
+    # cv2.imshow("imgCopy",imgCopy)
+    # cv2.waitKey()
 
     # Generate candidates
     generateCandidates = GenerateCandidates()
@@ -150,27 +155,32 @@ def currentResults():
 
     # Obtain angle
     angleDetector = AngleDetector()
-    angleDetector.obtainAngle(listSamples)
+    listSamples =  angleDetector.obtainAngle(img,listSamples)
+
+    # Obtain roi number
+    obtainROICharacters = ObtainROICharacters()
+    obtainROICharacters.obtainNumberResponse(img,listSamples)
+
 
     for sample in listSamples:
-        cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), aux.font, 0.5, aux.colour, 2,cv2.LINE_AA)
-
-
+        cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
+        cv2.putText(sample.img, str(sample.angle), (0,int(sample.h/2)), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
 
     cv2.imshow('testSample',img)
     cv2.waitKey()
 
-# currentResults()
+currentResults()
 
 
 
 # Utilities.preprocessingImage("CardImages/all_spades_together.jpg")
 
-# createSamples('SampleImages/sample_clubs.jpg','MachineLearning/AngleTraining/clubs-8.jpg')
+# createSamples('SampleImages/sample_hearts.jpg','MachineLearning/AngleTraining/hearts-30.jpg')
 
-roiDetector = RoiDetector(heightThreshold=50,areaThreshold=200)
-extractor = Extractor()
-extractor.pixelClassifier(roiDetector, 'MachineLearning/AngleTraining/clubs-8.jpg')
+# roiDetector = RoiDetector(heightThreshold=20,areaThreshold=100)
+# extractor = Extractor()
+# extractor.pixelClassifier(roiDetector, 'MachineLearning/AngleTraining/spades-360.jpg','MachineLearning/AngleTraining/angles.data')
+# #
 # knn = knearest('MachineLearning/TrainingData/samples.data','MachineLearning/TrainingData/responses.data')
-# knn.applyKnearest(roiDetector,'MachineLearning/AngleTraining/spades-360.jpg')
-
+# knn.applyKnearest(roiDetector,'CardImages/2-spades7.jpg')
+#

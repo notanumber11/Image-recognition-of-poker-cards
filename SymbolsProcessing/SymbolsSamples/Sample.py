@@ -20,6 +20,9 @@ class Sample:
         # Obtain rectangle dimensions
         self.x,self.y,self.w,self.h = cv2.boundingRect(self.cnt)
 
+        self.cx = int(self.x + self.w / 2)
+        self.cy = int(self.y + self.h / 2)
+
         rect = cv2.minAreaRect(self.cnt)
 
         box = cv2.boxPoints(rect)
@@ -55,7 +58,8 @@ class Sample:
         self.percentageRed,self.percentageBlack = aux.obtainColourPercentages(self.img)
 
         self.label = None
-
+        self.angle = None
+        self.stringResult = None
 
     def printSample(self):
         print '<<< ----------------------------------- >>>'

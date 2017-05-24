@@ -19,7 +19,7 @@ class ClasifyCandidates:
 
     pathClub = "SampleImages/sample_clubs2.jpg"
     pathDiamond = "SampleImages/sample_diamonds2.jpg"
-    pathHeart = "SampleImages/sample_heart2.jpg"
+    pathHeart = "SampleImages/sample_hearts2.jpg"
     pathSpades = "SampleImages/sample_spades2.jpg"
 
     # List of symbols

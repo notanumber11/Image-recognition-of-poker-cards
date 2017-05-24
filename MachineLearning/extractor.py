@@ -34,14 +34,11 @@ class Extractor():
 
         # Utilities image
         im, gray, thresh, contours = Preprocessing.preprocessingImage(imgPath)
-        print len(contours)
+        print  'La longitud es ',len(contours)
+
         contours = sorted(contours, self.compareContours)
 
-        for cnt in contours:
-            img2 = im.copy()
-            cv2.drawContours(img2, cnt, -1, (0, 0, 255), 2)
-            cv2.waitKey()
-            cv2.destroyAllWindows()
+
         # Showing thesholding
         # cv2.imshow("sample", thresh)
         # cv2.waitKey()

@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 
 from Utilities.preprocessing import Preprocessing
+from Utilities import utility as aux
 
 
 
@@ -86,7 +87,7 @@ class knearest:
 
 
 
-    def applyKnearestToSample(self,roiDetector,sample,sizeSample = 100,shapeSample = (10, 10)):
+    def applyKnearestToSample(self,roiDetector,img,sample,sizeSample = 100,shapeSample = (10, 10)):
 
         if (shapeSample[0]*shapeSample[1]!=sizeSample):
             print 'Error with parameters sizeSample and shapeSample'
@@ -95,21 +96,19 @@ class knearest:
         self.sizeSample = sizeSample
 
         # preprocessing image
-        img = sample.img
         thresh = sample.thresh
-        contours = sample.cnt
+        cnt = sample.cnt
 
         out = np.zeros(img.shape, np.uint8)
-        cv2.imshow("thresh",thresh)
-        cv2.waitKey()
+        # cv2.imshow("thresh",thresh)
+        # cv2.waitKey()
 
         resultsTesting = []
 
         # Obtaining the rois
-        roiList,roiPointList = roiDetector.roiDetection(thresh, contours)
+        roi = roiDetector.roiDetectionCNT(sample)
 
-        # Find the right position to apply k-nearest
-        for i,roi in enumerate(roiList):
+        if(roi is not None):
 
            # Resizing the shape
             roismall = cv2.resize(roi,self.shapeSample)
@@ -117,22 +116,11 @@ class knearest:
             roismall = np.float32(roismall)
 
             # Obtaining positions
-            x, y, w, h = roiPointList[i][0], roiPointList[i][1], roiPointList[i][2], roiPointList[i][3]
+            # x, y, w, h = roiPointList[i][0], roiPointList[i][1], roiPointList[i][2], roiPointList[i][3]
 
             # Applying algorithm knearest
             retval, results, neigh_resp, dists = self.knn.findNearest(roismall, k = 1)
-            string = str(((results[0][0])))
-            cv2.putText(out,string,(x,y+h),0,1,(0,255,0))
+            result = (results[0][0])
 
-            # Save results for testing
-            resultsTesting.append(results[0][0])
+            sample.angle = result
 
-        # Save results when they are 100% Ok
-        # np.savetxt('TextResults/example_test.txt',resultsTesting)
-
-        print "knearest complete"
-
-        # cv2.imshow('im', img)
-        # cv2.imshow('out',out)
-        # cv2.waitKey(0)
-        # checkResults('TextResults/example_test.txt',resultsTesting)

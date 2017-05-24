@@ -35,7 +35,7 @@ class RefinateDecission():
         end = int(0.8*length)
 
         start = 0
-        print start,end
+        # print start,end
 
         for i in range(start,end):
             sizes.append(samples[i].rectangleArea)

@@ -21,3 +21,18 @@ class RoiDetector:
                     roiPointsList.append((x,y,w,h))
 
         return roiList,roiPointsList
+
+
+    def roiDetectionCNT(self,sample):
+        roiList = []
+        roiPointsList = []
+        if cv2.contourArea(sample.cnt) > self.areaThreshold:
+            [x, y, w, h] = cv2.boundingRect(sample.cnt)
+            if h > self.heightThreshold and h < self.heightThreshold * 20:
+
+                x = x-sample.offSetX
+                y = y - sample.offSetY
+                roi = sample.thresh[y:y + h, x:x + w]
+                return roi
+
+        return None
