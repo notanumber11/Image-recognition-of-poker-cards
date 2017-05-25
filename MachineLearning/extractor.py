@@ -66,6 +66,8 @@ class Extractor():
                 elif key in keys:
                     responses.append(key)
                     samples = np.append(samples, roismall, 0)
+                else:
+                    print 'skipping'
             else:
                 sample = roismall.reshape((1, self.sizeSample))
                 samples = np.append(samples, sample, 0)

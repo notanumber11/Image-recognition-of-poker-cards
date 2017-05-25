@@ -16,7 +16,7 @@ class AngleDetector:
 
 
     def __init__(self):
-        self.roiDetector = RoiDetector(heightThreshold=20,areaThreshold=100)
+        self.roiDetector = RoiDetector(heightThreshold=10,areaThreshold=50)
         self.knnHearts = knearest('MachineLearning/AngleTraining/hearts_360.data','MachineLearning/AngleTraining/angles.data')
         self.knnSpades = knearest('MachineLearning/AngleTraining/spades_360.data', 'MachineLearning/AngleTraining/angles.data')
         self.knnClubs = knearest('MachineLearning/AngleTraining/clubs_360.data', 'MachineLearning/AngleTraining/angles.data')
@@ -24,22 +24,31 @@ class AngleDetector:
 
     def obtainAngle(self,img,listSamples):
         listFinalSamples = []
-        for sample in listSamples:
+
+
+        for i,sample in enumerate(listSamples):
+            # print 'Iteraccion ', i
+            # cv2.imshow("angleDetector", sample.img)
+            # cv2.waitKey()
+            # cv2.destroyAllWindows()
             if (sample.label == 'S'):
-                self.knnSpades.applyKnearestToSample(self.roiDetector,img, sample)
-                listFinalSamples.append(sample)
-            if (sample.label == 'D'):
+                angle = self.knnSpades.applyKnearestToSample(self.roiDetector, sample)
+            elif (sample.label == 'C'):
+                angle = self.knnClubs.applyKnearestToSample(self.roiDetector, sample)
+            elif (sample.label == 'H'):
+                angle = self.knnHearts.applyKnearestToSample(self.roiDetector, sample)
+            elif (sample.label == 'D'):
                 contours = []
                 contours.append(sample.cnt)
                 angle = self.obtainAngleDiamond(sample.cnt,img)
-                angle = int(angle)
-                sample.angle = angle
-                # print 'Angle in angle detector ', angle
 
-                # img2 = drawAngle(img,contours)
-                # cv2.imshow("angleDetector",img2)
-                # cv2.waitKey()
-                listFinalSamples.append(sample)
+            if angle is None:
+                continue
+
+            angle = int(angle)
+            sample.angle = angle
+            listFinalSamples.append(sample)
+
         return listFinalSamples
 
     # def drawAngle(self,img, contours):
@@ -102,5 +111,4 @@ class AngleDetector:
             m2 = (point4[1] - point3[1]) / (point4[0] - point3[0])
         angle = math.atan((m2 - m1) / (1 + m1 * m2))
         angle = math.degrees(angle)
-        print 'CreateSampleImages angle ', angle
         return angle

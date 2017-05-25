@@ -7,16 +7,20 @@ class ObtainROICharacters():
     def __init__(self):
         pass
 
-    def obtainNumberResponse(self,img,listSamples,thresholdSize = 0.2):
+    def getROICharacter(self, img, threshold, listSamples, thresholdSize = 0.3):
+
+        finalList = []
+
         for sample in listSamples:
-            angle = sample.angle
+            angle =  - sample.angle
             rows, cols,_ = img.shape
-            M = cv2.getRotationMatrix2D((sample.cx,sample.cy), -angle, 1)
+            M = cv2.getRotationMatrix2D((sample.cx,sample.cy), angle, 1)
             dst = cv2.warpAffine(img, M, (cols, rows))
 
 
             x, y, w, h = sample.x, sample.y, sample.w, sample.h
 
+            # If the rectangle has more width than height
             if w > h:
                 temp = w
                 w = h
@@ -33,16 +37,19 @@ class ObtainROICharacters():
             y = y - diffY
             x = x - diffX
 
+            roi = dst[y:y+h,x:x+w]
 
 
-            # w = int(w)
-            # h = int(h*1.5)
-            cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 0, 255), 2)
-            cv2.circle(dst, (sample.cx,sample.cy), 5, aux.colour)
-            cv2.imshow("rotated",dst)
+            if y < 0 or x < 0:
+                continue
 
-            # cv2.circle(img, (sample.cx, sample.cy), 5, aux.colour)
-            # cv2.imshow("img", img)
-
-            cv2.waitKey()
+            # print y, y + h, x, x + w
+            # cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 0, 255), 2)
+            # cv2.circle(dst, (sample.cx,sample.cy), 5, aux.colour)
+            # cv2.imshow("obtainROICharacters",roi)
+            # cv2.waitKey()
             cv2.destroyAllWindows()
+
+            sample.ROI = roi
+            finalList.append(sample)
+        return finalList

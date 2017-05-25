@@ -60,6 +60,8 @@ class Sample:
         self.label = None
         self.angle = None
         self.stringResult = None
+        self.ROI = None
+        self.Character = None
 
     def printSample(self):
         print '<<< ----------------------------------- >>>'

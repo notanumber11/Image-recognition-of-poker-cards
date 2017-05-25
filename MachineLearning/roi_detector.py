@@ -24,8 +24,6 @@ class RoiDetector:
 
 
     def roiDetectionCNT(self,sample):
-        roiList = []
-        roiPointsList = []
         if cv2.contourArea(sample.cnt) > self.areaThreshold:
             [x, y, w, h] = cv2.boundingRect(sample.cnt)
             if h > self.heightThreshold and h < self.heightThreshold * 20:

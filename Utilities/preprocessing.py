@@ -10,14 +10,11 @@ class Preprocessing:
         pass
 
     @staticmethod
-    def preprocessingImage(pathImage):
-        # Read image from path
-        img = cv2.imread(pathImage)
-
+    def preprocessing(img):
         # Change red to black
         imgBlack = img
-        imgBlack = Preprocessing.changeRedToBlack(img)
 
+        imgBlack = Preprocessing.changeRedToBlack(img)
 
         # Image to gray scale
         gray = cv2.cvtColor(imgBlack, cv2.COLOR_BGR2GRAY)
@@ -32,9 +29,8 @@ class Preprocessing:
         contrastImg = grayNoise
         # histogram
         # contrastImg = cv2.equalizeHist(grayNoise)
-        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
         contrastImg = clahe.apply(grayNoise)
-
 
         # Thresholding
         # blur = cv2.GaussianBlur(gray, (1, 1), 1000)
@@ -45,26 +41,31 @@ class Preprocessing:
 
         # Contours
         imgContours = np.copy(img)
-        _, contours, hierarchy = cv2.findContours(threshold,cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        _, contours, hierarchy = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         # contours = sorted(contours, key=cv2.contourArea)
         # cv2.drawContours(imgContours, contours, -1, (0, 255, 255), 2)
 
 
         # Utilities.printImages(listImage = [gray,contrastImg,threshold,imgContours])
 
-        return img,gray,threshold,contours
+        return img, gray, threshold, contours
+
+    @staticmethod
+    def preprocessingImageFromROI(roi):
+        img = np.copy(roi)
+        return Preprocessing.preprocessing(img)
+
+
+
+    @staticmethod
+    def preprocessingImage(pathImage):
+        # Read image from path
+        img = cv2.imread(pathImage)
+
+        return Preprocessing.preprocessing(img)
 
     @staticmethod
     def printImages(listImage):
-
-        # titles = ['gray', 'contrast',
-        #           'threshold', 'contours']
-        # images = [img1, img2, img3, img4]
-        # for i in xrange(4):
-        #     plt.subplot(2, 2, i + 1), plt.imshow(images[i], 'gray')
-        #     plt.title(titles[i])
-        #     plt.xticks([]), plt.yticks([])
-        # plt.show()
 
 
         for image in listImage:
