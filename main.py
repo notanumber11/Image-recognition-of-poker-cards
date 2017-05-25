@@ -1,5 +1,7 @@
 from __future__ import division
 
+import os
+
 import cv2
 
 from MachineLearning.extractor import Extractor
@@ -17,6 +19,11 @@ from Utilities.createSampleImages import createSamples, drawAngle
 from Utilities.preprocessing import Preprocessing
 
 
+
+
+from Utilities.utility import sayIt
+
+
 def cascadeVideoCamera():
     cap = cv2.VideoCapture(0)
     number = 0
@@ -26,9 +33,9 @@ def cascadeVideoCamera():
         cv2.imshow('img', img)
 
         key = cv2.waitKey(1)
-
+        # currentResults(imgParameter=img)
         if key == ord('p'):
-            currentResults(img = img)
+            currentResults(imgParameter = img)
             number += 1
             cv2.imwrite('Captures/img_' + str(number) + '.jpg', img)
             print 'Imprimiendo captura ' + 'img_' + str(number) + '.jpg'
@@ -44,13 +51,13 @@ def cascadeVideoCamera():
 
 
 
-def currentResults(img = None,imgPath = None):
+def currentResults(imgParameter = None,imgPath = None):
     print 'Executing current results'
     if(imgPath is not None):
         # Preprocessing image
         img, gray, threshold, contours = Preprocessing.preprocessingImage(imgPath)
-    elif(img is not None):
-        img, gray, threshold, contours = Preprocessing.preprocessingImageFromROI(img)
+    elif(imgParameter is not None):
+        img, gray, threshold, contours = Preprocessing.preprocessingImageFromROI(imgParameter)
     else:
         print 'Error en el paso de parametros'
         return -1
@@ -62,6 +69,8 @@ def currentResults(img = None,imgPath = None):
     # Generate candidates
     generateCandidates = GenerateCandidates()
     img, listROIs, listThreshold,listContours, listOffSetX, listOffSetY = generateCandidates.generateCandidates(img,threshold,contours)
+
+
     # Extract characteristics
     extractCharacteristics = ExtractCharacteristics()
     listSamples = extractCharacteristics.extractCharacteristics(listROIs,listThreshold,listContours, listOffSetX, listOffSetY)
@@ -78,34 +87,41 @@ def currentResults(img = None,imgPath = None):
     angleDetector = AngleDetector()
     listSamples =  angleDetector.obtainAngle(img,listSamples)
 
-    # Obtain roi number
+    # # Obtain roi number
     obtainROICharacters = ObtainROICharacters()
     listSamples = obtainROICharacters.getROICharacter(img, threshold, listSamples)
-    #
-    # Process roi number
+
+    # # Process roi number
     processROICharacter = ProcessROICharacter()
     listSamples = processROICharacter.processROICharacter(listSamples)
 
     for sample in listSamples:
+        if (imgParameter is not None):
+            img = imgParameter
         cv2.putText(img, sample.stringResult, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
         # cv2.putText(img, str(sample.angle), (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
-        # cv2.putText(sample.img, sample.label, (0,int(sample.h/2)), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
+        # cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
 
     cv2.imshow('testSample',img)
     cv2.waitKey()
+    cv2.destroyAllWindows()
 
-# currentResults(imgPath='CardImages/randomCards-2.jpg')
+    # for sample in listSamples:
+    #     sayIt(sample)
 
-cascadeVideoCamera()
+currentResults(imgPath='CardImages/all_spades.jpg')
+
+# cascadeVideoCamera()
 
 # Utilities.preprocessingImage("CardImages/all_spades_together.jpg")
 
 # createSamples('SampleImages/sample_hearts.jpg','MachineLearning/AngleTraining/hearts-30.jpg')
 
-roiDetector = RoiDetector(heightThreshold=20,areaThreshold=100)
+# roiDetector = RoiDetector(heightThreshold=20,areaThreshold=100)
 # extractor = Extractor()
 # extractor.pixelClassifier(roiDetector, 'MachineLearning/CharacterTraining/set-4.png')
 #
 # knn = knearest('MachineLearning/CharacterTraining/samples.data','MachineLearning/CharacterTraining/responses.data')
 # knn.applyKnearest(roiDetector,'MachineLearning/CharacterTraining/set-4.png')
-#
+
+

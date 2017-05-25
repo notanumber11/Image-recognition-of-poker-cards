@@ -34,7 +34,6 @@ class Extractor():
 
         # Utilities image
         im, gray, thresh, contours = Preprocessing.preprocessingImage(imgPath)
-        print  'La longitud es ',len(contours)
 
         contours = sorted(contours, self.compareContours)
 

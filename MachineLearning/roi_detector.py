@@ -28,8 +28,9 @@ class RoiDetector:
             [x, y, w, h] = cv2.boundingRect(sample.cnt)
             if h > self.heightThreshold and h < self.heightThreshold * 20:
 
-                x = x-sample.offSetX
-                y = y - sample.offSetY
+                # x = x-sample.offSetX
+                # y = y - sample.offSetY
+                # print x,y
                 roi = sample.thresh[y:y + h, x:x + w]
                 return roi
 

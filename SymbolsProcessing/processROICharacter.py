@@ -16,8 +16,14 @@ class ProcessROICharacter:
         finalList = []
         i = 0
         for sample in listSamples:
+
+
+
             i+=1
             img, gray, threshold, contours = Preprocessing.preprocessingImageFromROI(sample.ROI)
+
+            # cv2.imshow("processROICharacter", img)
+            # cv2.waitKey()
 
             width = sample.w
             height = sample.h
@@ -28,13 +34,15 @@ class ProcessROICharacter:
                 height = temp
 
             listValidContours = []
-            for cnt in contours:
-                x,y,w,h = cv2.boundingRect(cnt)
-                # check if the contour has the right size
-                if ( h > height ):
-                    listValidContours.append(cnt)
+            # for cnt in contours:
+            #     x,y,w,h = cv2.boundingRect(cnt)
+            #     # check if the contour has the right size
+            #     if ( h > height ):
+            #         listValidContours.append(cnt)
+            listValidContours = contours
 
-            roiDetector = RoiDetector(heightThreshold=height, areaThreshold=height*1.2*3)
+
+            roiDetector = RoiDetector(heightThreshold=height, areaThreshold=height)
             # roiDetector = RoiDetector(heightThreshold=5, areaThreshold=1)
 
             listStringResults = self.knn.applyKnearestToImg(threshold,listValidContours,roiDetector)
@@ -55,6 +63,12 @@ class ProcessROICharacter:
                 if(lenght>1):
                     if('1' in listStringResults or '0' in listStringResults):
                         response='10'
+                    else:
+                        response = listStringResults[0]
+
+            # if response == 'J':
+            #     cv2.imshow("processROICharacter", threshold)
+            #     cv2.waitKey()
 
             if response is not None:
                 sample.Character = response
@@ -68,10 +82,9 @@ class ProcessROICharacter:
             #     print 'Response', response , ' Angle = ' , sample.angle
             #     # if i == 24:
             #     #     print 'meh'
-            #     # cv2.imshow("processROICharacter", sample.img)
-            #     cv2.imshow("processROICharacter", threshold)
-            #
-            #     cv2.waitKey()
+
+
+
 
             # for response in listStringResults:
             #     print response

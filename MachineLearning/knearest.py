@@ -98,6 +98,8 @@ class knearest:
 
         if(roi is not None):
 
+
+
            # Resizing the shape
             roismall = cv2.resize(roi,self.shapeSample)
             roismall = roismall.reshape((1,self.sizeSample))
@@ -109,7 +111,7 @@ class knearest:
             # Applying algorithm knearest
             retval, results, neigh_resp, dists = self.knn.findNearest(roismall, k = 1)
             if dists > 999999:
-                print 'Error in knearest character'
+                print 'Error in knearest symbol'
                 return None
             result = (results[0][0])
             return result
@@ -144,9 +146,20 @@ class knearest:
 
             string = str((unichr(results[0][0])))
 
-            if dists > 999999:
-                print 'Error in knearest character'
-                continue
+
+
+            # print dists, neigh_resp
+            # cv2.imshow("knearest",roi)
+            # cv2.waitKey()
+            # cv2.destroyAllWindows()
+
+            # if dists > 999999:
+            #     # cv2.imshow("knearest",roi)
+            #     # print dists
+            #     # cv2.waitKey()
+            #     # cv2.destroyAllWindows()
+            #     print 'Error in knearest character'
+            #     continue
             listResults.append(string)
 
 

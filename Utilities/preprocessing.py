@@ -29,15 +29,26 @@ class Preprocessing:
         contrastImg = grayNoise
         # histogram
         # contrastImg = cv2.equalizeHist(grayNoise)
-        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-        contrastImg = clahe.apply(grayNoise)
+        # clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+        # contrastImg = clahe.apply(grayNoise)
 
         # Thresholding
         # blur = cv2.GaussianBlur(gray, (1, 1), 1000)
-        # ret, threshold = cv2.threshold(blur,120 , 255, cv2.THRESH_BINARY)
+        # ret, threshold = cv2.threshold(contrastImg,140 , 255, cv2.THRESH_BINARY_INV)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 2)
-        ret2, threshold = cv2.threshold(contrastImg, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+        ret2, threshold = cv2.threshold(contrastImg, 150, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+
+
+        # if(ret2<80):
+            # print ret2
+            # cv2.imshow("preprocessing",contrastImg)
+            # cv2.imshow("preprocessing2", threshold)
+            # cv2.waitKey()
+            # ret2 = 160
+        # ret, threshold = cv2.threshold(contrastImg,ret2 , 255, cv2.THRESH_BINARY_INV)
+
+
 
         # Contours
         imgContours = np.copy(img)

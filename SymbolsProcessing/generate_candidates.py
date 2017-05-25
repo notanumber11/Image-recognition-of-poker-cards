@@ -30,9 +30,9 @@ class GenerateCandidates:
                 x = x - diffX
 
                 if (x > 0 and y > 0 and (y + h) < rows and (x + w) < cols):
-                    sample = img[y:y + h, x:x + w]
+                    roi = img[y:y + h, x:x + w]
                     thresh = threshold[y:y + h, x:x + w]
-                    listROIs.append(sample)
+                    listROIs.append(roi)
                     listOffSetX.append(x)
                     listOffSetY.append(y)
                     listContours.append(cnt)

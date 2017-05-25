@@ -14,11 +14,14 @@ class ObtainROICharacters():
         for sample in listSamples:
             angle =  - sample.angle
             rows, cols,_ = img.shape
-            M = cv2.getRotationMatrix2D((sample.cx,sample.cy), angle, 1)
+            M = cv2.getRotationMatrix2D((sample.cx+sample.offSetX,sample.cy+sample.offSetY), angle, 1)
             dst = cv2.warpAffine(img, M, (cols, rows))
 
+            # cv2.imshow("obtainROICharacters",dst)
+            # cv2.waitKey()
+            # cv2.destroyAllWindows()
 
-            x, y, w, h = sample.x, sample.y, sample.w, sample.h
+            x, y, w, h = sample.x+sample.offSetX, sample.y+sample.offSetY, sample.w, sample.h
 
             # If the rectangle has more width than height
             if w > h:
@@ -48,7 +51,7 @@ class ObtainROICharacters():
             # cv2.circle(dst, (sample.cx,sample.cy), 5, aux.colour)
             # cv2.imshow("obtainROICharacters",roi)
             # cv2.waitKey()
-            cv2.destroyAllWindows()
+            # cv2.destroyAllWindows()
 
             sample.ROI = roi
             finalList.append(sample)

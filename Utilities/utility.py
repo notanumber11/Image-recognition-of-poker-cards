@@ -1,10 +1,11 @@
 from __future__ import division
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 from rectangle import Rectangle
-
+from gtts import gTTS
 font = cv2.FONT_HERSHEY_SIMPLEX
 colour = (255,255, 0)
 size = 0.8
@@ -306,3 +307,35 @@ def thresholding(img):
         plt.title(titles[i])
         plt.xticks([]), plt.yticks([])
     plt.show()
+
+
+def sayIt(sample):
+    from gtts import gTTS
+
+    import pyglet
+
+
+
+    if(sample.label == 'D'):
+        text = 'Diamonds'
+    elif (sample.label == 'H'):
+        text = 'Hearts'
+    elif (sample.label == 'C'):
+        text = 'Clubs'
+    elif(sample.label =='S'):
+        text = 'Spades'
+    text = 'I love you Anna and your card is ' + sample.Character + ' of ' + text
+
+
+    tts = gTTS(text=text, lang='en')
+    filename = 'file.mp3'
+    tts.save(filename)
+
+    # os.system(filename)
+    # #
+
+    import mp3play, time
+    clip = mp3play.load(filename)
+    clip.play()
+    time.sleep(min(30, clip.seconds()))
+    clip.stop()

@@ -5,6 +5,7 @@ import cv2
 import numpy as np
 
 from Utilities import utility as aux
+from Utilities.preprocessing import Preprocessing
 
 
 class Sample:
@@ -14,6 +15,25 @@ class Sample:
 
         self.offSetX = offSetX
         self.offSetY = offSetY
+
+        # New code testing
+        img, gray, thresh, contours = Preprocessing.preprocessingImageFromROI(img)
+        #
+        contours = sorted(contours, key=cv2.contourArea)
+        #
+
+        if(len>0):
+            cnt = contours[len(contours)-1]
+        else:
+            cnt = contours[0]
+        cv2.drawContours(img, cnt, -1, (0, 255, 255), 2)
+
+        # cv2.imshow("meh",thresh)
+        # cv2.imshow("mwh1",img)
+        # cv2.waitKey()
+        # cv2.destroyAllWindows()
+
+
         self.img = img
         self.cnt = cnt
         self.thresh = thresh
