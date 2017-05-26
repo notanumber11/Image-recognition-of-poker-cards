@@ -69,7 +69,7 @@ class ClasifyCandidates:
             #     cv2.imshow("classifyCandidates.py",sample.img)
             #     self.sampleSpade.printSpade(sample)
             #     cv2.waitKey()
-
+            sample.stringResult = sample.label
         return listFinal
 
     def showSamples(self, listSamples):

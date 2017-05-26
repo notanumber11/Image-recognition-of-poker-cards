@@ -132,6 +132,8 @@ class knearest:
 
         # Find the right position to apply k-nearest
         for i, roi in enumerate(roiList):
+
+
             # Resizing the shape
             roismall = cv2.resize(roi, self.shapeSample)
             roismall = roismall.reshape((1, self.sizeSample))
@@ -140,26 +142,42 @@ class knearest:
             # Obtaining positions
             x, y, w, h = roiPointList[i][0], roiPointList[i][1], roiPointList[i][2], roiPointList[i][3]
 
+
+
             # Applying algorithm knearest
             retval, results, neigh_resp, dists = self.knn.findNearest(roismall, k=1)
 
 
             string = str((unichr(results[0][0])))
 
+            if string == '0':
 
 
-            # print dists, neigh_resp
-            # cv2.imshow("knearest",roi)
-            # cv2.waitKey()
-            # cv2.destroyAllWindows()
+                print string, dists
+                cv2.imshow("knearest", threshold)
+                cv2.waitKey()
 
-            # if dists > 999999:
-            #     # cv2.imshow("knearest",roi)
-            #     # print dists
-            #     # cv2.waitKey()
-            #     # cv2.destroyAllWindows()
-            #     print 'Error in knearest character'
-            #     continue
+            if  dists > 1500000:
+                continue
+
+            rows,columns = roi.shape
+            if dists < 50000 and rows/columns < 2 and string =='1':
+                # print rows, columns
+                #
+                # print dists
+                # cv2.imshow("knearest", roi)
+                # cv2.waitKey()
+                # cv2.destroyAllWindows()
+                continue
+
+
+            # else:
+            #     if string == '1':
+            #         cv2.imshow("knearest", roi)
+            #         print dists
+            #         cv2.waitKey()
+            #         cv2.destroyAllWindows()
+            #         print 'Error in knearest character'
             listResults.append(string)
 
 

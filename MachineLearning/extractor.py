@@ -7,7 +7,7 @@ from Utilities.preprocessing import Preprocessing
 
 
 # Keys range accepted from the keyboard
-keys = [i for i in range(48, 81)]
+keys = [i for i in range(47, 82)]
 
 
 class Extractor():

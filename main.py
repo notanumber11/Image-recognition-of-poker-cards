@@ -71,6 +71,8 @@ def currentResults(imgParameter = None,imgPath = None):
     img, listROIs, listThreshold,listContours, listOffSetX, listOffSetY = generateCandidates.generateCandidates(img,threshold,contours)
 
 
+
+
     # Extract characteristics
     extractCharacteristics = ExtractCharacteristics()
     listSamples = extractCharacteristics.extractCharacteristics(listROIs,listThreshold,listContours, listOffSetX, listOffSetY)
@@ -102,14 +104,16 @@ def currentResults(imgParameter = None,imgPath = None):
         # cv2.putText(img, str(sample.angle), (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
         # cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
 
+    # img = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_CUBIC)
     cv2.imshow('testSample',img)
+    # cv2.resizeWindow('image', 600, 600)
     cv2.waitKey()
     cv2.destroyAllWindows()
 
     # for sample in listSamples:
     #     sayIt(sample)
 
-currentResults(imgPath='CardImages/all_spades.jpg')
+currentResults(imgPath='CardImages/all_hearts.jpg')
 
 # cascadeVideoCamera()
 
@@ -117,11 +121,11 @@ currentResults(imgPath='CardImages/all_spades.jpg')
 
 # createSamples('SampleImages/sample_hearts.jpg','MachineLearning/AngleTraining/hearts-30.jpg')
 
-# roiDetector = RoiDetector(heightThreshold=20,areaThreshold=100)
+# roiDetector = RoiDetector(heightThreshold=20,areaThreshold=50)
 # extractor = Extractor()
 # extractor.pixelClassifier(roiDetector, 'MachineLearning/CharacterTraining/set-4.png')
-#
-# knn = knearest('MachineLearning/CharacterTraining/samples.data','MachineLearning/CharacterTraining/responses.data')
+
+# knn = knearest('MachineLearning/TrainingData/samples.data','MachineLearning/TrainingData/responses.data')
 # knn.applyKnearest(roiDetector,'MachineLearning/CharacterTraining/set-4.png')
 
 

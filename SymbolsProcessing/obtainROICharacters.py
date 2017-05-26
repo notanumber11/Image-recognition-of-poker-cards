@@ -46,12 +46,6 @@ class ObtainROICharacters():
             if y < 0 or x < 0:
                 continue
 
-            # print y, y + h, x, x + w
-            # cv2.rectangle(dst, (x, y), (x + w, y + h), (0, 0, 255), 2)
-            # cv2.circle(dst, (sample.cx,sample.cy), 5, aux.colour)
-            # cv2.imshow("obtainROICharacters",roi)
-            # cv2.waitKey()
-            # cv2.destroyAllWindows()
 
             sample.ROI = roi
             finalList.append(sample)
