@@ -5,7 +5,7 @@ import cv2
 class SampleSpade:
 
     minSpadePerimeter = 0.76
-    maxSpadePerimeter = 1
+    maxSpadePerimeter = 1.1
 
     minSpadeAspectRatio = 0.65
     maxSpadeAspectRatio = 0.89
@@ -43,6 +43,7 @@ class SampleSpade:
 
     def isSpadeMatchShape(self,sample):
         ret = cv2.matchShapes(self.SpadeSample.cnt, sample.cnt, 1, 0.0)
+        self.matchShape = ret
         if (ret < self.matchShapeThreshold):
             return  True, ret
         return False, ret

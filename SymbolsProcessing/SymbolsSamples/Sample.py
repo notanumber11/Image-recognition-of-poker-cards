@@ -26,7 +26,7 @@ class Sample:
             cnt = contours[len(contours)-1]
         else:
             cnt = contours[0]
-        cv2.drawContours(img, cnt, -1, (0, 255, 255), 2)
+        # cv2.drawContours(img, cnt, -1, (0, 255, 255), 2)
 
         # cv2.imshow("meh",thresh)
         # cv2.imshow("mwh1",img)
@@ -48,7 +48,8 @@ class Sample:
         box = cv2.boxPoints(rect)
         self.box = np.int0(box)
 
-
+        self.bestMatchShape = 1
+        self.labelMatchShape = None
 
         # print ' <<<<<<<< Inicio box >>>>>>>>>>'
         # print rect

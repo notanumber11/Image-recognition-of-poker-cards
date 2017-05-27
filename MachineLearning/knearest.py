@@ -150,12 +150,12 @@ class knearest:
 
             string = str((unichr(results[0][0])))
 
-            if string == '0':
-
-
-                print string, dists
-                cv2.imshow("knearest", threshold)
-                cv2.waitKey()
+            # if string == '0':
+            #
+            #
+            #     print string, dists
+            #     cv2.imshow("knearest", threshold)
+            #     cv2.waitKey()
 
             if  dists > 1500000:
                 continue

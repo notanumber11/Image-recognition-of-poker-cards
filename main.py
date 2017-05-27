@@ -81,10 +81,10 @@ def currentResults(imgParameter = None,imgPath = None):
     classifier = ClasifyCandidates()
     listSamples = classifier.clasifyCandidates(img,listSamples)
 
-    # Refinate decission
-    refinateDecission = RefinateDecission()
-    listSamples = refinateDecission.refinateDecission(listSamples)
-
+    # # Refinate decission
+    # refinateDecission = RefinateDecission()
+    # listSamples = refinateDecission.refinateDecission(listSamples)
+    #
     # Obtain angle
     angleDetector = AngleDetector()
     listSamples =  angleDetector.obtainAngle(img,listSamples)
@@ -92,8 +92,8 @@ def currentResults(imgParameter = None,imgPath = None):
     # # Obtain roi number
     obtainROICharacters = ObtainROICharacters()
     listSamples = obtainROICharacters.getROICharacter(img, threshold, listSamples)
-
-    # # Process roi number
+    #
+    # # # Process roi number
     processROICharacter = ProcessROICharacter()
     listSamples = processROICharacter.processROICharacter(listSamples)
 
@@ -102,7 +102,7 @@ def currentResults(imgParameter = None,imgPath = None):
             img = imgParameter
         cv2.putText(img, sample.stringResult, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
         # cv2.putText(img, str(sample.angle), (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
-        # cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
+        # cv2.putText(img, sample.Character, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
 
     # img = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_CUBIC)
     cv2.imshow('testSample',img)
@@ -113,7 +113,7 @@ def currentResults(imgParameter = None,imgPath = None):
     # for sample in listSamples:
     #     sayIt(sample)
 
-currentResults(imgPath='CardImages/all_hearts.jpg')
+currentResults(imgPath='CardImages/test2.jpg')
 
 # cascadeVideoCamera()
 

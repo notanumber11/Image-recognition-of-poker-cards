@@ -23,8 +23,14 @@ class ProcessROICharacter:
             i+=1
             img, gray, threshold, contours = Preprocessing.preprocessingImageFromROI(sample.ROI)
 
+
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            ret2, threshold = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+            _, contours, hierarchy = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+
             # cv2.drawContours(img, contours, -1, (0, 255, 255), 2)
-            # cv2.imshow("processROICharacter", img)
+            # cv2.imshow("processROICharacter1", img)
+            # cv2.imshow("processROICharacter", threshold)
             # cv2.waitKey()
 
             width = sample.w
@@ -73,8 +79,8 @@ class ProcessROICharacter:
                                 response = listStringResults[i]
                 if(response=='1'):
                     response = None
-                # if(response == '0'):
-                #     response = 'Q'
+                if(response == '0'):
+                    response = 'Q'
 
                 # print '----------------------'
                 # for string in listStringResults:

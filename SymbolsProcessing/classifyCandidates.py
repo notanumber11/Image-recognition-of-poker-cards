@@ -60,14 +60,31 @@ class ClasifyCandidates:
             flagDiamonds = self.isDiamond(sample)
 
             list = [flagHearts, flagSpades, flagDiamonds, flagClubs]
-            if self.TrueXor(list):
+            # if self.TrueXor(list):
                 # cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), self.font, 0.5, self.symbolsColour, 2, cv2.LINE_AA)
-                listFinal.append(sample)
+                # listFinal.append(sample)
+            # else:
+            #     cv2.imshow("classifyCandidates.py", sample.img)
+            #     self.sampleDiamond.printDiamond(sample)
+            #     self.sampleHeart.printHeart(sample)
+            #     cv2.waitKey()
             isSymbol = flagClubs or flagDiamonds or flagHearts or flagSpades
 
+
+            if isSymbol:
+                listFinal.append(sample)
+
             # if not isSymbol:
-            #     cv2.imshow("classifyCandidates.py",sample.img)
+            #     cv2.imshow("classifyCandidates.py", sample.img)
+            #     # self.sampleDiamond.printDiamond(sample)
+            #     # self.sampleHeart.printHeart(sample)
             #     self.sampleSpade.printSpade(sample)
+            #     # self.sampleClubs.printClub(sample)
+            #     cv2.waitKey()
+
+            # if not self.TrueXor(list):
+            #     cv2.imshow("classifyCandidates.py",sample.img)
+            #     self.sampleDiamond.printDiamond(sample)
             #     cv2.waitKey()
             sample.stringResult = sample.label
         return listFinal
@@ -100,25 +117,30 @@ class ClasifyCandidates:
             print "Aspect Ratio = ", self.listSamples[i].aspectRatio
 
     def isSpade(self, sample):
-        isSpade = self.sampleSpade.isSpade(sample)
-        if isSpade:
+        isSpade = self.sampleSpade.isSpade(sample) and sample.bestMatchShape > self.sampleSpade.matchShape
+        if isSpade :
+            sample.bestMatchShape = self.sampleSpade.matchShape
             sample.label = 'S'
         return isSpade
 
     def isClub(self, sample):
-        isClub = self.sampleClubs.isClub(sample)
-        if isClub:
+        isClub = self.sampleClubs.isClub(sample) and sample.bestMatchShape > self.sampleClubs.matchShape
+        if isClub :
+            sample.bestMatchShape = self.sampleClubs.matchShape
             sample.label = 'C'
         return isClub
 
     def isHeart(self, sample):
-        isHearts = self.sampleHeart.isHeart(sample)
-        if isHearts:
+        isHearts = self.sampleHeart.isHeart(sample) and sample.bestMatchShape > self.sampleHeart.matchShape
+        if isHearts :
+            sample.bestMatchShape = self.sampleHeart.matchShape
             sample.label = 'H'
         return isHearts
 
     def isDiamond(self, sample):
-        isDiamond = self.sampleDiamond.isDiamond(sample)
-        if isDiamond:
+        isDiamond = self.sampleDiamond.isDiamond(sample) and sample.bestMatchShape > self.sampleDiamond.matchShape
+        if isDiamond :
+            sample.bestMatchShape = self.sampleDiamond.matchShape
             sample.label = 'D'
         return isDiamond
+

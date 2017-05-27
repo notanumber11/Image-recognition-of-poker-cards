@@ -29,6 +29,7 @@ class SampleHeart:
 
     def isHeartsMatchShape(self,sample):
         ret = cv2.matchShapes(self.heartSample.cnt, sample.cnt, 1, 0.0)
+        self.matchShape = ret
         if (ret < self.matchShapeThreshold):
             return  True, ret
         return False, ret
@@ -38,14 +39,15 @@ class SampleHeart:
             return True
         return False
 
-    def printHeart(self, matchShape, red, relationArea, sample):
+    def printHeart(self, sample):
         print ""
         print "<--------------------------------------------------------->"
         print " --  Hearts   ---"
         print  "Is red ? ", self.isRed(sample), sample.percentageRed
         print " Is  RelationArea? ", self.isHeartRelationArea(sample), sample.relationArea
         print " Is  match shape? ", self.isHeartsMatchShape(sample)
-        if matchShape and relationArea and red:
+        matchShape,_ = self.isHeartsMatchShape(sample)
+        if matchShape and self.isHeartRelationArea(sample) and self.isRed(sample):
             print "Is Hearts !"
         else:
             print "Is not Hearts !"

@@ -29,6 +29,7 @@ class SampleDiamond:
 
     def isDiamondsMatchShape(self,sample):
         ret = cv2.matchShapes(self.diamondSample.cnt, sample.cnt, 1, 0.0)
+        self.matchShape = ret
         if (ret < self.matchShapeThreshold):
             return  True, ret
         return False, ret
@@ -42,14 +43,15 @@ class SampleDiamond:
 
         return matchShape and relationArea and red
 
-    def printDiamond(self, matchShape, red, relationArea, sample):
+    def printDiamond(self,sample):
         print ""
         print "<--------------------------------------------------------->"
         print " --  Diamonds   ---"
         print  "Is red ? ", self.isRed(sample), sample.percentageRed
         print " Is  RelationArea? ", self.isDiamondRelationArea(sample), sample.relationArea
         print " Is  match shape? ", self.isDiamondsMatchShape(sample)
-        if matchShape and relationArea and red:
+        matchShape,_ = self.isDiamondsMatchShape(sample)
+        if matchShape and self.isDiamondRelationArea(sample) and self.isRed(sample):
             print "Is Diamonds !"
         else:
             print "Is not Diamonds !"

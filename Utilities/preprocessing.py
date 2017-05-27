@@ -37,9 +37,9 @@ class Preprocessing:
         # ret, threshold = cv2.threshold(contrastImg,140 , 255, cv2.THRESH_BINARY_INV)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 2)
-        ret2, threshold = cv2.threshold(contrastImg, 150, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+        ret2, threshold = cv2.threshold(contrastImg, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
-
+        # print ret2
         # if(ret2<80):
             # print ret2
             # cv2.imshow("preprocessing",contrastImg)
