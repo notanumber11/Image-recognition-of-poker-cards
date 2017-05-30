@@ -56,14 +56,18 @@ def currentResults(imgParameter = None,imgPath = None):
     if(imgPath is not None):
         # Preprocessing image
         img, gray, threshold, contours = Preprocessing.preprocessingImage(imgPath)
-    elif(imgParameter is not None):
+        img = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_CUBIC)
+        imgParameter = img
+
+    if(imgParameter is not None):
         img, gray, threshold, contours = Preprocessing.preprocessingImageFromROI(imgParameter)
     else:
         print 'Error en el paso de parametros'
         return -1
 
+
     # imgCopy= drawAngle(img,contours)
-    # cv2.imshow("imgCopy",imgCopy)
+    # cv2.imshow("imgCopy",threshold)
     # cv2.waitKey()
 
     # Generate candidates
@@ -72,6 +76,14 @@ def currentResults(imgParameter = None,imgPath = None):
 
 
 
+    # for cnt in listContours:
+    #     x, y, w, h = cv2.boundingRect(cnt)
+    #     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+
+
+    # cv2.imshow("contours", img)
+    # cv2.waitKey()
 
     # Extract characteristics
     extractCharacteristics = ExtractCharacteristics()
@@ -81,39 +93,43 @@ def currentResults(imgParameter = None,imgPath = None):
     classifier = ClasifyCandidates()
     listSamples = classifier.clasifyCandidates(img,listSamples)
 
-    # # Refinate decission
+    # # # Refinate decission
     # refinateDecission = RefinateDecission()
     # listSamples = refinateDecission.refinateDecission(listSamples)
-    #
+
     # Obtain angle
     angleDetector = AngleDetector()
     listSamples =  angleDetector.obtainAngle(img,listSamples)
 
-    # # Obtain roi number
+
+    # # # # # Obtain roi number
     obtainROICharacters = ObtainROICharacters()
     listSamples = obtainROICharacters.getROICharacter(img, threshold, listSamples)
-    #
-    # # # Process roi number
+    # #
+    # Process roi number
     processROICharacter = ProcessROICharacter()
     listSamples = processROICharacter.processROICharacter(listSamples)
 
     for sample in listSamples:
         if (imgParameter is not None):
             img = imgParameter
-        cv2.putText(img, sample.stringResult, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
-        # cv2.putText(img, str(sample.angle), (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
+        cv2.putText(img, sample.stringResult, (sample.offSetX, sample.offSetY), aux.font, aux.size*1.25, aux.colour, 2,cv2.LINE_AA)
+        # cv2.putText(img, str(sample.angle), (sample.offSetX, sample.offSetY), aux.font, aux.size * 1.5, aux.colour, 2,cv2.LINE_AA)
         # cv2.putText(img, sample.Character, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
 
-    # img = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_CUBIC)
     cv2.imshow('testSample',img)
-    # cv2.resizeWindow('image', 600, 600)
     cv2.waitKey()
     cv2.destroyAllWindows()
 
     # for sample in listSamples:
     #     sayIt(sample)
 
-currentResults(imgPath='CardImages/test2.jpg')
+currentResults(imgPath='CardImages/5-diamonds-15-degrees.jpg')
+
+i = 0
+for i in range(0,17):
+    print i
+    currentResults(imgPath='CardImages/test'+str(i)+'.jpg')
 
 # cascadeVideoCamera()
 
@@ -123,8 +139,8 @@ currentResults(imgPath='CardImages/test2.jpg')
 
 # roiDetector = RoiDetector(heightThreshold=20,areaThreshold=50)
 # extractor = Extractor()
-# extractor.pixelClassifier(roiDetector, 'MachineLearning/CharacterTraining/set-4.png')
-
+# extractor.pixelClassifier(roiDetector, 'MachineLearning/AngleTraining/hearts-30.jpg')
+#
 # knn = knearest('MachineLearning/TrainingData/samples.data','MachineLearning/TrainingData/responses.data')
 # knn.applyKnearest(roiDetector,'MachineLearning/CharacterTraining/set-4.png')
 

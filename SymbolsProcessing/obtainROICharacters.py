@@ -25,9 +25,12 @@ class ObtainROICharacters():
         for sample in listSamples:
             angle =  - sample.angle
             rows, cols,_ = img.shape
+            # cv2.rectangle(img, (sample.x+sample.offSetX, sample.y+sample.offSetY), (sample.x+sample.offSetX + sample.w, sample.y+sample.offSetY + sample.h), (0, 255, 0), 2)
+
             M = cv2.getRotationMatrix2D((sample.cx+sample.offSetX,sample.cy+sample.offSetY), angle, 1)
             dst = cv2.warpAffine(img, M, (cols, rows))
             dstThreshold = cv2.warpAffine(threshold, M, (cols, rows))
+
 
 
             x, y, w, h = sample.x+sample.offSetX, sample.y+sample.offSetY, sample.w, sample.h
@@ -41,7 +44,8 @@ class ObtainROICharacters():
             # print x, y, w, h
             offSetY = 1.6 * h
             y = int(y - offSetY)
-            h = int(h * 1.2)
+
+            h = int(h * 1.4)
             diffY = (int)(thresholdSize * h)
             diffX = (int)(thresholdSize * w)
             h = h + diffY * 2
@@ -49,18 +53,31 @@ class ObtainROICharacters():
             y = y - diffY
             x = x - diffX
 
+            # y2 = int(y + offSetY)+40
+
             roi = dst[y:y+h,x:x+w]
             roiThreshold = dstThreshold[y:y+h,x:x+w]
 
-            # cv2.imshow("obtainROICharacters1",roi)
-            # cv2.imshow("obtainROICharacters",roiThreshold)
-            # cv2.waitKey()
-            # cv2.destroyAllWindows()
+
 
 
             if y < 0 or x < 0:
                 continue
 
+
+
+            # cv2.imshow("original", img)
+            # cv2.imshow("rotated",dst)
+            # cv2.rectangle(dst, (x, y), (x+w,y+h), (255, 0, 0), 2)
+            # cv2.rectangle(dst, (x, y2), (x+w,y2+h), (255, 0, 0), 2)
+            #
+            # cv2.imshow("roi character",dst)
+            # cv2.waitKey()
+
+            # cv2.imshow("obtainROICharacters1",roi)
+            # cv2.imshow("obtainROICharacters",roiThreshold)
+            # cv2.waitKey()
+            # cv2.destroyAllWindows()
 
             sample.ROI = roi
             finalList.append(sample)

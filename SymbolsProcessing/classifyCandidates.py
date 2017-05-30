@@ -29,13 +29,22 @@ class ClasifyCandidates:
 
         # SampleImages
         img, gray, threshold, contours = Preprocessing.preprocessingImage(pathDiamond)
+        contours = sorted(contours, key=cv2.contourArea, reverse=True)
         self.diamond = Sample(img,threshold,contours[0])
+
         img, gray, threshold, contours = Preprocessing.preprocessingImage(pathClub)
+        contours = sorted(contours, key=cv2.contourArea, reverse=True)
         self.clubs = Sample(img,threshold,contours[0])
+
         img, gray, threshold, contours = Preprocessing.preprocessingImage(pathHeart)
+        contours = sorted(contours, key=cv2.contourArea, reverse=True)
         self.heart = Sample(img,threshold,contours[0])
+
         img, gray, threshold, contours = Preprocessing.preprocessingImage(pathSpades)
+        contours = sorted(contours, key=cv2.contourArea, reverse=True)
         self.spades = Sample(img,threshold,contours[0])
+
+
 
         # List of samples
         self.listSamples = [self.spades,self.clubs,self.heart,self.diamond]
@@ -70,17 +79,19 @@ class ClasifyCandidates:
             #     cv2.waitKey()
             isSymbol = flagClubs or flagDiamonds or flagHearts or flagSpades
 
+            # if(flagHearts):
+            #     print self.sampleHeart.isHeartsMatchShape(sample)
 
             if isSymbol:
                 listFinal.append(sample)
 
-            # if not isSymbol:
-            #     cv2.imshow("classifyCandidates.py", sample.img)
-            #     # self.sampleDiamond.printDiamond(sample)
-            #     # self.sampleHeart.printHeart(sample)
-            #     self.sampleSpade.printSpade(sample)
-            #     # self.sampleClubs.printClub(sample)
-            #     cv2.waitKey()
+            # if    isSymbol:
+                # self.sampleDiamond.printDiamond(sample)
+                # self.sampleHeart.printHeart(sample)
+                # self.sampleSpade.printSpade(sample)
+                # self.sampleClubs.printClub(sample)
+                # cv2.imshow("classifyCandidates.py", sample.img)
+                # cv2.waitKey()
 
             # if not self.TrueXor(list):
             #     cv2.imshow("classifyCandidates.py",sample.img)

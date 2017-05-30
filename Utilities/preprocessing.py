@@ -14,7 +14,7 @@ class Preprocessing:
         # Change red to black
         imgBlack = img
 
-        imgBlack = Preprocessing.changeRedToBlack(img)
+        # imgBlack = Preprocessing.changeRedToBlack(img)
 
         # Image to gray scale
         gray = cv2.cvtColor(imgBlack, cv2.COLOR_BGR2GRAY)
@@ -35,16 +35,16 @@ class Preprocessing:
         # Thresholding
         # blur = cv2.GaussianBlur(gray, (1, 1), 1000)
         # ret, threshold = cv2.threshold(contrastImg,140 , 255, cv2.THRESH_BINARY_INV)
-        # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
+        threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY_INV, 41, 0)
         # threshold = cv2.adaptiveThreshold(contrastImg, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY, 11, 2)
-        ret2, threshold = cv2.threshold(contrastImg, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-
+        # ret2, threshold = cv2.threshold(contrastImg, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+        #
         # print ret2
         # if(ret2<80):
             # print ret2
             # cv2.imshow("preprocessing",contrastImg)
-            # cv2.imshow("preprocessing2", threshold)
-            # cv2.waitKey()
+
+
             # ret2 = 160
         # ret, threshold = cv2.threshold(contrastImg,ret2 , 255, cv2.THRESH_BINARY_INV)
 
@@ -54,8 +54,13 @@ class Preprocessing:
         imgContours = np.copy(img)
         _, contours, hierarchy = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         # contours = sorted(contours, key=cv2.contourArea)
-        # cv2.drawContours(imgContours, contours, -1, (0, 255, 255), 2)
 
+        # cv2.imshow("image",img)
+        # cv2.imshow("gray",gray)
+        # cv2.imshow("preprocessing2", threshold)
+        # cv2.drawContours(img, contours, -1, (0, 255, 255), 2)
+        # cv2.imshow("contours", img)
+        # cv2.waitKey()
 
         # Utilities.printImages(listImage = [gray,contrastImg,threshold,imgContours])
 

@@ -57,7 +57,7 @@ class SampleClub:
         # self.printClub(aspectRatio, Black, matchShape, perimeter, sample)
         return matchShape and aspectRatio and perimeter and Black
 
-    def printClub(self, aspectRatio, Red, matchShape, perimeter, sample):
+    def printClub(self, sample):
         print ""
         print "<--------------------------------------------------------->"
         print " --  CLUBS   ---"
@@ -65,7 +65,8 @@ class SampleClub:
         print " Is  Perimeter? ", self.isClubPerimeter(sample), sample.relationPerimeter
         print " Is  Aspect Ratio? ", self.isClubAspectRatio(sample), sample.aspectRatio
         print " Is  match shape? ", self.isClubMatchShape(sample)
-        if matchShape and aspectRatio and perimeter and Red:
+        matchShape,_ = self.isClubMatchShape(sample)
+        if matchShape and self.isClubAspectRatio(sample) and self.isClubPerimeter(sample) and self.isBlack(sample):
             print "Is Club !"
         else:
             print "Is not Club !"

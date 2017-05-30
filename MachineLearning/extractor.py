@@ -34,7 +34,8 @@ class Extractor():
 
         # Utilities image
         im, gray, thresh, contours = Preprocessing.preprocessingImage(imgPath)
-
+        # cv2.imshow("meh",thresh)
+        # cv2.waitKey()
         contours = sorted(contours, self.compareContours)
 
 
@@ -48,6 +49,7 @@ class Extractor():
 
         # Loop rois
         for i,roi in enumerate(roiList):
+
             roismall = cv2.resize(roi, self.shapeSample)
             roismall = roismall.reshape((1, self.sizeSample))
 

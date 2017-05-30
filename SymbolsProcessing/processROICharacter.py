@@ -24,9 +24,9 @@ class ProcessROICharacter:
             img, gray, threshold, contours = Preprocessing.preprocessingImageFromROI(sample.ROI)
 
 
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            ret2, threshold = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
-            _, contours, hierarchy = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+            # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            # ret2, threshold = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+            # _, contours, hierarchy = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 
             # cv2.drawContours(img, contours, -1, (0, 255, 255), 2)
             # cv2.imshow("processROICharacter1", img)
@@ -74,7 +74,7 @@ class ProcessROICharacter:
                         response = listStringResults[0]
                         if(listStringResults[0]=='1'):
                             i = 0
-                            while(listStringResults[i]=='1' and i < lenght):
+                            while(listStringResults[i]=='1' and i < lenght-1):
                                 i +=1
                                 response = listStringResults[i]
                 if(response=='1'):
@@ -87,13 +87,13 @@ class ProcessROICharacter:
                 #     print string
 
 
-                # if response == 'J':
+                # if response == '8':
                 #     cv2.imshow("processROICharacter", threshold)
                 #     cv2.waitKey()
 
             if response is not None:
                 sample.Character = response
-                sample.stringResult = response + " " + sample.label
+                sample.stringResult = response  + sample.label
                 finalList.append(sample)
 
 

@@ -22,7 +22,7 @@ class Sample:
         contours = sorted(contours, key=cv2.contourArea)
         #
 
-        if(len>0):
+        if(len(contours)>1):
             cnt = contours[len(contours)-1]
         else:
             cnt = contours[0]

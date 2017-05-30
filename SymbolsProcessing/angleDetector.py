@@ -40,7 +40,7 @@ class AngleDetector:
             elif (sample.label == 'D'):
                 contours = []
                 contours.append(sample.cnt)
-                angle = self.obtainAngleDiamond(sample.cnt,img)
+                angle = self.obtainAngleDiamond(sample.cnt,sample,img)
 
             if angle is None:
                 continue
@@ -49,24 +49,25 @@ class AngleDetector:
             sample.angle = angle
             listFinalSamples.append(sample)
 
+        # for s in listFinalSamples:
+            # cv2.rectangle(img, (s.x+s.offSetX, s.y+s.offSetY), (s.x+s.offSetX + s.w, s.y+s.offSetY + s.h), (0, 255, 0), 2)
+
+
         return listFinalSamples
 
-    # def drawAngle(self,img, contours):
-    #     centroidList = Preprocessing.obtainCentroid(contours)
-    #     imgClone = np.copy(img)
-    #     for i, cnt in enumerate(contours):
-    #         # drawLine(imgClone,cnt)
-    #         angle = self.obtainAngle(cnt, imgClone)
-    #         cv2.putText(imgClone, str(int(angle)), (int(centroidList[i][0]), int(centroidList[i][1])), aux.font, aux.size,
-    #                     aux.colour, 2, cv2.LINE_AA)
-    #
-    #     return imgClone
 
-    def obtainAngleDiamond(self,cnt, imgClone):
+
+
+    def obtainAngleDiamond(self,cnt,sample,img):
         point1, point2, point3, point4 = self.obtainExtremePoints(cnt)
+        # self.drawPoint(img,point1[0]+sample.offSetX,point1[1]+sample.offSetY)
+        # self.drawPoint(img,point2[0]+sample.offSetX,point2[1]+sample.offSetY)
+        # self.drawPoint(img,point3[0]+sample.offSetX,point3[1]+sample.offSetY)
+        # self.drawPoint(img,point4[0]+sample.offSetX,point4[1]+sample.offSetY)
 
-        # cv2.line(imgClone, point1, point2, (0, 255, 0), 2)
-        # cv2.line(imgClone, point3, point4, (0, 255, 255), 2)
+        # self.drawLine(img,point1,point2,sample)
+        # self.drawLine(img, point3, point4, sample,aux.colour)
+
 
         angle = self.calculateAngle(point1, point2, point3, point4)
         if angle < 0:
@@ -82,6 +83,8 @@ class AngleDetector:
         x, y, w, h = cv2.boundingRect(cnt)
         cx = int(x + w / 2)
         cy = int(y + h / 2)
+
+        # return leftmost,rightmost,topmost,bottommost
 
         if (self.obtainDistance(leftmost, rightmost) > self.obtainDistance(topmost, bottommost)):
             return leftmost, rightmost, (cx, cy), (cx, topmost[1])
@@ -112,3 +115,15 @@ class AngleDetector:
         angle = math.atan((m2 - m1) / (1 + m1 * m2))
         angle = math.degrees(angle)
         return angle
+
+    def drawPoint(self,img,x,y):
+        print x,y
+        # cv2.circle(img, (i[0], i[1]), i[2], (0, 255, 0), 2)
+        cv2.circle(img,(x,y),3, aux.colour, 5)
+
+    def drawLine(self,img,point1,point2,sample,colour =(0, 255, 0) ):
+        x = point1[0] + sample.offSetX
+        x1 = point2[0] + sample.offSetX
+        y = point1[1] + sample.offSetY
+        y1= point2[1] + sample.offSetY
+        cv2.line(img, (x,y), (x1,y1),colour , 3)

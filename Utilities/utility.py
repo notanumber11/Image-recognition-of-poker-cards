@@ -7,7 +7,7 @@ import os
 from rectangle import Rectangle
 from gtts import gTTS
 font = cv2.FONT_HERSHEY_SIMPLEX
-colour = (255,255, 0)
+colour = (0,255, 255)
 size = 0.8
 
 def helloworld():
