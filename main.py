@@ -56,10 +56,10 @@ def currentResults(imgParameter = None,imgPath = None):
     if(imgPath is not None):
         # Preprocessing image
         img, gray, threshold, contours = Preprocessing.preprocessingImage(imgPath)
-        img = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_CUBIC)
-        imgParameter = img
+        # img = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_CUBIC)
+        # imgParameter = img
 
-    if(imgParameter is not None):
+    elif(imgParameter is not None):
         img, gray, threshold, contours = Preprocessing.preprocessingImageFromROI(imgParameter)
     else:
         print 'Error en el paso de parametros'
@@ -116,6 +116,7 @@ def currentResults(imgParameter = None,imgPath = None):
         cv2.putText(img, sample.stringResult, (sample.offSetX, sample.offSetY), aux.font, aux.size*1.25, aux.colour, 2,cv2.LINE_AA)
         # cv2.putText(img, str(sample.angle), (sample.offSetX, sample.offSetY), aux.font, aux.size * 1.5, aux.colour, 2,cv2.LINE_AA)
         # cv2.putText(img, sample.Character, (sample.offSetX, sample.offSetY), aux.font, aux.size, aux.colour, 2,cv2.LINE_AA)
+    img = cv2.resize(img, None, fx=0.5, fy=0.5, interpolation=cv2.INTER_CUBIC)
 
     cv2.imshow('testSample',img)
     cv2.waitKey()

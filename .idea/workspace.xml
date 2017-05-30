@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd52b43f-ef69-4c87-a641-41ccb369c3b6" name="Default" comment="Several test of image processing with openCV and Python">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/test0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/CharacterTraining/responses.data" afterPath="$PROJECT_DIR$/MachineLearning/CharacterTraining/responses.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/CharacterTraining/samples.data" afterPath="$PROJECT_DIR$/MachineLearning/CharacterTraining/samples.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/TrainingData/responses.data" afterPath="$PROJECT_DIR$/MachineLearning/TrainingData/responses.data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/TrainingData/samples.data" afterPath="$PROJECT_DIR$/MachineLearning/TrainingData/samples.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/extractor.py" afterPath="$PROJECT_DIR$/MachineLearning/extractor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/knearest.py" afterPath="$PROJECT_DIR$/MachineLearning/knearest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/roi_detector.py" afterPath="$PROJECT_DIR$/MachineLearning/roi_detector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utilities/preprocessing.py" afterPath="$PROJECT_DIR$/Utilities/preprocessing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utilities/utility.py" afterPath="$PROJECT_DIR$/Utilities/utility.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +18,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Tutorial$training2.coverage" NAME="training2 Coverage Results" MODIFIED="1494519172148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
     <SUITE FILE_PATH="coverage/Tutorial$testing.coverage" NAME="testing Coverage Results" MODIFIED="1494535124814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
-    <SUITE FILE_PATH="coverage/Image_Processing_Test$main.coverage" NAME="main Coverage Results" MODIFIED="1496171320592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Image_Processing_Test$main.coverage" NAME="main Coverage Results" MODIFIED="1496172644431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Tutorial$trainingOCR.coverage" NAME="trainingOCR Coverage Results" MODIFIED="1494528690686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
     <SUITE FILE_PATH="coverage/Tutorial$main.coverage" NAME="main Coverage Results" MODIFIED="1494865219913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Tutorial$digits.coverage" NAME="digits Coverage Results" MODIFIED="1492712860705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -53,8 +41,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="131" selection-end-column="59" />
+            <state relative-caret-position="102">
+              <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -82,8 +70,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="samples.data" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MachineLearning/TrainingData/samples.data">
+      <file leaf-file-name="responses.data" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MachineLearning/CharacterTraining/responses.data">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -95,7 +83,7 @@
       <file leaf-file-name="knearest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MachineLearning/knearest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="2125">
               <caret line="89" column="46" lean-forward="true" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
               <folding />
             </state>
@@ -115,7 +103,7 @@
       <file leaf-file-name="roi_detector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MachineLearning/roi_detector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="700">
               <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding />
             </state>
@@ -125,7 +113,7 @@
       <file leaf-file-name="angleDetector.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SymbolsProcessing/angleDetector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="1075">
               <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
@@ -135,7 +123,7 @@
       <file leaf-file-name="preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utilities/preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="900">
               <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
               <folding />
             </state>
@@ -271,8 +259,8 @@
         <option value="$PROJECT_DIR$/Utilities/preprocessing.py" />
         <option value="$PROJECT_DIR$/MachineLearning/knearest.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -306,6 +294,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -416,7 +405,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -529,19 +517,19 @@
     <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages" />
-      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\MachineLearning\CharacterTraining" />
-      <recent name="$PROJECT_DIR$/SymbolsProcessing" />
-      <recent name="$PROJECT_DIR$/OCR/AngleTraining" />
-      <recent name="$PROJECT_DIR$/OCR/ImagesSymbols" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages" />
       <recent name="$PROJECT_DIR$/SymbolsProcessing" />
       <recent name="$PROJECT_DIR$/MachineLearning" />
       <recent name="$PROJECT_DIR$/Utilities" />
       <recent name="$PROJECT_DIR$/OCR/ImagesCharacters" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\MachineLearning\CharacterTraining" />
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\MachineLearning\TrainingData" />
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages" />
+      <recent name="$PROJECT_DIR$/SymbolsProcessing" />
+      <recent name="$PROJECT_DIR$/OCR/AngleTraining" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -849,13 +837,13 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41210046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41210046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4155251" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5142232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -927,11 +915,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CardImages/test8.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CardImages/test1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1169,7 +1152,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Utilities/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="900">
           <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
           <folding />
         </state>
@@ -1177,7 +1160,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SymbolsProcessing/angleDetector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="1075">
           <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
@@ -1185,7 +1168,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MachineLearning/roi_detector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="700">
           <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
           <folding />
         </state>
@@ -1193,7 +1176,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MachineLearning/knearest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="2125">
           <caret line="89" column="46" lean-forward="true" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
           <folding />
         </state>
@@ -1207,18 +1190,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MachineLearning/TrainingData/samples.data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1231,10 +1214,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MachineLearning/CharacterTraining/responses.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="131" selection-end-column="59" />
+        <state relative-caret-position="102">
+          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
