@@ -7,7 +7,7 @@ class GenerateCandidates:
     def __init__(self):
         pass
 
-    def generateCandidates(self, img,threshold, contours, thresholdArea=50, thresholdSize=0.1):
+    def generateCandidates(self, img,threshold, contours, thresholdArea=10, thresholdSize=0.001):
         contours = sorted(contours, key=cv2.contourArea)
         self.thresholdArea = thresholdArea
         self.thresholdSize = thresholdSize

@@ -52,7 +52,6 @@ class AngleDetector:
         # for s in listFinalSamples:
             # cv2.rectangle(img, (s.x+s.offSetX, s.y+s.offSetY), (s.x+s.offSetX + s.w, s.y+s.offSetY + s.h), (0, 255, 0), 2)
 
-
         return listFinalSamples
 
 
@@ -64,7 +63,6 @@ class AngleDetector:
         # self.drawPoint(img,point2[0]+sample.offSetX,point2[1]+sample.offSetY)
         # self.drawPoint(img,point3[0]+sample.offSetX,point3[1]+sample.offSetY)
         # self.drawPoint(img,point4[0]+sample.offSetX,point4[1]+sample.offSetY)
-
         # self.drawLine(img,point1,point2,sample)
         # self.drawLine(img, point3, point4, sample,aux.colour)
 

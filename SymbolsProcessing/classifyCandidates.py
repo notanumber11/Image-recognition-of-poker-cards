@@ -45,10 +45,8 @@ class ClasifyCandidates:
         self.spades = Sample(img,threshold,contours[0])
 
 
-
         # List of samples
         self.listSamples = [self.spades,self.clubs,self.heart,self.diamond]
-
         self.sampleHeart = SampleHeart(self.heart)
         self.sampleDiamond = SampleDiamond(self.diamond)
         self.sampleClubs = SampleClub(self.clubs)
@@ -68,19 +66,8 @@ class ClasifyCandidates:
 
             flagDiamonds = self.isDiamond(sample)
 
-            list = [flagHearts, flagSpades, flagDiamonds, flagClubs]
-            # if self.TrueXor(list):
-                # cv2.putText(img, sample.label, (sample.offSetX, sample.offSetY), self.font, 0.5, self.symbolsColour, 2, cv2.LINE_AA)
-                # listFinal.append(sample)
-            # else:
-            #     cv2.imshow("classifyCandidates.py", sample.img)
-            #     self.sampleDiamond.printDiamond(sample)
-            #     self.sampleHeart.printHeart(sample)
-            #     cv2.waitKey()
             isSymbol = flagClubs or flagDiamonds or flagHearts or flagSpades
 
-            # if(flagHearts):
-            #     print self.sampleHeart.isHeartsMatchShape(sample)
 
             if isSymbol:
                 listFinal.append(sample)
@@ -93,11 +80,8 @@ class ClasifyCandidates:
                 # cv2.imshow("classifyCandidates.py", sample.img)
                 # cv2.waitKey()
 
-            # if not self.TrueXor(list):
-            #     cv2.imshow("classifyCandidates.py",sample.img)
-            #     self.sampleDiamond.printDiamond(sample)
-            #     cv2.waitKey()
             sample.stringResult = sample.label
+
         return listFinal
 
     def showSamples(self, listSamples):
@@ -120,11 +104,9 @@ class ClasifyCandidates:
             # print "Area symbol = ", self.listSamples[i].contourArea
             # print "Area rectangle ", self.listSamples[i].rectangleArea
             print "Relation area ", self.listSamples[i].relationArea
-
             # print "perimeter symbol = ", self.listSamples[i].contourPerimeter
             # print "perimeter rectangle ", self.listSamples[i].rectanglePerimeter
             print "Relation perimeter ", self.listSamples[i].relationPerimeter
-
             print "Aspect Ratio = ", self.listSamples[i].aspectRatio
 
     def isSpade(self, sample):

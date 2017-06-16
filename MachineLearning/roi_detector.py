@@ -9,9 +9,6 @@ class RoiDetector:
 
 
     def roiDetection(self,thresh,contours):
-        # cv2.imshow("processROICharacter", thresh)
-        # cv2.waitKey()
-        # cv2.destroyAllWindows()
         roiList = []
         roiPointsList = []
         for cnt in contours:
@@ -22,12 +19,6 @@ class RoiDetector:
                     roi = thresh[y:y + h, x:x + w]
                     roiList.append(roi)
                     roiPointsList.append((x,y,w,h))
-
-
-        # for roi in roiList:
-        #     cv2.imshow("processROICharacter", roi)
-        #     cv2.waitKey()
-        #     cv2.destroyAllWindows()
 
         return roiList,roiPointsList
 

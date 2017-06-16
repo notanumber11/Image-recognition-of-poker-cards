@@ -16,22 +16,15 @@ class Sample:
         self.offSetX = offSetX
         self.offSetY = offSetY
 
-        # New code testing
+
         img, gray, thresh, contours = Preprocessing.preprocessingImageFromROI(img)
-        #
+
         contours = sorted(contours, key=cv2.contourArea)
-        #
 
         if(len(contours)>1):
             cnt = contours[len(contours)-1]
         else:
             cnt = contours[0]
-        # cv2.drawContours(img, cnt, -1, (0, 255, 255), 2)
-
-        # cv2.imshow("meh",thresh)
-        # cv2.imshow("mwh1",img)
-        # cv2.waitKey()
-        # cv2.destroyAllWindows()
 
 
         self.img = img
@@ -51,17 +44,6 @@ class Sample:
         self.bestMatchShape = 1
         self.labelMatchShape = None
 
-        # print ' <<<<<<<< Inicio box >>>>>>>>>>'
-        # print rect
-        # print box
-        # print self.x, self.y, self.w, self.h
-        #
-        # print ' <<<<<<<< Fin box >>>>>>>>>>'
-        #
-        # cv2.drawContours(self.img, [self.box], 0, (0, 0, 255), 2)
-        # cv2.rectangle(self.img, (self.x, self.y), (self.x + self.w, self.y + self.h), (0, 255, 0), 2)
-
-
 
         # Obtain dimensions
         self.rectangleArea = self.w * self.h
@@ -75,9 +57,11 @@ class Sample:
         self.aspectRatio = self.w/self.h
         if (self.aspectRatio>1):
             self.aspectRatio = 1/self.aspectRatio
+
         # Obtain percentage of red/black
         self.percentageRed,self.percentageBlack = aux.obtainColourPercentages(self.img)
 
+        # Init to None the features that will be calculate after
         self.label = None
         self.angle = None
         self.stringResult = None
@@ -90,7 +74,6 @@ class Sample:
         # print 'Rectangle perimeter = ',self.rectanglePerimeter
         # print 'Contour area = ' ,self.contourArea
         # print 'Contour perimeter = ',self.contourPerimeter
-
         print 'Relation area = ', self.relationArea
         print 'Relation perimeter = ', self.relationPerimeter
         print 'Aspect ratio = ', self.aspectRatio

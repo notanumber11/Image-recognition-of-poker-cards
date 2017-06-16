@@ -34,8 +34,6 @@ class Extractor():
 
         # Utilities image
         im, gray, thresh, contours = Preprocessing.preprocessingImage(imgPath)
-        # cv2.imshow("meh",thresh)
-        # cv2.waitKey()
         contours = sorted(contours, self.compareContours)
 
 

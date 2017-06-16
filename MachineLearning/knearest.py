@@ -5,24 +5,22 @@ from Utilities.preprocessing import Preprocessing
 from Utilities import utility as aux
 
 
-
 class knearest:
-
-    def __init__(self,pathSamples,pathResponses):
-        samples = np.loadtxt(pathSamples,np.float32)
-        responses = np.loadtxt(pathResponses,np.float32)
-        responses = responses.reshape((responses.size,1))
+    def __init__(self, pathSamples, pathResponses):
+        samples = np.loadtxt(pathSamples, np.float32)
+        responses = np.loadtxt(pathResponses, np.float32)
+        responses = responses.reshape((responses.size, 1))
         self.knn = cv2.ml.KNearest_create()
-        self.knn.train(samples,cv2.ml.ROW_SAMPLE,responses)
+        self.knn.train(samples, cv2.ml.ROW_SAMPLE, responses)
 
-    def checkResults(self,pathResponses, results):
+    def checkResults(self, pathResponses, results):
         # Load corrects results from file
         responses = np.loadtxt(pathResponses, np.float32)
         responses = responses.reshape((1, responses.size))
 
         # Change format results
         results = np.array(results, np.int32)
-        results = results.reshape((1,results.size))
+        results = results.reshape((1, results.size))
 
         # Checking if the lenght is the same
         if results.size != responses.size:
@@ -34,9 +32,9 @@ class knearest:
         # print results
         print np.sum(diff)
 
-    def applyKnearest(self,roiDetector,imgPath,sizeSample = 100,shapeSample = (10, 10)):
+    def applyKnearest(self, roiDetector, imgPath, sizeSample=100, shapeSample=(10, 10)):
 
-        if (shapeSample[0]*shapeSample[1]!=sizeSample):
+        if (shapeSample[0] * shapeSample[1] != sizeSample):
             print 'Error with parameters sizeSample and shapeSample'
             return -1
         self.shapeSample = shapeSample
@@ -52,23 +50,22 @@ class knearest:
         resultsTesting = []
 
         # Obtaining the rois
-        roiList,roiPointList = roiDetector.roiDetection(thresh, contours)
+        roiList, roiPointList = roiDetector.roiDetection(thresh, contours)
 
         # Find the right position to apply k-nearest
-        for i,roi in enumerate(roiList):
-
-           # Resizing the shape
-            roismall = cv2.resize(roi,self.shapeSample)
-            roismall = roismall.reshape((1,self.sizeSample))
+        for i, roi in enumerate(roiList):
+            # Resizing the shape
+            roismall = cv2.resize(roi, self.shapeSample)
+            roismall = roismall.reshape((1, self.sizeSample))
             roismall = np.float32(roismall)
 
             # Obtaining positions
             x, y, w, h = roiPointList[i][0], roiPointList[i][1], roiPointList[i][2], roiPointList[i][3]
 
             # Applying algorithm knearest
-            retval, results, neigh_resp, dists = self.knn.findNearest(roismall, k = 1)
+            retval, results, neigh_resp, dists = self.knn.findNearest(roismall, k=1)
             string = str((unichr(results[0][0])))
-            cv2.putText(out,string,(x,y+h),0,1,(0,255,0))
+            cv2.putText(out, string, (x, y + h), 0, 1, (0, 255, 0))
 
             # Save results for testing
             resultsTesting.append(results[0][0])
@@ -79,38 +76,36 @@ class knearest:
         # checkResults('TextResults/example_test.txt',resultsTesting)
         print "knearest complete"
 
-        cv2.imshow("thresh",thresh)
-        cv2.imshow('out',out)
+        cv2.imshow("thresh", thresh)
+        cv2.imshow('out', out)
         cv2.waitKey(0)
 
+    def applyKnearestToSample(self, roiDetector, sample, sizeSample=100, shapeSample=(10, 10)):
 
-    def applyKnearestToSample(self,roiDetector,sample,sizeSample = 100,shapeSample = (10, 10)):
-
-        if (shapeSample[0]*shapeSample[1]!=sizeSample):
+        if (shapeSample[0] * shapeSample[1] != sizeSample):
             print 'Error with parameters sizeSample and shapeSample'
             return -1
         self.shapeSample = shapeSample
         self.sizeSample = sizeSample
 
-
         # Obtaining the rois
         roi = roiDetector.roiDetectionCNT(sample)
 
-        if(roi is not None):
+        if (roi is not None):
 
             # cv2.imshow("meh",sample.img)
             # cv2.waitKey()
 
-           # Resizing the shape
-            roismall = cv2.resize(roi,self.shapeSample)
-            roismall = roismall.reshape((1,self.sizeSample))
+            # Resizing the shape
+            roismall = cv2.resize(roi, self.shapeSample)
+            roismall = roismall.reshape((1, self.sizeSample))
             roismall = np.float32(roismall)
 
             # Obtaining positions
             # x, y, w, h = roiPointList[i][0], roiPointList[i][1], roiPointList[i][2], roiPointList[i][3]
 
             # Applying algorithm knearest
-            retval, results, neigh_resp, dists = self.knn.findNearest(roismall, k = 1)
+            retval, results, neigh_resp, dists = self.knn.findNearest(roismall, k=1)
             # print dists
             # cv2.imshow("knearest",roi)
             # cv2.waitKey()
@@ -121,8 +116,8 @@ class knearest:
             return result
         return None
 
-    def applyKnearestToImg(self,threshold,contours,roiDetector,sizeSample = 100,shapeSample = (10, 10)):
-        if (shapeSample[0]*shapeSample[1]!=sizeSample):
+    def applyKnearestToImg(self, threshold, contours, roiDetector, sizeSample=100, shapeSample=(10, 10)):
+        if (shapeSample[0] * shapeSample[1] != sizeSample):
             print 'Error with parameters sizeSample and shapeSample'
             return -1
         self.shapeSample = shapeSample
@@ -137,7 +132,6 @@ class knearest:
         # Find the right position to apply k-nearest
         for i, roi in enumerate(roiList):
 
-
             # Resizing the shape
             roismall = cv2.resize(roi, self.shapeSample)
             roismall = roismall.reshape((1, self.sizeSample))
@@ -146,43 +140,22 @@ class knearest:
             # Obtaining positions
             x, y, w, h = roiPointList[i][0], roiPointList[i][1], roiPointList[i][2], roiPointList[i][3]
 
-
-
             # Applying algorithm knearest
             retval, results, neigh_resp, dists = self.knn.findNearest(roismall, k=1)
-
 
             string = str((unichr(results[0][0])))
 
             # if string == '0':
-            #
-            #
             #     print string, dists
             #     cv2.imshow("knearest", threshold)
             #     cv2.waitKey()
 
-            if  dists > 1500000:
+            if dists > 1500000:
                 continue
 
-            rows,columns = roi.shape
-            if dists < 50000 and rows/columns < 2 and string =='1':
-                # print rows, columns
-                #
-                # print dists
-                # cv2.imshow("knearest", roi)
-                # cv2.waitKey()
-                # cv2.destroyAllWindows()
+            rows, columns = roi.shape
+            if dists < 50000 and rows / columns < 2 and string == '1':
                 continue
-
-
-            # else:
-            #     if string == '1':
-            #         cv2.imshow("knearest", roi)
-            #         print dists
-            #         cv2.waitKey()
-            #         cv2.destroyAllWindows()
-            #         print 'Error in knearest character'
             listResults.append(string)
-
 
         return listResults

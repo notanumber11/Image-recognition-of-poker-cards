@@ -4,15 +4,15 @@ import cv2
 
 class SampleClub:
 
-    minClubPerimeter = 0.80
-    maxClubPerimeter = 1.4
+    minClubPerimeter = 0
+    maxClubPerimeter = 100
 
-    minClubAspectRatio = 0.85
-    maxClubAspectRatio = 1.05
+    minClubAspectRatio = 0
+    maxClubAspectRatio = 100
 
-    minBlack = 0.25
-    maxBlack = 0.70
-    matchShapeThreshold = 0.15
+    minBlack = 0
+    maxBlack = 1
+    matchShapeThreshold = 10000
 
 
     def __init__(self,clubsSample):

@@ -58,26 +58,9 @@ class ObtainROICharacters():
             roi = dst[y:y+h,x:x+w]
             roiThreshold = dstThreshold[y:y+h,x:x+w]
 
-
-
-
+            # If the ROI is out of the image
             if y < 0 or x < 0:
                 continue
-
-
-
-            # cv2.imshow("original", img)
-            # cv2.imshow("rotated",dst)
-            # cv2.rectangle(dst, (x, y), (x+w,y+h), (255, 0, 0), 2)
-            # cv2.rectangle(dst, (x, y2), (x+w,y2+h), (255, 0, 0), 2)
-            #
-            # cv2.imshow("roi character",dst)
-            # cv2.waitKey()
-
-            # cv2.imshow("obtainROICharacters1",roi)
-            # cv2.imshow("obtainROICharacters",roiThreshold)
-            # cv2.waitKey()
-            # cv2.destroyAllWindows()
 
             sample.ROI = roi
             finalList.append(sample)

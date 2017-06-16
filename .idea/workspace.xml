@@ -2,10 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd52b43f-ef69-4c87-a641-41ccb369c3b6" name="Default" comment="Several test of image processing with openCV and Python">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/CharacterTraining/responses.data" afterPath="$PROJECT_DIR$/MachineLearning/CharacterTraining/responses.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/CharacterTraining/samples.data" afterPath="$PROJECT_DIR$/MachineLearning/CharacterTraining/samples.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/TrainingData/responses.data" afterPath="$PROJECT_DIR$/MachineLearning/TrainingData/responses.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/TrainingData/samples.data" afterPath="$PROJECT_DIR$/MachineLearning/TrainingData/samples.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test17.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test19.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test23.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test24.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test25.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test26.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test27.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test28.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test29.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation7.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/.directory" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/10-hearts.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/2-spades1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/2-spades7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-diamonds.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-diamonds_20_degrees.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-diamonds_90_degrees.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-hearts-crop.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-hearts.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_cards.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_clubs.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_diamonds.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_hearts.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_spades.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/fives-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/fives-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/test17.jpg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/10-clubs.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/5-diamonds-15-degrees.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test30.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/all_spades_together.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test18.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/randomCards-1.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/randomCards-2.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/randomCards-3.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test21.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test0.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test0.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test1.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test10.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test10.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test11.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test11.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test12.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test12.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test13.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test13.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test14.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test14.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test15.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test15.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test16.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test16.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test2.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test3.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test4.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test5.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test6.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test7.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test7.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test8.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test8.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test9.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test9.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/twos-1.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Tutorial.iml" afterPath="$PROJECT_DIR$/.idea/Tutorial.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/extractor.py" afterPath="$PROJECT_DIR$/MachineLearning/extractor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/knearest.py" afterPath="$PROJECT_DIR$/MachineLearning/knearest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/roi_detector.py" afterPath="$PROJECT_DIR$/MachineLearning/roi_detector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/generate_candidates.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/generate_candidates.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utilities/utility.py" afterPath="$PROJECT_DIR$/Utilities/utility.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +97,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Tutorial$training2.coverage" NAME="training2 Coverage Results" MODIFIED="1494519172148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
     <SUITE FILE_PATH="coverage/Tutorial$testing.coverage" NAME="testing Coverage Results" MODIFIED="1494535124814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
-    <SUITE FILE_PATH="coverage/Image_Processing_Test$main.coverage" NAME="main Coverage Results" MODIFIED="1496172644431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Image_Processing_Test$main.coverage" NAME="main Coverage Results" MODIFIED="1497653945502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Tutorial$trainingOCR.coverage" NAME="trainingOCR Coverage Results" MODIFIED="1494528690686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
     <SUITE FILE_PATH="coverage/Tutorial$main.coverage" NAME="main Coverage Results" MODIFIED="1494865219913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Tutorial$digits.coverage" NAME="digits Coverage Results" MODIFIED="1492712860705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -41,92 +120,24 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processROICharacter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+            <state relative-caret-position="174">
+              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responses.data" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MachineLearning/TrainingData/responses.data">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
+      <file leaf-file-name="result-30.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CardImages/Results/result-30.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responses.data" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MachineLearning/CharacterTraining/responses.data">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="knearest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MachineLearning/knearest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="89" column="46" lean-forward="true" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="obtainROICharacters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roi_detector.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MachineLearning/roi_detector.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="angleDetector.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SymbolsProcessing/angleDetector.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1075">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="preprocessing.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utilities/preprocessing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-              <folding />
-            </state>
+      <file leaf-file-name="result-0.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CardImages/Results/result-0.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -141,9 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>key =</find>
-      <find>key =a</find>
-      <find>s</find>
       <find>sort</find>
       <find>prin</find>
       <find>print ma</find>
@@ -156,11 +164,9 @@
       <find>print i</find>
       <find>print is</find>
       <find>print isM</find>
-      <find>d</find>
       <find>drawR¡</find>
       <find>drawR</find>
       <find>drawr</find>
-      <find>draw</find>
       <find>re</find>
       <find>rec</find>
       <find>cv2.re</find>
@@ -171,6 +177,11 @@
       <find>circ</find>
       <find>circle</find>
       <find>rectangle</find>
+      <find>drawC</find>
+      <find>drawCo</find>
+      <find>d</find>
+      <find>draw</find>
+      <find>drawc</find>
     </findStrings>
     <replaceStrings>
       <replace>cntsImgScale</replace>
@@ -246,20 +257,20 @@
         <option value="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleDiamond.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleSpade.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/refinate_decission.py" />
-        <option value="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" />
-        <option value="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" />
-        <option value="$PROJECT_DIR$/SymbolsProcessing/generate_candidates.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleHeart.py" />
-        <option value="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" />
-        <option value="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py" />
-        <option value="$PROJECT_DIR$/MachineLearning/roi_detector.py" />
-        <option value="$PROJECT_DIR$/MachineLearning/extractor.py" />
-        <option value="$PROJECT_DIR$/Utilities/utility.py" />
-        <option value="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" />
         <option value="$PROJECT_DIR$/Utilities/preprocessing.py" />
+        <option value="$PROJECT_DIR$/MachineLearning/extractor.py" />
         <option value="$PROJECT_DIR$/MachineLearning/knearest.py" />
+        <option value="$PROJECT_DIR$/MachineLearning/roi_detector.py" />
+        <option value="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py" />
+        <option value="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" />
+        <option value="$PROJECT_DIR$/Utilities/utility.py" />
+        <option value="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" />
+        <option value="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" />
+        <option value="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" />
+        <option value="$PROJECT_DIR$/SymbolsProcessing/generate_candidates.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -271,10 +282,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1042" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -294,117 +305,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Utilities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SymbolsProcessing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MachineLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MachineLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrainingData" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MachineLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CharacterTraining" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MachineLearning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AngleTraining" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -507,6 +407,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image_Processing_Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image_Processing_Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,18 +433,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\Results" />
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages" />
       <recent name="$PROJECT_DIR$/SymbolsProcessing" />
       <recent name="$PROJECT_DIR$/MachineLearning" />
       <recent name="$PROJECT_DIR$/Utilities" />
-      <recent name="$PROJECT_DIR$/OCR/ImagesCharacters" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\ShadowTest" />
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\OverallTest" />
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\RotationTest" />
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\DistanceTest" />
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\MachineLearning\CharacterTraining" />
-      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\MachineLearning\TrainingData" />
-      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages" />
-      <recent name="$PROJECT_DIR$/SymbolsProcessing" />
-      <recent name="$PROJECT_DIR$/OCR/AngleTraining" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -830,27 +745,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22760417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41210046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30895197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4155251" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5142232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3231441" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5142232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3242009" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
@@ -889,18 +804,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MachineLearning/extractor.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/MachineLearning/extractor.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager>
@@ -915,6 +818,59 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CardImages/test25.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test27.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/fives-3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/fives-2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test26.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/all_cards.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/all_clubs.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/all_hearts.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test0.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CardImages/test1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -925,12 +881,17 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test10.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test9.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test5.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -940,27 +901,32 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test7.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test8.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test9.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test10.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CardImages/test11.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test9.jpg" />
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleSpade.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/refinate_decission.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test14.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test12.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -970,7 +936,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test16.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test14.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -980,27 +946,62 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/10-clubs.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test16.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/all_cards.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test17.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/10-hearts.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test18.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/fives-2.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test19.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/fives-3.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/test20.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test21.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test22.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test23.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test24.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test30.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test29.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test28.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1015,6 +1016,21 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds_20_degrees.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds_90_degrees.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CardImages/5-hearts.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1025,210 +1041,41 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/characteristics">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SampleImages/sample_hearts.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/10-clubs.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SampleImages/samples.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/10-hearts.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleHeart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/AngleTraining/angles.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/AngleTraining/clubs_360.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="120" lean-forward="false" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/generate_candidates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/AngleTraining/hearts-30.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/all_diamonds.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/AngleTraining/hearts-360.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/all_spades.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="78" column="31" lean-forward="false" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds_90_degrees.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/Results/result-0.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utilities/utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="285" column="22" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds_20_degrees.jpg">
+    <entry file="file://$PROJECT_DIR$/CardImages/Results/result-30.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/1990425973/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="2930" column="4" lean-forward="false" selection-start-line="2930" selection-start-column="4" selection-end-line="2930" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utilities/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/angleDetector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/roi_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/knearest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="89" column="46" lean-forward="true" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/TrainingData/samples.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/TrainingData/responses.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachineLearning/CharacterTraining/responses.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="174">
+          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
