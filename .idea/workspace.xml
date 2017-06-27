@@ -2,88 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd52b43f-ef69-4c87-a641-41ccb369c3b6" name="Default" comment="Several test of image processing with openCV and Python">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/DistanceTest/distance7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test22.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test23.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test25.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test26.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test27.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test28.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test29.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CardImages/RotationTest/rotation7.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/.directory" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/10-hearts.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/2-spades1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/2-spades7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-diamonds.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-diamonds_20_degrees.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-diamonds_90_degrees.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-hearts-crop.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/5-hearts.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_cards.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_clubs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_diamonds.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_hearts.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/all_spades.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/fives-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/fives-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CardImages/test17.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/10-clubs.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/5-diamonds-15-degrees.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test30.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/all_spades_together.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test18.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/randomCards-1.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/randomCards-2.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/randomCards-3.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test21.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test0.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test0.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test1.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test10.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test10.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test11.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test11.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test12.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test12.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test13.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test13.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test14.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test14.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test15.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test15.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test16.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test16.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test2.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test3.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test4.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test5.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test6.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test7.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test8.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/test9.jpg" afterPath="$PROJECT_DIR$/CardImages/OverallTest/test9.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/CardImages/twos-1.jpg" afterPath="$PROJECT_DIR$/CardImages/BrightnessTest/brightness3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Tutorial.iml" afterPath="$PROJECT_DIR$/.idea/Tutorial.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Playing cards recognition.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result-0.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OtherAlternatives/Tesseract/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OtherAlternatives/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Readme.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/try.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Digits.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/digits.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rectangle.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-15-diamonds.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-15-diamonds.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-15-spades.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-15-spades.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-20-2-spades.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-20-2-spades.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-clubs-15-stages.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-clubs-15-stages.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-diamonds-10-stages.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-diamonds-10-stages.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-diamonds-13-stages.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-diamonds-13-stages.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-spades-13-stagesLBP.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-spades-13-stagesLBP.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-spades-9-stages.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-spades-9-stages.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade_spades_sample_16.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade_spades_sample_16.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/haarcascade_frontalface_default.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/haarcascade_frontalface_default.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/commandsCreateCascade" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/commandsCreateCascade" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tesseract.py" afterPath="$PROJECT_DIR$/OtherAlternatives/Tesseract/tesseract.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/extractor.py" afterPath="$PROJECT_DIR$/MachineLearning/extractor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/knearest.py" afterPath="$PROJECT_DIR$/MachineLearning/knearest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MachineLearning/roi_detector.py" afterPath="$PROJECT_DIR$/MachineLearning/roi_detector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/Sample.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/generate_candidates.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/generate_candidates.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" afterPath="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utilities/utility.py" afterPath="$PROJECT_DIR$/Utilities/utility.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
@@ -97,7 +42,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Tutorial$training2.coverage" NAME="training2 Coverage Results" MODIFIED="1494519172148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
     <SUITE FILE_PATH="coverage/Tutorial$testing.coverage" NAME="testing Coverage Results" MODIFIED="1494535124814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
-    <SUITE FILE_PATH="coverage/Image_Processing_Test$main.coverage" NAME="main Coverage Results" MODIFIED="1497653945502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Image_Processing_Test$main.coverage" NAME="main Coverage Results" MODIFIED="1498554755259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Tutorial$trainingOCR.coverage" NAME="trainingOCR Coverage Results" MODIFIED="1494528690686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OCR" />
     <SUITE FILE_PATH="coverage/Tutorial$main.coverage" NAME="main Coverage Results" MODIFIED="1494865219913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Tutorial$digits.coverage" NAME="digits Coverage Results" MODIFIED="1492712860705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -117,11 +62,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            <state relative-caret-position="343">
+              <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tesseract.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OtherAlternatives/Tesseract/tesseract.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utility.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utilities/utility.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="characteristics" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/characteristics">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -129,13 +108,6 @@
       </file>
       <file leaf-file-name="result-30.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CardImages/Results/result-30.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result-0.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CardImages/Results/result-0.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -221,7 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SampleDiamond.py" />
         <option value="$PROJECT_DIR$/Digits.py" />
         <option value="$PROJECT_DIR$/Sample.py" />
         <option value="$PROJECT_DIR$/SampleSpades.py" />
@@ -266,12 +237,13 @@
         <option value="$PROJECT_DIR$/SymbolsProcessing/extract_characteristics.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/obtainROICharacters.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/processROICharacter.py" />
-        <option value="$PROJECT_DIR$/Utilities/utility.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/angleDetector.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/classifyCandidates.py" />
         <option value="$PROJECT_DIR$/SymbolsProcessing/generate_candidates.py" />
+        <option value="$PROJECT_DIR$/Utilities/utility.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Readme.md" />
       </list>
     </option>
   </component>
@@ -282,10 +254,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -305,6 +277,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image_Processing_Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image_Processing_Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image_Processing_Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Image_Processing_Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CardImages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -407,21 +408,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Image_Processing_Test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,18 +419,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\OtherAlternatives\Cascades" />
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\OtherAlternatives\Tesseract" />
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\Results" />
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages" />
       <recent name="$PROJECT_DIR$/SymbolsProcessing" />
-      <recent name="$PROJECT_DIR$/MachineLearning" />
-      <recent name="$PROJECT_DIR$/Utilities" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test" />
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\ShadowTest" />
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\OverallTest" />
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\RotationTest" />
       <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\CardImages\DistanceTest" />
-      <recent name="C:\Users\Denis\Desktop\FinalProyect\Image_Processing_Test\MachineLearning\CharacterTraining" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -745,19 +731,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30895197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4155251" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3231441" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30821916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4155251" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5142232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -766,6 +751,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32305935" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
@@ -818,249 +804,42 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CardImages/test25.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test27.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SymbolsProcessing/SymbolsSamples/SampleClub.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/fives-3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/fives-2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test26.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/all_cards.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/all_clubs.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/all_hearts.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test0.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test6.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test7.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test8.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test9.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test10.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test11.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test12.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test13.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test14.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test15.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test16.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test17.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test18.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test19.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test20.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test21.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test22.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test23.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test24.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test30.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test29.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/test28.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/2-spades1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/2-spades7.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds_20_degrees.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds_90_degrees.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/5-hearts.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/5-hearts-crop.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/10-clubs.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/10-hearts.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/all_diamonds.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CardImages/all_spades.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CardImages/test3.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test4.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test5.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test6.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test7.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test8.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test9.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test10.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test11.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test12.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test13.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test14.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test15.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test16.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test17.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test18.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test19.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test20.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test21.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test22.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test23.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test24.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test30.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test29.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/test28.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/2-spades1.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/2-spades7.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds_20_degrees.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/5-diamonds_90_degrees.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/5-hearts.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/5-hearts-crop.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/10-clubs.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/10-hearts.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/all_diamonds.jpg" />
+    <entry file="file://$PROJECT_DIR$/CardImages/all_spades.jpg" />
     <entry file="file://$PROJECT_DIR$/CardImages/Results/result-0.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1071,10 +850,63 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OtherAlternatives/Tesseract/tesseract.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/digits.png" />
+    <entry file="file://$PROJECT_DIR$/Captures/img_1.jpg" />
+    <entry file="file://$PROJECT_DIR$/Captures/img_2.jpg" />
+    <entry file="file://$PROJECT_DIR$/Captures/img_3.jpg" />
+    <entry file="file://$PROJECT_DIR$/Captures/img_4.jpg" />
+    <entry file="file://$PROJECT_DIR$/Captures/img_5.jpg" />
+    <entry file="file://$PROJECT_DIR$/Captures/try.jpg" />
+    <entry file="file://$PROJECT_DIR$/Utilities/utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Digits.py" />
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        <state relative-caret-position="343">
+          <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="350">
+            <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="59" lean-forward="false" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/characteristics">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

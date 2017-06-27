@@ -4,7 +4,6 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-from rectangle import Rectangle
 from gtts import gTTS
 font = cv2.FONT_HERSHEY_SIMPLEX
 colour = (255,50, 0)

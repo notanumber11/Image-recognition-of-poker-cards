@@ -112,10 +112,10 @@ def currentResults(imgParameter = None,imgPath = None):
     cv2.destroyAllWindows()
     return img
 
-# currentResults(imgPath='CardImages/test0.jpg')
+# currentResults(imgPath='CardImages/OverallTest/test0.jpg')
 
-i = 1
-for i in range(30,32):
+
+for i in range(0,31):
     img = currentResults(imgPath='CardImages/OverallTest/test'+str(i)+'.jpg')
     cv2.imwrite('result-'+str(i)+'.jpg',img)
 
