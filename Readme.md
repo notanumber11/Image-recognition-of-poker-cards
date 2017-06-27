@@ -11,6 +11,9 @@ This is my final bachelor project that was made during my Erasmus semester
 in the Gdansk University of technology in the ETI faculty in order to finish
 my bachelor in Computer Engineering.
 
+## Testing and results
+Under the folder CardImages you can find the images used for testing and the results of the image processing.
+
 ## Acknowledgement
 - Henryk Krawzyk: My tutor during this project.
 - Monika Graczyk-Raczyńska: She helps me with the administrative part of the project.

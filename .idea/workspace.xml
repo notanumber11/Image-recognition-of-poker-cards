@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd52b43f-ef69-4c87-a641-41ccb369c3b6" name="Default" comment="Several test of image processing with openCV and Python">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Playing cards recognition.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result-0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OtherAlternatives/Tesseract/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OtherAlternatives/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Readme.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/img_5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Captures/try.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Digits.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/digits.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rectangle.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-15-diamonds.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-15-diamonds.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-15-spades.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-15-spades.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-20-2-spades.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-20-2-spades.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-clubs-15-stages.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-clubs-15-stages.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-diamonds-10-stages.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-diamonds-10-stages.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-diamonds-13-stages.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-diamonds-13-stages.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-spades-13-stagesLBP.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-spades-13-stagesLBP.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade-spades-9-stages.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade-spades-9-stages.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/cascade_spades_sample_16.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/cascade_spades_sample_16.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cascades/haarcascade_frontalface_default.xml" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/haarcascade_frontalface_default.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/commandsCreateCascade" afterPath="$PROJECT_DIR$/OtherAlternatives/Cascades/commandsCreateCascade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tesseract.py" afterPath="$PROJECT_DIR$/OtherAlternatives/Tesseract/tesseract.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utilities/utility.py" afterPath="$PROJECT_DIR$/Utilities/utility.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,12 +68,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="characteristics" pinned="false" current-in-tab="true">
+      <file leaf-file-name="characteristics" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/characteristics">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="275">
+                <caret line="14" column="109" lean-forward="false" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -732,7 +717,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -740,7 +724,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908705" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30821916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30821916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4155251" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -886,11 +870,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/characteristics">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="350">
-            <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <first_editor relative-caret-position="275">
+            <caret line="14" column="109" lean-forward="false" selection-start-line="14" selection-start-column="109" selection-end-line="14" selection-end-column="109" />
             <folding />
           </first_editor>
           <second_editor />
@@ -899,14 +891,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="59" lean-forward="false" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/characteristics">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
